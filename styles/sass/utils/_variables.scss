@@ -1,0 +1,58 @@
+/*----------------------------------- colors -----------------------------------*/
+
+/*primary/blue*/
+$primary-color-default: #2D8BF1;
+$primary-color-hovered: #106CD1;
+$primary-color-onclick: #0C5FBA;
+
+/*secondary/yellow*/
+$secondary-color-default: #DAE856;
+$secondary-color-hovered: #CADF00;
+$secondary-color-onclick: #BED200;
+
+/*dark/black*/
+$dark-color-default: #201E33;
+$dark-color-hovered: #605D7C;
+$dark-color-onclick: #201E33;
+
+/*middle-dark/gray*/
+$middle-dark-color-default: #A7A6B5;
+$middle-dark-color-hovered: #7E7D90;
+$middle-dark-color-onclick: #5A596E;
+
+/*light/white*/
+$light-color-default: #F6F6F7;
+$light-color-hovered: #F0F0F4; // same as gray-cards-background
+$light-color-onclick: #FFFFFF;
+
+/*danger/red*/
+$danger-color-default: #F13D53;
+$danger-color-hovered: #AD003E;
+$danger-color-onclick: #FF005C;
+
+/*succes/green*/
+$succes-color-default: #4BB96A;
+
+/**/
+$active-text-color:#6990BA; 
+
+/*----------------------------------- mediaquery -----------------------------------*/
+$desktop: 1440px;
+$tablet: 960px;
+$mobile: 500px;
+
+/*----------------------------------- spacers -----------------------------------*/
+$spacer-base: 8px;
+
+$spacer-xxs: $spacer-base;      // 8
+$spacer-xs: 2 * $spacer-base;   // 16
+$spacer-s: 3 * $spacer-base;    // 24 
+$spacer-m: 4 * $spacer-base;    // 32
+$spacer-l: 5 * $spacer-base;    // 40
+$spacer-xl: 8 * $spacer-base;   // 64
+$spacer-xxl: 10 * $spacer-base; // 80
+
+
+/*----------------------------------- transitions -----------------------------------*/
+$transition-time-function: ease-in-out;
+$transition-timer: 0.2s;
