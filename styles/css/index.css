@@ -66,7 +66,7 @@ select {
 /*----------------------------------- spacers -----------------------------------*/
 /*----------------------------------- transitions -----------------------------------*/
 /*----------------------------------- titles -----------------------------------*/
-.header .header__link, .lead__slide .lead__title-wrapper a, .lead__slide .lead__title-wrapper p {
+.project .project__tag, .project .project__title, .header .header__link, .city .city__title, .navigation__button .navigation__city, .title, .lead__slide .lead__title-wrapper a, .lead__slide .lead__title-wrapper p {
   font-family: "Circe";
   font-style: normal;
   font-weight: 700;
@@ -78,16 +78,31 @@ select {
   line-height: 72px;
 }
 
-.header .header__link {
+.title {
+  font-size: 42px;
+  line-height: 52px;
+}
+
+.city .city__title, .navigation__button .navigation__city {
+  font-size: 26px;
+  line-height: 34px;
+}
+
+.project .project__tag, .project .project__title, .header .header__link {
   font-size: 16px;
   line-height: 24px;
 }
 
 /*----------------------------------- circe text -----------------------------------*/
-.lead__slide .lead__button {
+.lead__slide .lead__button, .navigation__button .navigation__advice {
   font-family: "Circe";
   font-style: normal;
   font-weight: 400;
+}
+
+.navigation__button .navigation__advice {
+  font-size: 20px;
+  line-height: 24px;
 }
 
 .lead__slide .lead__button {
@@ -96,19 +111,32 @@ select {
 }
 
 /*----------------------------------- lora text -----------------------------------*/
+.city .city__description, .city .city__subtitle {
+  font-family: "Lora";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 24px;
+}
+
+.city .city__subtitle {
+  font-style: italic;
+  color: #A7A6B5;
+}
+
 /*----------------------------------- custom cursor -----------------------------------*/
-.carousel__dots .carousel__dot:hover, .carousel__button:hover, .lead__slide .lead__button:hover, .lead__slide .lead__title-wrapper a:hover, .header .header__link:hover, .header .header__burger:hover, .header .header__logo:hover {
+.carousel__dots .carousel__dot:hover, .carousel__button:hover, .navigation__button:hover, .lead__slide .lead__button:hover, .project:hover, .city .city__title a:hover, .lead__slide .lead__title-wrapper a:hover, .header .header__link:hover, .header .header__burger:hover, .header .header__logo:hover {
   cursor: url(../../images/Cursor-hand.svg), pointer;
 }
 
 /*----------------------------------- silly-link -----------------------------------*/
-.lead__slide .lead__title-wrapper a, .header .header__link, .header .header__burger, .header .header__logo {
+.project, .city .city__title a, .lead__slide .lead__title-wrapper a, .header .header__link, .header .header__burger, .header .header__logo {
   color: inherit;
   text-decoration: none;
 }
 
 /*----------------------------------- transition -----------------------------------*/
-.header .header__link, .header .header__list-social ul svg, .header .header__burger-lines, .lead .carousel__button, .lead__slide .lead__button {
+.project .project__title, .project, .header .header__link, .header .header__list-social ul svg, .header .header__burger-lines, .lead .carousel__button, .navigation__button, .lead__slide .lead__button {
   -moz-transition-duration: 0.2s;
   -o-transition-duration: 0.2s;
   transition-duration: 0.2s;
@@ -118,7 +146,7 @@ select {
 }
 
 /*----------------------------------- buttons -----------------------------------*/
-.lead__slide .lead__button {
+.navigation__button, .lead__slide .lead__button {
   transition-property: color, background-color;
   text-decoration: none;
   text-align: center;
@@ -148,8 +176,6 @@ select {
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   position: relative;
-  height: 150vh;
-  background-color: honeydew;
 }
 
 /*настройки карусельки*/
@@ -304,6 +330,7 @@ select {
 /*СТИЛИЗАЦИЯ ПОД РАЗНЫЕ СТРАНИЦЫ*/
 .lead .carousel {
   --carousel-button-svg-stroke-width: 1;
+  margin: 0;
 }
 .lead .carousel__button {
   transition-property: all;
@@ -340,6 +367,18 @@ select {
   margin-top: -40px;
 }
 
+.title {
+  width: 90%;
+  max-width: 1312px;
+  margin: 0 auto 40px;
+}
+@media screen and (max-width: 1024px) {
+  .title {
+    font-size: 26px;
+    line-height: 34px;
+  }
+}
+
 .header {
   width: 100%;
   z-index: 555;
@@ -352,7 +391,7 @@ select {
   margin-bottom: 40px;
   box-shadow: 0px 27px 60px rgba(131, 139, 163, 0.15), 0px 9.85544px 21.901px rgba(131, 139, 163, 0.09), 0px 4.78464px 10.6325px rgba(131, 139, 163, 0.07), 0px 2.34552px 5.21226px rgba(131, 139, 163, 0.07), 0px 0.927421px 2.06094px rgba(131, 139, 163, 0.06);
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1024px) {
   .header {
     height: 80px;
   }
@@ -376,7 +415,7 @@ select {
   height: 74px;
   z-index: 98;
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1024px) {
   .header .header__logo {
     background-image: url(../../../images/logos/main-logo-old-black.svg);
     width: 83px;
@@ -391,7 +430,7 @@ select {
   display: flex;
   flex-direction: row-reverse;
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1024px) {
   .header .header__body {
     margin-right: auto;
     flex-direction: column;
@@ -415,7 +454,7 @@ select {
 .header .header__burger:hover .header__burger-lines {
   background-color: #7E7D90;
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1024px) {
   .header .header__burger {
     display: flex;
   }
@@ -436,7 +475,7 @@ select {
   margin: 0;
   column-gap: 16px;
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1024px) {
   .header .header__list {
     flex-direction: column;
     row-gap: 24px;
@@ -484,7 +523,7 @@ select {
 .header .header__list-social ul .header__link:hover svg {
   fill: #7E7D90;
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1024px) {
   .header .header__list-social {
     display: flex;
   }
@@ -495,12 +534,12 @@ select {
 .header .header__link:hover {
   color: #605D7C;
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1024px) {
   .header .header__link:hover {
     color: #7E7D90;
   }
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1024px) {
   .header.open {
     background-color: #201E33;
     border-bottom: 2px solid #6990BA;
@@ -703,6 +742,226 @@ select {
     transform: translate(-300px, -250px) rotate(360deg) scale(2.1);
     transition-timing-function: ease-in;
   }
+}
+.navigation {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0;
+  width: 100%;
+}
+
+.navigation__button {
+  display: flex;
+  width: 100%;
+  background-color: #FFFFFF;
+  color: #201E33;
+  min-height: 80px;
+  padding: 0;
+  border-bottom: 1px solid #201E33;
+}
+.navigation__button .navigation__container {
+  width: 90%;
+  max-width: calc(1440px - 10%);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+@media screen and (max-width: 1024px) {
+  .navigation__button .navigation__container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 105px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .navigation__button .navigation__advice {
+    font-size: 18px;
+  }
+}
+.navigation__button:hover {
+  background-color: #2D8BF1;
+  color: #F6F6F7;
+}
+.navigation__button:active {
+  background-color: #0C5FBA;
+  color: #FFFFFF;
+}
+
+.cities {
+  margin: 80px auto;
+}
+.cities .cities__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 80px;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  width: 90%;
+  max-width: calc(1440px - 10%);
+}
+.cities .cities__list .cities__item:nth-of-type(2n+1) .city__info {
+  grid-template-areas: "title       photo" "subtitle    photo" "description photo" "-           photo";
+}
+@media screen and (max-width: 800px) {
+  .cities .cities__list .cities__item:nth-of-type(2n+1) .city__info {
+    grid-template-areas: "title      " "subtitle   " "photo   " "description";
+  }
+}
+.cities .cities__list .cities__item:nth-of-type(2n+1) .city__projects {
+  flex-direction: row-reverse;
+}
+.cities .cities__list .cities__item:nth-of-type(2n) .city__info {
+  grid-template-areas: "photo  title       " "photo  subtitle    " "photo  description " "photo  -           ";
+}
+@media screen and (max-width: 800px) {
+  .cities .cities__list .cities__item:nth-of-type(2n) .city__info {
+    grid-template-areas: "title      " "subtitle   " "photo   " "description";
+  }
+}
+@media screen and (max-width: 800px) {
+  .cities .cities__list {
+    row-gap: 64px;
+  }
+}
+
+.city {
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+  width: 100%;
+}
+@media screen and (max-width: 800px) {
+  .city {
+    row-gap: 16px;
+  }
+}
+.city .city__info {
+  display: grid;
+  grid-template-rows: min-content;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 24px;
+  row-gap: 4px;
+}
+@media screen and (max-width: 800px) {
+  .city .city__info {
+    grid-template-areas: "title      " "subtitle   " "photo   " "description";
+    grid-template-columns: 1fr;
+    row-gap: 8px;
+  }
+}
+.city .city__img {
+  grid-area: photo;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}
+@media screen and (max-width: 800px) {
+  .city .city__img {
+    margin-bottom: 16px;
+  }
+}
+.city .city__title {
+  grid-area: title;
+}
+.city .city__title:hover {
+  color: #605D7C;
+}
+.city .city__title:active {
+  color: #201E33;
+}
+.city .city__subtitle {
+  grid-area: subtitle;
+}
+.city .city__description {
+  grid-area: description;
+}
+@media screen and (max-width: 1024px) {
+  .city .city__description {
+    margin-bottom: 24px;
+  }
+}
+.city .city__projects {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+@media screen and (max-width: 1024px) {
+  .city .city__projects {
+    flex-wrap: wrap;
+  }
+}
+.city .city__project {
+  width: calc(25% - 16px);
+}
+.city .city__project.city__project-long {
+  width: calc(50% - 16px);
+}
+@media screen and (max-width: 550px) {
+  .city .city__project.city__project-long {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .city .city__project {
+    width: calc(50% - 16px);
+  }
+}
+@media screen and (max-width: 550px) {
+  .city .city__project {
+    width: 100%;
+  }
+}
+
+.city__project-long .project {
+  min-height: 160px;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-top: 2px solid #201E33;
+  border-right: 2px solid #201E33;
+  box-sizing: border-box;
+  padding: 16px 16px 0 0;
+  min-height: 310px;
+}
+@media screen and (max-width: 1024px) {
+  .project {
+    min-height: 160px;
+  }
+}
+.project .project__tag {
+  margin-top: auto;
+  color: #A7A6B5;
+  display: flex;
+  justify-content: flex-end;
+  column-gap: 4px;
+}
+@media screen and (max-width: 1024px) {
+  .project .project__tag {
+    text-transform: lowercase;
+  }
+}
+.project .project__tag svg {
+  display: none;
+}
+@media screen and (max-width: 1024px) {
+  .project .project__tag svg {
+    display: block;
+  }
+}
+.project:hover {
+  border-top: 2px solid #DAE856;
+  border-right: 2px solid #DAE856;
+}
+.project:hover .project__title {
+  color: #605D7C;
 }
 
 /*# sourceMappingURL=index.css.map */

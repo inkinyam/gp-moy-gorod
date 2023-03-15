@@ -1,0 +1,53 @@
+.navigation {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0;
+  width: 100%;
+}
+
+.navigation__button {
+  @extend %button;
+  @extend %transition;
+  display: flex;
+  width: 100%;
+  background-color: $light-color-onclick;
+  color: $dark-color-default;
+  min-height: $spacer-xxl;
+  padding: 0;
+  border-bottom: 1px solid $dark-color-default;
+
+  .navigation__container {
+    width: 90%;
+    max-width: calc(1440px - 10%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    @media screen and (max-width: $tablet) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 105px;
+    }
+  }
+
+  .navigation__city {
+    @extend %title-h2;
+  }
+  
+  .navigation__advice {
+    @extend %text-circe-20;
+    @media screen  and (max-width: $tablet){
+      font-size: 18px;
+    }
+  }
+
+  &:hover {
+    background-color: $primary-color-default;
+    color: $light-color-default;
+  }
+  &:active {
+    background-color: $primary-color-onclick;
+    color: $light-color-onclick;
+  }
+}

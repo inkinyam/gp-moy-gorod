@@ -1,0 +1,172 @@
+.cities {
+  margin: $spacer-xxl auto;
+
+  .cities__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: calc($spacer-l*2);
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    width: 90%;
+    max-width: calc(1440px - 10%);
+
+    .cities__item {
+      &:nth-of-type(2n+1){
+        .city__info {
+          grid-template-areas: 
+          'title       photo'
+          'subtitle    photo'
+          'description photo'
+          '-           photo';
+
+          @media screen and (max-width: 800px) {
+            grid-template-areas: 
+                  'title      '
+                  'subtitle   '
+                  'photo   '
+                  'description';
+          }  
+        }
+
+        .city__projects {
+          flex-direction: row-reverse;
+        }
+      }
+
+      &:nth-of-type(2n){
+        .city__info {
+          grid-template-areas: 
+          'photo  title       '
+          'photo  subtitle    '
+          'photo  description '
+          'photo  -           ';
+
+          @media screen and (max-width: 800px) {
+            grid-template-areas: 
+                  'title      '
+                  'subtitle   '
+                  'photo   '
+                  'description';
+          }  
+        }
+      }
+    }
+
+    @media screen and (max-width: 800px) {
+      row-gap: $spacer-xl;
+    }
+  
+  }
+}
+
+
+.city {
+  display: flex;
+  flex-direction: column;
+  row-gap: $spacer-l;
+  width: 100%;
+
+  @media screen and (max-width: 800px) {
+    row-gap: $spacer-xs;
+  }
+
+  .city__info {
+    display: grid;
+    grid-template-rows: min-content;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: $spacer-s;
+    row-gap: calc($spacer-xxs/2);
+    
+    @media screen and (max-width: 800px) {
+      grid-template-areas: 
+            'title      '
+            'subtitle   '
+            'photo   '
+            'description';
+      grid-template-columns:1fr;   
+      row-gap: $spacer-xxs;   
+    }
+
+  }
+
+  .city__img {
+    grid-area: photo;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+
+    @media screen and (max-width: 800px) {
+      margin-bottom: $spacer-xs;
+      
+    }
+  }
+
+
+  .city__title {
+    grid-area: title;
+    @extend %title-h2;
+    
+    a {
+      @extend %silly-link;
+    }
+
+    &:hover {
+      color: $dark-color-hovered;
+    }
+
+    &:active {
+      color: $dark-color-onclick;
+    }
+  }
+
+  .city__subtitle {
+    grid-area: subtitle;
+    @extend %text-lora-description;
+  }
+
+  .city__description {
+    grid-area: description;
+    @extend %text-lora;
+
+    @media screen and (max-width: $tablet) {
+     margin-bottom: $spacer-s;
+    }
+
+  }
+
+  .city__projects {
+    display: flex;
+    gap: $spacer-s;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    @media screen and (max-width: $tablet) {
+      flex-wrap: wrap;
+    }
+  }
+
+  .city__project {
+    width: calc(25% - $spacer-xs);
+
+    &.city__project-long{
+      width: calc(50% - $spacer-xs);
+
+      @media screen and (max-width: $mobile) {
+        width: 100%;
+      }
+    }
+
+    @media screen and (max-width: $tablet) {
+      width: calc(50% - $spacer-xs);
+    }
+
+    @media screen and (max-width: $mobile) {
+      width: 100%;
+    }
+    
+  }
+}
+
