@@ -1,12 +1,18 @@
 /*sass styles/sass:styles/css --watch*/
 
 @import url(../../vendors/fonts.css);
+@import url('https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css');
 
-@import './utils/reset';     // убираем лишнее
-@import './utils/variables'; // переменные
-@import './utils/samples';   // шаблоны для основных стилей
-@import './utils/root';      // стили для .page
 
+@import './utils/reset';              // убираем лишнее
+@import './utils/variables';          // переменные
+@import './utils/samples';            // шаблоны для основных стилей
+@import './utils/root';               // стили для .page
+@import './utils/_fansy-custom.scss'; //настройки fancy-box с основного сайта
+
+@import './blocks/main';
 @import './blocks/header';
+@import './blocks/lead';
+@import './blocks/navigation';
 
 

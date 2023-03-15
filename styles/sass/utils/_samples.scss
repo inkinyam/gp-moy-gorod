@@ -121,5 +121,28 @@
   -moz-transition-function: $transition-time-function;
   -o-transition-function: $transition-time-function;
   transition-timing-function: $transition-time-function;
+}
 
+/*----------------------------------- buttons -----------------------------------*/
+%button {
+  @extend %custom-cursor;
+  @extend %transition;
+  transition-property: color, background-color;
+  text-decoration: none;
+  text-align: center;
+  font-family: 'Circe';
+  font-style: normal;
+  font-weight: 400;
+  border: none;
+  width: auto;
+  min-height: 44px;
+  height: fit-content;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  padding: 10px 24px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

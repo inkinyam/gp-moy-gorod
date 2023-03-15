@@ -1,0 +1,235 @@
+/*настройки карусельки*/
+
+.carousel {
+  color: $dark-color-default;
+  --carousel-button-bg: transparent;
+  --carousel-button-shadow: none;
+  --carousel-button-svg-width: 28px;
+  --carousel-button-svg-height: 28px;
+  --carousel-button-svg-stroke-width: 2.5;
+  width: 100%;
+}
+
+.carousel__button {
+  @extend %custom-cursor;
+  stroke: $light-color-default;
+  transition: all 0.4s ease;
+  color:#fff;
+
+  /*кнопка X*/
+  &.fancybox__button--close {
+    svg {
+      fill: currentColor;
+      stroke-width:  0.2px;
+    }
+
+      &:hover {
+      color: $secondary-color-default;
+    }
+
+      &:active {
+      color: $secondary-color-onclick;
+    } 
+  } 
+
+  /*кнопка открыть галерею для предпросмотра (кубики)*/
+  &.fancybox__button--thumbs {
+    transition: all 0.3s ease;
+    margin: 0  8px 0 0;
+
+      svg {
+      height: 100%;
+      width: 100%;
+    }
+
+      rect{
+      fill: currentColor;
+    }
+
+      &:hover {
+      color: $secondary-color-default;
+    }
+
+      &:active {
+      color: $secondary-color-onclick;
+    }
+  }
+}
+
+.carousel__slide {
+  width: 100%;
+  padding: 0;
+
+  @media screen and (max-width: 800px) {
+    padding: 0 5px;
+  }
+}
+
+.carousel__dots {
+  color: $primary-color-default;
+
+  .carousel__dot {
+    @extend %custom-cursor;
+  }
+}
+
+/*настройки фансибоксов*/
+.fancybox__container {
+  --fancybox-color: #ffffff;
+  --fancybox-bg: rgba(19, 18, 18, 0.9);
+  --fancybox-content-color: #f3f3f3;
+  --fancybox-content-bg: #fff;
+  --fancybox-thumbs-width: 24px;
+  --fancybox-thumbs-ratio: 1;
+  --carousel-button-svg-stroke-width: 1.4;
+  --carousel-button-svg-stroke: $light-color-default;
+  --carousel-button-svg-filter: none;
+  --fancybox-thumbs-border-radius:0;
+  --fancybox-thumbs-width: 60px;
+  --fancybox-thumbs-height: 60px;
+  --fancybox-accent-color: $secondary-color-default;
+}
+
+.fancybox__nav {
+  --carousel-button-bg: transparent;
+  --carousel-button-svg-width: 28px;
+  --carousel-button-svg-height: 28px;
+  --carousel-button-svg-stroke-width: 0;
+
+  /*кастомизируем кнопки*/
+
+  .carousel__button {
+    /*кнопка ->*/
+    &.is-next {
+      right: 2%;
+
+      &:hover {
+        color: $secondary-color-default;
+      }
+
+      &:active {
+        color: $secondary-color-onclick;
+      }
+
+      @media screen and (max-width: 800px) {
+        display: none;
+      }
+    }
+
+    /*кнопка <-*/
+    &.is-prev {
+      right: 2%;
+
+      &:hover {
+        color: $secondary-color-default;
+      }
+
+      &:active {
+        color: $secondary-color-onclick;
+      }
+
+      @media screen and (max-width: 800px) {
+        display: none;
+      }
+    }
+  }
+}
+
+.fancybox__caption {
+  font-family: 'Lora';
+  font-style: italic;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: $light-color-default;
+  text-align: left;
+}
+
+.fancybox__toolbar {
+  /*положение тулбара (крестик, кубики)*/
+  padding: 0;
+
+  .fancybox__toolbar__items {
+    margin-right: 2%;
+    margin-top: 2%;
+  }
+
+  .carousel__button {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+.fancybox__thumbs {
+  /*расположение и кастомизация зоны предпросмотра*/
+  .carousel__slide {
+    margin-bottom: 8px;
+
+    .fancybox__thumb::after {
+      border-width: 3px;
+    }
+  }
+}
+
+
+
+/*СТИЛИЗАЦИЯ ПОД РАЗНЫЕ СТРАНИЦЫ*/
+.lead  {
+  .carousel {
+    --carousel-button-svg-stroke-width: 1;
+  }
+
+  .carousel__button {
+    @extend %transition;
+    transition-property: all;
+    &.is-prev {
+      &:hover {
+        circle{
+          fill: $light-color-hovered;
+          stroke: $light-color-hovered;
+        }
+      }
+  
+      &:active {
+        circle{
+          fill: $light-color-onclick;
+          stroke: $light-color-onclick;
+        }
+      }
+    }
+
+    &.is-next {
+      &:hover {
+        circle{
+          fill: $light-color-hovered;
+          stroke: $light-color-hovered;
+        }
+      }
+  
+      &:active {
+        circle{
+          fill: $light-color-onclick;
+          stroke: $light-color-onclick;
+        }
+      }
+    }
+  }
+
+  .carousel__dots {
+    top: 95%;
+    .carousel__dot {
+      &::after {
+        background-color: $light-color-default;
+        opacity: 0.8;
+      }
+
+      &.is-selected {
+        &::after {
+          background-color: $dark-color-default;
+          opacity: 1;          
+        }
+      }
+    }
+  }
+}
+
