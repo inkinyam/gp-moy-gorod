@@ -66,14 +66,14 @@ select {
 /*----------------------------------- spacers -----------------------------------*/
 /*----------------------------------- transitions -----------------------------------*/
 /*----------------------------------- titles -----------------------------------*/
-.project .project__tag, .project .project__title, .header .header__link, .city .city__title, .navigation__button .navigation__city, .title, .lead__slide .lead__title-wrapper a, .lead__slide .lead__title-wrapper p {
+.footer .footer__block span p, .about .about__card-title, .project .project__tag, .project .project__title, .header .header__link, .navigation__button .navigation__city, .title, .city .city__title, .lead__slide .lead__title-wrapper a, .lead__slide .lead__title-wrapper p {
   font-family: "Circe";
   font-style: normal;
   font-weight: 700;
   text-transform: uppercase;
 }
 
-.lead__slide .lead__title-wrapper a, .lead__slide .lead__title-wrapper p {
+.city .city__title, .lead__slide .lead__title-wrapper a, .lead__slide .lead__title-wrapper p {
   font-size: 72px;
   line-height: 72px;
 }
@@ -83,18 +83,18 @@ select {
   line-height: 52px;
 }
 
-.city .city__title, .navigation__button .navigation__city {
+.navigation__button .navigation__city {
   font-size: 26px;
   line-height: 34px;
 }
 
-.project .project__tag, .project .project__title, .header .header__link {
+.footer .footer__block span p, .about .about__card-title, .project .project__tag, .project .project__title, .header .header__link {
   font-size: 16px;
   line-height: 24px;
 }
 
 /*----------------------------------- circe text -----------------------------------*/
-.lead__slide .lead__button, .navigation__button .navigation__advice {
+.footer .footer__block, .lead__slide .lead__button, .navigation__button .navigation__advice {
   font-family: "Circe";
   font-style: normal;
   font-weight: 400;
@@ -110,8 +110,13 @@ select {
   line-height: 24px;
 }
 
+.footer .footer__block {
+  font-size: 16px;
+  line-height: 24px;
+}
+
 /*----------------------------------- lora text -----------------------------------*/
-.city .city__description, .city .city__subtitle {
+.about .about__card-text, .city .city__description, .city .city__subtitle {
   font-family: "Lora";
   font-style: normal;
   font-weight: 400;
@@ -125,18 +130,18 @@ select {
 }
 
 /*----------------------------------- custom cursor -----------------------------------*/
-.carousel__dots .carousel__dot:hover, .carousel__button:hover, .navigation__button:hover, .lead__slide .lead__button:hover, .project:hover, .city .city__title a:hover, .lead__slide .lead__title-wrapper a:hover, .header .header__link:hover, .header .header__burger:hover, .header .header__logo:hover {
+.carousel__dots .carousel__dot:hover, .carousel__button:hover, .navigation__button:hover, .lead__slide .lead__button:hover, .footer .footer__block a:hover, .project:hover, .city .city__title a:hover, .lead__slide .lead__title-wrapper a:hover, .header .header__link:hover, .header .header__burger:hover, .header .header__logo:hover {
   cursor: url(../../images/Cursor-hand.svg), pointer;
 }
 
 /*----------------------------------- silly-link -----------------------------------*/
-.project, .city .city__title a, .lead__slide .lead__title-wrapper a, .header .header__link, .header .header__burger, .header .header__logo {
+.footer .footer__block a, .project, .city .city__title a, .lead__slide .lead__title-wrapper a, .header .header__link, .header .header__burger, .header .header__logo {
   color: inherit;
   text-decoration: none;
 }
 
 /*----------------------------------- transition -----------------------------------*/
-.project .project__title, .project, .header .header__link, .header .header__list-social ul svg, .header .header__burger-lines, .lead .carousel__button, .navigation__button, .lead__slide .lead__button {
+.footer .footer__block a, .project .project__title, .project, .header .header__link, .header .header__list-social ul svg, .header .header__burger-lines, .lead .carousel__button, .navigation__button, .lead__slide .lead__button {
   -moz-transition-duration: 0.2s;
   -o-transition-duration: 0.2s;
   transition-duration: 0.2s;
@@ -363,6 +368,14 @@ select {
   opacity: 1;
 }
 
+@keyframes bganimation {
+  from {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
 .main {
   margin-top: -40px;
 }
@@ -799,7 +812,7 @@ select {
   padding: 0;
   margin: 0 auto;
   width: 90%;
-  max-width: calc(1440px - 10%);
+  max-width: 1312px;
 }
 .cities .cities__list .cities__item:nth-of-type(2n+1) .city__info {
   grid-template-areas: "title       photo" "subtitle    photo" "description photo" "-           photo";
@@ -962,6 +975,107 @@ select {
 }
 .project:hover .project__title {
   color: #605D7C;
+}
+
+.about {
+  margin: 0 auto 80px;
+  box-sizing: border-box;
+  position: relative;
+}
+.about .about__list {
+  z-index: 2;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 24px;
+  row-gap: 40px;
+  width: 90%;
+  max-width: 1312px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+@media screen and (max-width: 550px) {
+  .about .about__list {
+    grid-template-columns: 1fr;
+  }
+}
+.about .about__card {
+  width: 100%;
+  padding: 24px 24px 0 0;
+  border-top: 2px solid #201E33;
+  border-right: 2px solid #201E33;
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  min-height: 223px;
+}
+@media screen and (max-width: 550px) {
+  .about .about__card {
+    padding: 16px 16px 0 0;
+  }
+}
+.about .about__layout {
+  z-index: 1;
+  position: absolute;
+  overflow: hidden;
+  bottom: -80px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(0% 100%, 0 80%, 21% 38%, 49% 55%, 52% 45%, 84% 45%, 90% 57%, 97% 59%, 100% 100%);
+}
+.about .about__bg {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  right: 0;
+  width: 2000px;
+  height: 2000px;
+  background: conic-gradient(from 225deg at 50% 50%, #BFF800 0deg, #E6E6E6 360deg);
+  animation: bganimation 60s linear infinite forwards;
+}
+
+.footer {
+  background-color: #201E33;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 24px 5% 50px;
+  display: flex;
+  flex-direction: row;
+}
+.footer .footer__logo {
+  width: 76px;
+  height: 76px;
+  object-fit: cover;
+  object-position: center;
+}
+.footer .footer__container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-right: 76px;
+  justify-content: center;
+  row-gap: 8px;
+}
+.footer .footer__block {
+  color: #F6F6F7;
+  display: flex;
+  flex-direction: row;
+  column-gap: 16px;
+}
+.footer .footer__block span {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 8px;
+}
+.footer .footer__block a:hover {
+  color: #A7A6B5;
+}
+.footer .footer__block a:active {
+  color: #FFFFFF;
 }
 
 /*# sourceMappingURL=index.css.map */
