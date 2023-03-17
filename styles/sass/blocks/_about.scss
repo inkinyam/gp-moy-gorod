@@ -55,6 +55,12 @@
     height: 100%;
     clip-path: polygon(0% 100%, 0 80%, 21% 38%, 49% 55%, 52% 45%, 84% 45%, 90% 57%, 97% 59%, 100% 100%);
   
+    @media screen and (max-width: $mobile) {
+      clip-path: polygon(0% 42%, 19% 0%, 78% 11%, 100% 0%, 100% 100%, 56% 100%, 16% 95%, 0% 100%);
+      height: 70%;
+    }
+   
+
   }
   
   .about__bg {

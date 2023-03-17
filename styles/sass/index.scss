@@ -11,14 +11,19 @@
 @import './utils/_fansy-custom.scss';   // настройки fancy-box с основного сайта
 @import './utils/_animation.scss';      // анимации
 
-@import './blocks/main';
-@import './blocks/title';
 @import './blocks/header';
+@import './blocks/main';
+@import './blocks/footer';
+@import './blocks/breadcrumb';
+
+@import './blocks/title';
 @import './blocks/lead';
 @import './blocks/navigation';
 @import './blocks/cities';
 @import './blocks/project';
 @import './blocks/about';
-@import './blocks/footer';
-
+@import './blocks/cover';
+@import './blocks/article';
+@import './blocks/map';
+@import './blocks/ideas';
 

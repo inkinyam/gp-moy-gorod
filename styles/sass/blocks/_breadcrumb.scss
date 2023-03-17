@@ -1,0 +1,94 @@
+.breadcrumb {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  width: 100%; 
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  
+  @media screen and (max-width: $tablet) {
+    padding: 0 0 8px;
+  }
+  
+  @media screen and (max-width: $mobile) {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+}
+
+
+
+.breadcrumb__item {
+  @extend %text-circe-16;
+  margin: 0 0 0 20px;
+   position: relative;
+  flex-shrink: 0;
+  min-width: max-content;
+  max-width: 100%;
+
+  a {
+    @extend %silly-link;
+    &:hover {
+      color: $middle-dark-color-default;
+    }
+    &:active {
+      color: $light-color-onclick;
+    }
+    @media screen and (max-width: $mobile) {
+      font-size: 14px;     
+    }
+  }
+
+  span {
+    @media screen and (max-width: $mobile) {
+      font-size: 14px;     
+    }
+  }
+
+  &::after {
+    position: absolute;
+    top: 0;
+    right: -12px;
+    content: '/';
+  }
+
+  &:first-of-type {
+    margin: 0;
+    padding: 0;
+  }
+  
+  &:last-of-type {
+  min-width: 0;
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+    &::after { 
+      content: '';
+    }
+
+    @media screen and (max-width: $tablet) {
+      max-width: 170px;
+    }
+
+    @media screen and (max-width: $mobile){
+      display: none;
+    }
+  }
+
+  &:nth-last-of-type(2)::after{
+    @media screen and (max-width: $mobile){
+      display: none;
+    }
+  }
+
+  &:nth-of-type(4) {
+    @media screen and (max-width: $mobile) {
+      margin: 0;      
+    }
+  }
+}
