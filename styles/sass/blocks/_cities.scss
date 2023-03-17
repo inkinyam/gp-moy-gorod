@@ -4,7 +4,7 @@
   .cities__list {
     display: flex;
     flex-direction: column;
-    row-gap: calc($spacer-l*2);
+    row-gap: $spacer-l * 2;
     list-style: none;
     padding: 0;
     margin: 0 auto;
@@ -76,7 +76,7 @@
     grid-template-rows: min-content;
     grid-template-columns: repeat(2, 1fr);
     column-gap: $spacer-s;
-    row-gap: calc($spacer-xxs/2);
+    row-gap: $spacer-xxs / 2;
     
     @media screen and (max-width: 800px) {
       grid-template-areas: 
@@ -149,18 +149,18 @@
   }
 
   .city__project {
-    width: calc(25% - $spacer-xs);
+    width: calc(25% - 16px);
 
     &.city__project-long{
-      width: calc(50% - $spacer-xs);
+      width: calc(50% - 16px);
 
       @media screen and (max-width: $mobile) {
-        width: 100%;
+        width: 100% ;
       }
     }
 
     @media screen and (max-width: $tablet) {
-      width: calc(50% - $spacer-xs);
+      width: calc(50% - 16px);
     }
 
     @media screen and (max-width: $mobile) {

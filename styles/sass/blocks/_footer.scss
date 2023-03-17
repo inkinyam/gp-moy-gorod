@@ -1,53 +1,74 @@
 .footer {
   background-color: $dark-color-default;
+  color: $light-color-default;
 
   width: 100%;
   box-sizing: border-box;
   padding: 24px 5% 50px;
+  row-gap: $spacer-xxs;
 
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 76px 1fr 76px;
+  grid-template-areas: 
+              'logo  emailblock '
+              'logo  copyright '
+              'logo  links ';
+
+  @media screen and (max-width: $tablet) {
+    grid-template-columns: 76px 1fr;
+    row-gap: $spacer-s;
+    grid-template-areas: 
+              'logo  copyright '
+              'emailblock  emailblock'
+              'links  links';
+  }
 
   .footer__logo {
     width: 76px;
     height: 76px;
     object-fit: cover;
     object-position: center;
+    grid-area: logo;
   }
 
-  .footer__container {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-right: 76px;
-    justify-content: center;
-    row-gap: 8px;
-    
-  }
+  .footer__emails {
+    padding-top: 26px;
+    grid-area: emailblock;
 
-  .footer__block {
-    color: $light-color-default;
     display: flex;
     flex-direction: row;
     column-gap: $spacer-xs;
-    @extend %text-circe-16;
+    justify-content: center;
+    flex-wrap: wrap;
 
-    span {
+    @media screen and (max-width: $tablet) {
+      flex-direction: column;
+      row-gap: $spacer-s;
+      justify-content: flex-start;
+      padding-top: 0;
+    }
+
+    div {
       display: flex;
       flex-direction: row;
-      align-items: center;
       column-gap: $spacer-xxs;
-    
-      p {
-        @extend %title-h4;
+
+      @media screen and (max-width: $tablet) {
+        flex-direction: column;
+        row-gap: 0;
+        justify-content: flex-start;
       }
+    }
+
+    p {
+      @extend %title-h4;
     }
 
     a {
       @extend %silly-link;
+      @extend %text-circe-16;
       @extend %transition;
-
+      transition-property: color;
       &:hover {
         color: $middle-dark-color-default;
       }
@@ -55,6 +76,52 @@
         color: $light-color-onclick;
       }
     }
-   
   }
+
+  .footer__copyright {
+    grid-area: copyright;
+    @extend %text-circe-16;
+    text-align: center;
+
+    @media screen and (max-width: $tablet) {
+      text-align: start;
+      padding-left: $spacer-xs;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .footer__links {
+    grid-area: links;
+    display: flex;
+    flex-direction: row;
+    column-gap: $spacer-xs;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    a {
+      @extend %silly-link;
+      @extend %text-circe-16;
+      @extend %transition;
+      transition-property: color;
+      text-align: center;
+      &:hover {
+        color: $middle-dark-color-default;
+      }
+      &:active {
+        color: $light-color-onclick;
+      }
+
+      @media screen and (max-width: $tablet) {
+        text-align: start;
+      }
+    }
+
+    @media screen and (max-width: $tablet) {
+      flex-direction: column;
+      row-gap: $spacer-xxs;
+      justify-content: flex-start;
+    }
+  }
+
 }

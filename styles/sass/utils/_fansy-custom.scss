@@ -197,6 +197,9 @@
           stroke: $light-color-onclick;
         }
       }
+      @media screen and (max-width: 800px) {
+        display: none;
+      }
     }
 
     &.is-next {
@@ -213,6 +216,9 @@
           stroke: $light-color-onclick;
         }
       }
+    }
+    @media screen and (max-width: 800px) {
+      display: none;
     }
   }
 
@@ -232,5 +238,7 @@
       }
     }
   }
+
+
 }
 

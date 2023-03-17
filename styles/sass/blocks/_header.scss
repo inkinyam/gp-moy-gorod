@@ -68,7 +68,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    row-gap:  calc($spacer-base / 2);
+    row-gap:  $spacer-base / 2;
     width: 32px;
     height: 32px;
     padding: 0;
