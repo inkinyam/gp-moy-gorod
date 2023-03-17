@@ -1,0 +1,134 @@
+
+.publications {
+  max-width: 1312px;
+  width: 90%;
+  margin: 0 auto 80px;
+
+  display: flex;
+  flex-direction: column;
+
+  .publications__title {
+    @extend %title-h2;
+    margin-bottom: $spacer-m;
+  }
+
+  .publications__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    column-gap: $spacer-m;
+
+    @media screen and (max-width: $tablet) {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: $spacer-xl;
+    }
+
+    @media screen and (max-width: $mobile) {
+      grid-template-columns: 1fr;
+    }
+  }
+} 
+
+.publication {
+  width: 100%;
+
+  &:hover {
+    .publication__img {
+      img {
+        transform: scale(1.02);
+      }
+    }
+  }
+
+  .publication__info {
+    grid-area: info;
+    display: flex;
+    flex-direction: row;
+    color: var(--blue-default);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 0 8px 0;
+    max-height: 24px;
+    min-height: 24px;
+    align-self: flex-end;
+    width: 100%;
+    font-family: 'Circe';
+  
+    * {
+      flex-shrink: 0;
+    }
+  }
+  
+  .publication__type {
+    @extend %silly-link;
+    @extend %text-circe-20;
+    @extend %transition;
+  
+    max-width: 70%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    color: $primary-color-default;
+    &:hover {
+      color: $primary-color-hovered;
+    }
+    &:active {
+      color: $primary-color-onclick;
+    }
+  }
+  
+  .publication__filler {
+    flex-shrink: 1;
+    border-bottom: 1px solid $primary-color-default;
+    margin: 0 8px;
+    width: 100%;
+  }
+  
+  .publication__date {
+    @extend %text-circe-20;
+    margin: 0;
+    color: $primary-color-default;
+  }
+  
+  .publication__img {
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    display: flex;
+    margin-bottom: 24px;
+  
+    img {
+      @extend %transition;
+      object-fit: cover;
+      width: 100%;
+      transition: all .5s ease-in-out;
+    }
+  }
+    
+  .publication__title {
+    @extend %title-h2;
+  
+    a {
+      @extend %silly-link;
+      @extend %transition;
+  
+      &:hover {
+        color: $dark-color-hovered;
+      }
+  
+      &:active {
+        color: $dark-color-onclick;
+      }
+    }
+  }
+  
+  .publication__text {
+    @extend %text-lora;
+  }
+}
+

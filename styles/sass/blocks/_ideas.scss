@@ -17,11 +17,11 @@
     list-style: none;
     padding: 0;
     margin: 0;
-    column-gap: $spacer-xs;
+    column-gap: $spacer-m;
 
     @media screen and (max-width: $tablet) {
       grid-template-columns: repeat(2, 1fr);
-      row-gap: $spacer-s;
+      row-gap: $spacer-xl;
     }
 
     @media screen and (max-width: $mobile) {

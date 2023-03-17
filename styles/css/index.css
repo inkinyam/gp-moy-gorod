@@ -59,7 +59,7 @@ select {
 /*----------------------------------- spacers -----------------------------------*/
 /*----------------------------------- transitions -----------------------------------*/
 /*----------------------------------- titles -----------------------------------*/
-.lead__slide .lead__title-wrapper p, .lead__slide .lead__title-wrapper a, .city .city__title, .title, .navigation__button .navigation__city, .article .article__title, .map .map__title, .ideas .ideas__title, .header .header__link, .footer .footer__emails p, .project .project__title, .project .project__tag, .about .about__card-title, .ideas .ideas__cardtitle, .cover .cover__title {
+.lead__slide .lead__title-wrapper p, .lead__slide .lead__title-wrapper a, .city .city__title, .title, .navigation__button .navigation__city, .article .article__title, .map .map__title, .ideas .ideas__title, .publications .publications__title, .publication .publication__title, .header .header__link, .footer .footer__emails p, .project .project__title, .project .project__tag, .about .about__card-title, .ideas .ideas__cardtitle, .cover .cover__title {
   font-family: 'Circe';
   font-style: normal;
   font-weight: 700;
@@ -81,11 +81,11 @@ select {
       font-size: 26px;
       line-height: 34px; } }
 
-.navigation__button .navigation__city, .article .article__title, .map .map__title, .ideas .ideas__title {
+.navigation__button .navigation__city, .article .article__title, .map .map__title, .ideas .ideas__title, .publications .publications__title, .publication .publication__title {
   font-size: 26px;
   line-height: 34px; }
   @media screen and (max-width: 1024px) {
-    .navigation__button .navigation__city, .article .article__title, .map .map__title, .ideas .ideas__title {
+    .navigation__button .navigation__city, .article .article__title, .map .map__title, .ideas .ideas__title, .publications .publications__title, .publication .publication__title {
       font-size: 22px;
       line-height: 24px; } }
 
@@ -102,12 +102,12 @@ select {
       line-height: 34px; } }
 
 /*----------------------------------- circe text -----------------------------------*/
-.navigation__button .navigation__advice, .lead__slide .lead__button, .ideas .ideas__showmore, .footer .footer__emails a, .footer .footer__copyright, .footer .footer__links a, .breadcrumb__item, .ideas .ideas__tag, .ideas .ideas__description, .ideas .ideas__author, .ideas .ideas__like-counter {
+.navigation__button .navigation__advice, .publication .publication__type, .publication .publication__date, .lead__slide .lead__button, .ideas .ideas__showmore, .footer .footer__emails a, .footer .footer__copyright, .footer .footer__links a, .breadcrumb__item, .ideas .ideas__tag, .ideas .ideas__description, .ideas .ideas__author, .ideas .ideas__like-counter {
   font-family: 'Circe';
   font-style: normal;
   font-weight: 400; }
 
-.navigation__button .navigation__advice {
+.navigation__button .navigation__advice, .publication .publication__type, .publication .publication__date {
   font-size: 20px;
   line-height: 24px; }
 
@@ -120,7 +120,7 @@ select {
   line-height: 24px; }
 
 /*----------------------------------- lora text -----------------------------------*/
-.city .city__subtitle, .city .city__description, .about .about__card-text, .cover .cover__subtitle, .article .article__text p {
+.city .city__subtitle, .city .city__description, .about .about__card-text, .cover .cover__subtitle, .article .article__text p, .publication .publication__text {
   font-family: 'Lora';
   font-style: normal;
   font-weight: 400;
@@ -132,16 +132,16 @@ select {
   color: #A7A6B5; }
 
 /*----------------------------------- custom cursor -----------------------------------*/
-.header .header__logo:hover, .header .header__burger:hover, .header .header__link:hover, .footer .footer__emails a:hover, .footer .footer__links a:hover, .breadcrumb__item a:hover, .lead__slide .lead__title-wrapper a:hover, .city .city__title a:hover, .project:hover, .ideas .ideas__cardtitle a:hover, .lead__slide .lead__button:hover, .navigation__button:hover, .ideas .ideas__like:hover, .ideas .ideas__showmore:hover, .carousel__button:hover, .carousel__dots .carousel__dot:hover {
+.header .header__logo:hover, .header .header__burger:hover, .header .header__link:hover, .footer .footer__emails a:hover, .footer .footer__links a:hover, .breadcrumb__item a:hover, .lead__slide .lead__title-wrapper a:hover, .city .city__title a:hover, .project:hover, .ideas .ideas__cardtitle a:hover, .publication .publication__type:hover, .publication .publication__title a:hover, .lead__slide .lead__button:hover, .navigation__button:hover, .ideas .ideas__like:hover, .ideas .ideas__showmore:hover, .carousel__button:hover, .carousel__dots .carousel__dot:hover {
   cursor: url(../../images/Cursor-hand.svg), pointer; }
 
 /*----------------------------------- silly-link -----------------------------------*/
-.header .header__logo, .header .header__burger, .header .header__link, .footer .footer__emails a, .footer .footer__links a, .breadcrumb__item a, .lead__slide .lead__title-wrapper a, .city .city__title a, .project, .ideas .ideas__cardtitle a {
+.header .header__logo, .header .header__burger, .header .header__link, .footer .footer__emails a, .footer .footer__links a, .breadcrumb__item a, .lead__slide .lead__title-wrapper a, .city .city__title a, .project, .ideas .ideas__cardtitle a, .publication .publication__type, .publication .publication__title a {
   color: inherit;
   text-decoration: none; }
 
 /*----------------------------------- transition -----------------------------------*/
-.lead__slide .lead__button, .navigation__button, .ideas .ideas__like, .ideas .ideas__showmore, .lead .carousel__button, .header .header__burger-lines, .header .header__list-social ul svg, .header .header__link, .footer .footer__emails a, .footer .footer__links a, .project, .project .project__title, .ideas .ideas__cardtitle a, .ideas .ideas__like svg {
+.lead__slide .lead__button, .navigation__button, .ideas .ideas__like, .ideas .ideas__showmore, .lead .carousel__button, .header .header__burger-lines, .header .header__list-social ul svg, .header .header__link, .footer .footer__emails a, .footer .footer__links a, .project, .project .project__title, .ideas .ideas__cardtitle a, .ideas .ideas__like svg, .publication .publication__type, .publication .publication__img img, .publication .publication__title a {
   -moz-transition-duration: 0.2s;
   -o-transition-duration: 0.2s;
   transition-duration: 0.2s;
@@ -1083,11 +1083,11 @@ select {
     list-style: none;
     padding: 0;
     margin: 0;
-    column-gap: 16px; }
+    column-gap: 32px; }
     @media screen and (max-width: 1024px) {
       .ideas .ideas__list {
         grid-template-columns: repeat(2, 1fr);
-        row-gap: 24px; } }
+        row-gap: 64px; } }
     @media screen and (max-width: 550px) {
       .ideas .ideas__list {
         grid-template-columns: 1fr; } }
@@ -1151,5 +1151,83 @@ select {
     .ideas .ideas__showmore:active {
       background-color: #0C5FBA;
       color: #FFFFFF; }
+
+.publications {
+  max-width: 1312px;
+  width: 90%;
+  margin: 0 auto 80px;
+  display: flex;
+  flex-direction: column; }
+  .publications .publications__title {
+    margin-bottom: 32px; }
+  .publications .publications__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    column-gap: 32px; }
+    @media screen and (max-width: 1024px) {
+      .publications .publications__list {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 64px; } }
+    @media screen and (max-width: 550px) {
+      .publications .publications__list {
+        grid-template-columns: 1fr; } }
+
+.publication {
+  width: 100%; }
+  .publication:hover .publication__img img {
+    transform: scale(1.02); }
+  .publication .publication__info {
+    grid-area: info;
+    display: flex;
+    flex-direction: row;
+    color: var(--blue-default);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 0 8px 0;
+    max-height: 24px;
+    min-height: 24px;
+    align-self: flex-end;
+    width: 100%;
+    font-family: 'Circe'; }
+    .publication .publication__info * {
+      flex-shrink: 0; }
+  .publication .publication__type {
+    max-width: 70%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #2D8BF1; }
+    .publication .publication__type:hover {
+      color: #106CD1; }
+    .publication .publication__type:active {
+      color: #0C5FBA; }
+  .publication .publication__filler {
+    flex-shrink: 1;
+    border-bottom: 1px solid #2D8BF1;
+    margin: 0 8px;
+    width: 100%; }
+  .publication .publication__date {
+    margin: 0;
+    color: #2D8BF1; }
+  .publication .publication__img {
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    display: flex;
+    margin-bottom: 24px; }
+    .publication .publication__img img {
+      object-fit: cover;
+      width: 100%;
+      transition: all .5s ease-in-out; }
+  .publication .publication__title a:hover {
+    color: #605D7C; }
+  .publication .publication__title a:active {
+    color: #201E33; }
 
 /*# sourceMappingURL=index.css.map */
