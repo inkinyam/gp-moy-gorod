@@ -43,6 +43,12 @@ select {
   font: inherit;
 }
 
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -1653,9 +1659,22 @@ select {
   align-items: center;
   margin-top: 40px;
 }
+@media screen and (max-width: 1024px) {
+  .idea .idea__buttons {
+    flex-direction: column;
+    row-gap: 16px;
+    justify-content: center;
+    align-items: center;
+  }
+}
 .idea .idea__button {
   background-color: #2D8BF1;
   color: #F6F6F7;
+}
+@media screen and (max-width: 1024px) {
+  .idea .idea__button {
+    width: 100%;
+  }
 }
 .idea .idea__button svg {
   margin: 0 4px;

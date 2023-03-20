@@ -60,6 +60,13 @@
     justify-content: space-between;
     align-items: center;
     margin-top: $spacer-l;
+
+    @media screen and (max-width: $tablet) {
+      flex-direction: column;
+      row-gap: $spacer-xs;
+      justify-content: center;
+      align-items: center;
+    }
   }
 
   .idea__button {
@@ -67,6 +74,10 @@
     @extend %text-circe-18;
     background-color: $primary-color-default;
     color:$light-color-default;
+
+    @media screen and (max-width: $tablet) {
+      width: 100%;
+    }
 
     svg {
       margin: 0 4px;
