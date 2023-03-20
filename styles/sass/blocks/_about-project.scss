@@ -5,7 +5,9 @@
 
   .about-project__title {
     @extend %title-h2;
-    margin-bottom: $spacer-m;
+    max-width: 644px;
+    width: 100%;
+    margin: 0 auto $spacer-m;
   }
 
   .about-project__list {

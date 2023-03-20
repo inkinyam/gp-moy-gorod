@@ -1,16 +1,16 @@
-.catalog {
+.classificator {
   display: flex;
   flex-direction: column;
   max-width: calc(1440px - 10%);
   width: 90%;
   margin: 0 auto 80px;
 
-  .catalog__title {
+  .classificator__title {
     @extend %title-h2;
     margin-bottom: $spacer-m;
   }
 
-  .catalog__list {
+  .classificator__list {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -22,7 +22,7 @@
     justify-content: center;
   }
 
-  .catalog__item {
+  .classificator__item {
     flex-shrink: 0;
     
     a {

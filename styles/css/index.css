@@ -72,7 +72,7 @@ ul {
 /*----------------------------------- spacers -----------------------------------*/
 /*----------------------------------- transitions -----------------------------------*/
 /*----------------------------------- titles -----------------------------------*/
-.cover .cover__title, .about-project .about-project__item-title, .ideas .ideas__cardtitle, .about .about__card-title, .project .project__tag, .project .project__title, .footer .footer__emails p, .header .header__link, .idea .idea__cardtitle, .catalog .catalog__title, .titleblock .title, .about-project .about-project__title, .publication .publication__title, .publications .publications__title, .ideas .ideas__title, .map .map__title, .article .article__title, .navigation__button .navigation__city, .title, .city .city__title, .lead__slide .lead__title-wrapper a, .lead__slide .lead__title-wrapper p {
+.cover .cover__title, .about-project .about-project__item-title, .ideas .ideas__cardtitle, .about .about__card-title, .project .project__tag, .project .project__title, .footer .footer__emails p, .header .header__link, .idea .idea__cardtitle, .classificator .classificator__title, .titleblock .title, .about-project .about-project__title, .publication .publication__title, .publications .publications__title, .ideas .ideas__title, .map .map__title, .article .article__title, .lead-buttons__button .lead-buttons__city, .title, .city .city__title, .lead__slide .lead__title-wrapper a, .lead__slide .lead__title-wrapper p {
   font-family: "Circe";
   font-style: normal;
   font-weight: 700;
@@ -101,12 +101,12 @@ ul {
   }
 }
 
-.catalog .catalog__title, .titleblock .title, .about-project .about-project__title, .publication .publication__title, .publications .publications__title, .ideas .ideas__title, .map .map__title, .article .article__title, .navigation__button .navigation__city {
+.classificator .classificator__title, .titleblock .title, .about-project .about-project__title, .publication .publication__title, .publications .publications__title, .ideas .ideas__title, .map .map__title, .article .article__title, .lead-buttons__button .lead-buttons__city {
   font-size: 26px;
   line-height: 34px;
 }
 @media screen and (max-width: 1024px) {
-  .catalog .catalog__title, .titleblock .title, .about-project .about-project__title, .publication .publication__title, .publications .publications__title, .ideas .ideas__title, .map .map__title, .article .article__title, .navigation__button .navigation__city {
+  .classificator .classificator__title, .titleblock .title, .about-project .about-project__title, .publication .publication__title, .publications .publications__title, .ideas .ideas__title, .map .map__title, .article .article__title, .lead-buttons__button .lead-buttons__city {
     font-size: 22px;
     line-height: 24px;
   }
@@ -134,18 +134,18 @@ ul {
 }
 
 /*----------------------------------- circe text -----------------------------------*/
-.idea .idea__like-box .idea__like-counter, .idea .idea__author, .idea .idea__description, .idea .idea__tag, .ideas .ideas__like-counter, .ideas .ideas__author, .ideas .ideas__description, .ideas .ideas__tag, .breadcrumb__item, .footer .footer__links a, .footer .footer__copyright, .footer .footer__emails a, .catalog .catalog__item a, .idea .idea__button, .ideas .ideas__showmore, .lead__slide .lead__button, .publication .publication__date, .publication .publication__type, .navigation__button .navigation__advice {
+.idea .idea__like-box .idea__like-counter, .idea .idea__author, .idea .idea__description, .idea .idea__tag, .ideas .ideas__like-counter, .ideas .ideas__author, .ideas .ideas__description, .ideas .ideas__tag, .breadcrumb__item, .footer .footer__links a, .footer .footer__copyright, .footer .footer__emails a, .classificator .classificator__item a, .idea .idea__button, .ideas .ideas__showmore, .lead__slide .lead__button, .publication .publication__date, .publication .publication__type, .lead-buttons__button .lead-buttons__advice {
   font-family: "Circe";
   font-style: normal;
   font-weight: 400;
 }
 
-.publication .publication__date, .publication .publication__type, .navigation__button .navigation__advice {
+.publication .publication__date, .publication .publication__type, .lead-buttons__button .lead-buttons__advice {
   font-size: 20px;
   line-height: 24px;
 }
 
-.catalog .catalog__item a, .idea .idea__button, .ideas .ideas__showmore, .lead__slide .lead__button {
+.classificator .classificator__item a, .idea .idea__button, .ideas .ideas__showmore, .lead__slide .lead__button {
   font-size: 18px;
   line-height: 24px;
 }
@@ -170,18 +170,18 @@ ul {
 }
 
 /*----------------------------------- custom cursor -----------------------------------*/
-.carousel__dots .carousel__dot:hover, .carousel__button:hover, .idea .idea__like-box .idea__like:hover, .idea .idea__button:hover, .ideas .ideas__showmore:hover, .ideas .ideas__like:hover, .navigation__button:hover, .lead__slide .lead__button:hover, .catalog .catalog__item a:hover, .idea .idea__cardtitle a:hover, .publication .publication__title a:hover, .publication .publication__img:hover, .publication .publication__type:hover, .ideas .ideas__cardtitle a:hover, .project:hover, .city .city__title a:hover, .lead__slide .lead__title-wrapper a:hover, .breadcrumb__item a:hover, .footer .footer__links a:hover, .footer .footer__emails a:hover, .header .header__link:hover, .header .header__burger:hover, .header .header__logo:hover {
+.carousel__dots .carousel__dot:hover, .carousel__button:hover, .idea .idea__like-box .idea__like:hover, .idea .idea__button:hover, .ideas .ideas__showmore:hover, .ideas .ideas__like:hover, .lead-buttons__button:hover, .lead__slide .lead__button:hover, .classificator .classificator__item a:hover, .idea .idea__cardtitle a:hover, .idea .idea__tag a:hover, .publication .publication__title a:hover, .publication .publication__img:hover, .publication .publication__type:hover, .ideas .ideas__cardtitle a:hover, .ideas .ideas__tag a:hover, .project:hover, .city .city__title a:hover, .lead__slide .lead__title-wrapper a:hover, .breadcrumb__item a:hover, .footer .footer__links a:hover, .footer .footer__emails a:hover, .header .header__link:hover, .header .header__burger:hover, .header .header__logo:hover {
   cursor: url(../../images/Cursor-hand.svg), pointer;
 }
 
 /*----------------------------------- silly-link -----------------------------------*/
-.catalog .catalog__item a, .idea .idea__cardtitle a, .publication .publication__title a, .publication .publication__img, .publication .publication__type, .ideas .ideas__cardtitle a, .project, .city .city__title a, .lead__slide .lead__title-wrapper a, .breadcrumb__item a, .footer .footer__links a, .footer .footer__emails a, .header .header__link, .header .header__burger, .header .header__logo {
+.classificator .classificator__item a, .idea .idea__cardtitle a, .idea .idea__tag a, .publication .publication__title a, .publication .publication__img, .publication .publication__type, .ideas .ideas__cardtitle a, .ideas .ideas__tag a, .project, .city .city__title a, .lead__slide .lead__title-wrapper a, .breadcrumb__item a, .footer .footer__links a, .footer .footer__emails a, .header .header__link, .header .header__burger, .header .header__logo {
   color: inherit;
   text-decoration: none;
 }
 
 /*----------------------------------- transition -----------------------------------*/
-.idea .idea__like-box .idea__like svg, .idea .idea__cardtitle a, .publication .publication__title a, .publication .publication__img img, .publication .publication__type, .ideas .ideas__like svg, .ideas .ideas__cardtitle a, .project .project__title, .project, .footer .footer__links a, .footer .footer__emails a, .header .header__link, .header .header__list-social ul svg, .header .header__burger-lines, .lead .carousel__button, .idea .idea__like-box .idea__like, .idea .idea__button, .ideas .ideas__showmore, .ideas .ideas__like, .navigation__button, .lead__slide .lead__button {
+.idea .idea__like-box .idea__like svg, .idea .idea__cardtitle a, .idea .idea__tag a, .publication .publication__title a, .publication .publication__img img, .publication .publication__type, .ideas .ideas__like svg, .ideas .ideas__cardtitle a, .ideas .ideas__tag a, .project .project__title, .project, .footer .footer__links a, .footer .footer__emails a, .header .header__link, .header .header__list-social ul svg, .header .header__burger-lines, .lead .carousel__button, .idea .idea__like-box .idea__like, .idea .idea__button, .ideas .ideas__showmore, .ideas .ideas__like, .lead-buttons__button, .lead__slide .lead__button {
   -moz-transition-duration: 0.2s;
   -o-transition-duration: 0.2s;
   transition-duration: 0.2s;
@@ -191,7 +191,7 @@ ul {
 }
 
 /*----------------------------------- buttons -----------------------------------*/
-.idea .idea__like-box .idea__like, .idea .idea__button, .ideas .ideas__showmore, .ideas .ideas__like, .navigation__button, .lead__slide .lead__button {
+.idea .idea__like-box .idea__like, .idea .idea__button, .ideas .ideas__showmore, .ideas .ideas__like, .lead-buttons__button, .lead__slide .lead__button {
   transition-property: color, background-color;
   text-decoration: none;
   text-align: center;
@@ -1004,14 +1004,14 @@ ul {
     transition-timing-function: ease-in;
   }
 }
-.navigation {
+.lead-buttons {
   display: flex;
   flex-direction: column;
   row-gap: 0;
   width: 100%;
 }
 
-.navigation__button {
+.lead-buttons__button {
   display: flex;
   width: 100%;
   background-color: #FFFFFF;
@@ -1020,7 +1020,7 @@ ul {
   padding: 0;
   border-bottom: 1px solid #201E33;
 }
-.navigation__button .navigation__container {
+.lead-buttons__button .lead-buttons__container {
   width: 90%;
   max-width: calc(1440px - 10%);
   display: flex;
@@ -1028,26 +1028,26 @@ ul {
   justify-content: space-between;
 }
 @media screen and (max-width: 1024px) {
-  .navigation__button .navigation__container {
+  .lead-buttons__button .lead-buttons__container {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     min-height: 105px;
   }
 }
-.navigation__button .navigation__advice {
+.lead-buttons__button .lead-buttons__advice {
   line-height: 34px;
 }
 @media screen and (max-width: 1024px) {
-  .navigation__button .navigation__advice {
+  .lead-buttons__button .lead-buttons__advice {
     font-size: 18px;
   }
 }
-.navigation__button:hover {
+.lead-buttons__button:hover {
   background-color: #2D8BF1;
   color: #F6F6F7;
 }
-.navigation__button:active {
+.lead-buttons__button:active {
   background-color: #0C5FBA;
   color: #FFFFFF;
 }
@@ -1429,6 +1429,12 @@ ul {
 .ideas .ideas__tag {
   color: #A7A6B5;
 }
+.ideas .ideas__tag a:hover {
+  color: #7E7D90;
+}
+.ideas .ideas__tag a:active {
+  color: #5A596E;
+}
 .ideas .ideas__cardtitle {
   margin-bottom: 4px;
 }
@@ -1594,7 +1600,9 @@ ul {
   margin: 0 auto 80px;
 }
 .about-project .about-project__title {
-  margin-bottom: 32px;
+  max-width: 644px;
+  width: 100%;
+  margin: 0 auto 32px;
 }
 .about-project .about-project__list {
   display: flex;
@@ -1641,6 +1649,12 @@ ul {
 }
 .idea .idea__tag {
   color: #A7A6B5;
+}
+.idea .idea__tag a:hover {
+  color: #7E7D90;
+}
+.idea .idea__tag a:active {
+  color: #5A596E;
 }
 .idea .idea__cardtitle {
   margin: 8px 0 16px;
@@ -1721,7 +1735,7 @@ ul {
   display: block;
 }
 .idea .idea__like-box .idea__like svg {
-  stroke: #A7A6B5;
+  stroke: #605D7C;
   fill: none;
 }
 .idea .idea__like-box .idea__like:hover svg {
@@ -1737,20 +1751,20 @@ ul {
 }
 .idea .idea__like-box .idea__like-counter {
   line-height: 18px;
-  color: #A7A6B5;
+  color: #605D7C;
 }
 
-.catalog {
+.classificator {
   display: flex;
   flex-direction: column;
   max-width: calc(1440px - 10%);
   width: 90%;
   margin: 0 auto 80px;
 }
-.catalog .catalog__title {
+.classificator .classificator__title {
   margin-bottom: 32px;
 }
-.catalog .catalog__list {
+.classificator .classificator__list {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -1761,16 +1775,16 @@ ul {
   column-gap: 32px;
   justify-content: center;
 }
-.catalog .catalog__item {
+.classificator .classificator__item {
   flex-shrink: 0;
 }
-.catalog .catalog__item:hover a {
+.classificator .classificator__item:hover a {
   color: #106CD1;
 }
-.catalog .catalog__item:active a {
+.classificator .classificator__item:active a {
   color: #0C5FBA;
 }
-.catalog .catalog__item.active a {
+.classificator .classificator__item.active a {
   color: #0C5FBA;
 }
 

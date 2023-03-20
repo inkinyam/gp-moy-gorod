@@ -1,11 +1,11 @@
-.navigation {
+.lead-buttons {
   display: flex;
   flex-direction: column;
   row-gap: 0;
   width: 100%;
 }
 
-.navigation__button {
+.lead-buttons__button {
   @extend %button;
   @extend %transition;
   display: flex;
@@ -16,7 +16,7 @@
   padding: 0;
   border-bottom: 1px solid $dark-color-default;
 
-  .navigation__container {
+  .lead-buttons__container {
     width: 90%;
     max-width: calc(1440px - 10%);
     display: flex;
@@ -31,11 +31,11 @@
     }
   }
 
-  .navigation__city {
+  .lead-buttons__city {
     @extend %title-h2;
   }
   
-  .navigation__advice {
+  .lead-buttons__advice {
     @extend %text-circe-20;
     line-height: 34px;
     @media screen  and (max-width: $tablet){

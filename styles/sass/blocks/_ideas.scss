@@ -56,7 +56,19 @@
 
   .ideas__tag {
     @extend %text-circe-16;
+  
     color: $middle-dark-color-default;
+    a {
+      @extend %silly-link;
+      @extend %transition;
+
+      &:hover {
+        color: $middle-dark-color-hovered;
+      }
+      &:active {
+        color: $middle-dark-color-onclick;
+      }
+    }
   }
 
   .ideas__cardtitle {

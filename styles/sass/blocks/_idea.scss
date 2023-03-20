@@ -14,7 +14,18 @@
 
   .idea__tag {
     @extend %text-circe-16;
+  
     color: $middle-dark-color-default;
+    a {
+      @extend %silly-link;
+      @extend %transition;
+        &:hover {
+        color: $middle-dark-color-hovered;
+      }
+      &:active {
+        color: $middle-dark-color-onclick;
+      }
+    }
   }
 
   .idea__cardtitle {
@@ -119,7 +130,7 @@
   
       svg {
         @extend %transition;
-        stroke:$middle-dark-color-default;
+        stroke:$dark-color-hovered;
         fill: none;
       }
   
@@ -147,7 +158,7 @@
     .idea__like-counter {
       @extend %text-circe-16;
       line-height: 18px;
-      color: $middle-dark-color-default;
+      color: $dark-color-hovered;
     }
   }
 }
