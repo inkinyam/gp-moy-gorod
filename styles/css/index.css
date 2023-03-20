@@ -1303,7 +1303,7 @@ ul {
   grid-row: 1;
   width: 100%;
   height: 100%;
-  background-image: url(../../../images/covers/city-cover.jpg);
+  background-image: url(../../images/covers/city-cover.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1365,7 +1365,7 @@ ul {
 .map .map__map {
   width: 100%;
   height: 861px;
-  background-image: url(../../../images/pic.png);
+  background-image: url(../../images/pic.png);
   background-size: cover;
   background-repeat: no-repeat;
 }
