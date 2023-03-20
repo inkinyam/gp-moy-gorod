@@ -1,0 +1,142 @@
+.idea {
+  width: 90%;
+  margin: 0 auto 80px;
+  border-bottom: 1px solid $middle-dark-color-default;
+  box-sizing: border-box;
+  padding: 80px 0;
+
+  .idea__card {
+    max-width: 644px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    }
+
+  .idea__tag {
+    @extend %text-circe-16;
+    color: $middle-dark-color-default;
+  }
+
+  .idea__cardtitle {
+    @extend %title-h3;
+    margin: 4px 0 8px;
+    
+    a {
+      @extend %silly-link;
+      @extend %transition;
+
+      &:hover {
+        color: $dark-color-hovered;
+      }
+      &:active {
+        color: $dark-color-onclick;
+      }
+    }
+  }
+
+  .idea__description {
+    @extend %text-circe-16;
+  }
+
+  .idea__author {
+    @extend %text-circe-16;
+    margin: 6px 0;
+  }
+
+  .idea__map {
+    width: 100%;
+    max-height: 412px;
+    height: 100%;
+    img {
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  .idea__buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: $spacer-l;
+  }
+
+  .idea__button {
+    @extend %button;
+    @extend %text-circe-18;
+    background-color: $primary-color-default;
+    color:$light-color-default;
+
+    svg {
+      margin: 0 4px;
+      stroke:$light-color-default;
+    }
+
+    &:hover {
+      background-color: $primary-color-hovered;
+      color:$light-color-hovered;
+      svg {
+        stroke:$light-color-hovered;
+      } 
+    }
+
+    &:active {
+      background-color: $primary-color-onclick;
+      color:$light-color-onclick;
+      svg {
+        stroke:$light-color-onclick;
+      } 
+    }
+
+  }
+
+  .idea__like-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .idea__like {
+      @extend %button;
+      background-color: transparent;
+      padding: 0;
+      margin: 0 4px 0 auto;
+      width: 18px;
+      height: 18px;
+      min-height: 0;
+      display: block;
+  
+      svg {
+        @extend %transition;
+        stroke:$middle-dark-color-default;
+        fill: none;
+      }
+  
+      &:hover {
+        svg {
+          stroke: $danger-color-onclick;
+        }
+      }
+  
+      &.liked {
+        svg {
+          stroke:$danger-color-onclick;
+          fill: $danger-color-onclick;
+        }
+  
+        &:hover {
+          svg {
+            stroke:$danger-color-hovered;
+            fill: $danger-color-hovered;
+          }
+        }
+      }
+    } 
+    
+    .idea__like-counter {
+      @extend %text-circe-16;
+      line-height: 18px;
+      color: $middle-dark-color-default;
+    }
+  }
+}

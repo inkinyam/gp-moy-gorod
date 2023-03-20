@@ -37,6 +37,7 @@
   
   .navigation__advice {
     @extend %text-circe-20;
+    line-height: 34px;
     @media screen  and (max-width: $tablet){
       font-size: 18px;
     }

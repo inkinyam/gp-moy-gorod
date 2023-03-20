@@ -3,7 +3,7 @@
   flex-direction: column;
   max-width: 1312px;
   width: 90%;
-  margin: 80px auto;
+  margin: 80px auto; 
 
   .ideas__title {
     @extend %title-h2;
@@ -50,7 +50,7 @@
     padding: $spacer-xs;
     display: flex;
     flex-direction: column;
-    row-gap: $spacer-xxs /2;
+    row-gap: calc($spacer-xxs /2);
     height: 100%;
   }
 

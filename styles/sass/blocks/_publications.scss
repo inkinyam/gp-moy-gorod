@@ -97,10 +97,12 @@
   }
   
   .publication__img {
+    @extend %silly-link;
     aspect-ratio: 1/1;
     overflow: hidden;
     display: flex;
     margin-bottom: 24px;
+
   
     img {
       @extend %transition;
