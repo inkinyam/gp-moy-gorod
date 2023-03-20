@@ -1,7 +1,7 @@
 .title {
   @extend %title-h1;
   width: 90%;
-  max-width: 1312px;
+  max-width: calc(1440px - 10%);
   margin: 0 auto $spacer-l;
 
   @media screen and (max-width: $tablet) {

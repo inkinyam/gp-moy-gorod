@@ -444,8 +444,8 @@ ul {
   }
 }
 .header .header__container {
-  max-width: 90%;
-  width: 100%;
+  max-width: calc(1440px - 10%);
+  width: 90%;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
@@ -618,16 +618,21 @@ ul {
 .footer {
   background-color: #201E33;
   color: #F6F6F7;
-  width: 100%;
   box-sizing: border-box;
-  padding: 24px 5% 50px;
+  padding: 24px 0 50px;
+  width: 100%;
+}
+.footer .footer__container {
+  max-width: calc(1440px - 10%);
+  width: 90%;
+  margin: 0 auto;
   row-gap: 8px;
   display: grid;
   grid-template-columns: 76px 1fr 76px;
   grid-template-areas: "logo  emailblock " "logo  copyright " "logo  links ";
 }
 @media screen and (max-width: 1024px) {
-  .footer {
+  .footer .footer__container {
     grid-template-columns: 76px 1fr;
     row-gap: 24px;
     grid-template-areas: "logo  copyright " "emailblock  emailblock" "links  links";
@@ -810,7 +815,7 @@ ul {
 
 .title {
   width: 90%;
-  max-width: 1312px;
+  max-width: calc(1440px - 10%);
   margin: 0 auto 40px;
 }
 @media screen and (max-width: 1024px) {
@@ -1056,7 +1061,7 @@ ul {
   row-gap: 80px;
   margin: 0 auto;
   width: 90%;
-  max-width: 1312px;
+  max-width: calc(1440px - 10%);
 }
 .cities .cities__list .cities__item:nth-of-type(2n+1) .city__info {
   grid-template-areas: "title       photo" "subtitle    photo" "description photo" "-           photo";
@@ -1234,7 +1239,7 @@ ul {
   column-gap: 24px;
   row-gap: 40px;
   width: 90%;
-  max-width: 1312px;
+  max-width: calc(1440px - 10%);
   margin: 0 auto;
   padding: 0;
   list-style: none;
@@ -1358,7 +1363,7 @@ ul {
   width: 100%;
 }
 .map .map__title {
-  max-width: 1312px;
+  max-width: calc(1440px - 10%);
   width: 90%;
   margin: 0 auto;
 }
@@ -1373,7 +1378,7 @@ ul {
 .ideas {
   display: flex;
   flex-direction: column;
-  max-width: 1312px;
+  max-width: calc(1440px - 10%);
   width: 90%;
   margin: 80px auto;
 }
@@ -1487,7 +1492,7 @@ ul {
 }
 
 .publications {
-  max-width: 1312px;
+  max-width: calc(1440px - 10%);
   width: 90%;
   margin: 0 auto 80px;
   display: flex;
@@ -1584,7 +1589,7 @@ ul {
   color: #201E33;
 }
 .about-project {
-  max-width: 1312px;
+  max-width: calc(1440px - 10%);
   width: 90%;
   margin: 0 auto 80px;
 }
@@ -1738,7 +1743,7 @@ ul {
 .catalog {
   display: flex;
   flex-direction: column;
-  max-width: 1312px;
+  max-width: calc(1440px - 10%);
   width: 90%;
   margin: 0 auto 80px;
 }

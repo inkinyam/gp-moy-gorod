@@ -1,7 +1,7 @@
 .ideas {
   display: flex;
   flex-direction: column;
-  max-width: 1312px;
+  max-width: calc(1440px - 10%);
   width: 90%;
   margin: 80px auto; 
 

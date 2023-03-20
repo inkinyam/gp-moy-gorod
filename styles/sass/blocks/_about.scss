@@ -11,7 +11,7 @@
     column-gap: $spacer-s; 
     row-gap: $spacer-l;
     width: 90%;
-    max-width: 1312px;
+    max-width: calc(1440px - 10%);
     margin: 0 auto;
     padding: 0;
     list-style: none;

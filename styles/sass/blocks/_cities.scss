@@ -7,7 +7,7 @@
     row-gap: $spacer-l * 2;
     margin: 0 auto;
     width: 90%;
-    max-width: 1312px;
+    max-width: calc(1440px - 10%);
 
     .cities__item {
       &:nth-of-type(2n+1){

@@ -1,26 +1,32 @@
 .footer {
   background-color: $dark-color-default;
   color: $light-color-default;
-
-  width: 100%;
   box-sizing: border-box;
-  padding: 24px 5% 50px;
-  row-gap: $spacer-xxs;
+  padding: 24px 0 50px;
+  width: 100%;
+  
 
-  display: grid;
-  grid-template-columns: 76px 1fr 76px;
-  grid-template-areas: 
-              'logo  emailblock '
-              'logo  copyright '
-              'logo  links ';
-
-  @media screen and (max-width: $tablet) {
-    grid-template-columns: 76px 1fr;
-    row-gap: $spacer-s;
+  .footer__container {
+    max-width: calc(1440px - 10%);
+    width: 90%;
+    margin: 0 auto;
+    row-gap: $spacer-xxs;
+  
+    display: grid;
+    grid-template-columns: 76px 1fr 76px;
     grid-template-areas: 
-              'logo  copyright '
-              'emailblock  emailblock'
-              'links  links';
+                'logo  emailblock '
+                'logo  copyright '
+                'logo  links ';
+  
+    @media screen and (max-width: $tablet) {
+      grid-template-columns: 76px 1fr;
+      row-gap: $spacer-s;
+      grid-template-areas: 
+                'logo  copyright '
+                'emailblock  emailblock'
+                'links  links';
+    }
   }
 
   .footer__logo {
