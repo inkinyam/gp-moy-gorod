@@ -455,7 +455,7 @@ ul {
   display: flex;
   line-height: 0;
   font-size: 0;
-  background-image: url(../../../images/logos/main-logo.svg);
+  background-image: url(../../images/logos/main-logo.svg);
   background-size: cover;
   background-position: center;
   width: 74px;
@@ -464,7 +464,7 @@ ul {
 }
 @media screen and (max-width: 1024px) {
   .header .header__logo {
-    background-image: url(../../../images/logos/main-logo-old-black.svg);
+    background-image: url(../../images/logos/main-logo-old-black.svg);
     width: 83px;
     height: 40px;
     position: absolute;
@@ -1054,8 +1054,6 @@ ul {
   display: flex;
   flex-direction: column;
   row-gap: 80px;
-  list-style: none;
-  padding: 0;
   margin: 0 auto;
   width: 90%;
   max-width: 1312px;
@@ -1426,17 +1424,26 @@ ul {
 .ideas .ideas__tag {
   color: #A7A6B5;
 }
+.ideas .ideas__cardtitle {
+  margin-bottom: 4px;
+}
 .ideas .ideas__cardtitle a:hover {
   color: #605D7C;
 }
 .ideas .ideas__cardtitle a:active {
   color: #201E33;
 }
+.ideas .ideas__description {
+  line-height: 20px;
+}
 .ideas .ideas__footer {
   display: flex;
   flex-direction: row;
   align-items: center;
   margin-top: auto;
+}
+.ideas .ideas__author {
+  color: #A7A6B5;
 }
 .ideas .ideas__like {
   padding: 0;
@@ -1447,7 +1454,7 @@ ul {
   display: block;
 }
 .ideas .ideas__like svg {
-  stroke: #A7A6B5;
+  stroke: #605D7C;
   fill: none;
 }
 .ideas .ideas__like:hover svg {
@@ -1462,7 +1469,7 @@ ul {
   fill: #AD003E;
 }
 .ideas .ideas__like-counter {
-  color: #A7A6B5;
+  color: #605D7C;
 }
 .ideas .ideas__showmore {
   margin: 40px auto 0;
@@ -1592,7 +1599,7 @@ ul {
   padding: 0;
   list-style: none;
   max-width: 644px;
-  width: 90%;
+  width: 100%;
 }
 .about-project .about-project__item {
   display: flex;
@@ -1631,7 +1638,7 @@ ul {
   color: #A7A6B5;
 }
 .idea .idea__cardtitle {
-  margin: 4px 0 8px;
+  margin: 8px 0 16px;
 }
 .idea .idea__cardtitle a:hover {
   color: #605D7C;
@@ -1640,7 +1647,7 @@ ul {
   color: #201E33;
 }
 .idea .idea__author {
-  margin: 6px 0;
+  margin: 16px 0 8px;
 }
 .idea .idea__map {
   width: 100%;

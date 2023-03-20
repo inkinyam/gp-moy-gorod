@@ -19,7 +19,7 @@
 
   .idea__cardtitle {
     @extend %title-h3;
-    margin: 4px 0 8px;
+    margin: 8px 0 16px;
     
     a {
       @extend %silly-link;
@@ -40,7 +40,7 @@
 
   .idea__author {
     @extend %text-circe-16;
-    margin: 6px 0;
+    margin: 16px 0 8px;
   }
 
   .idea__map {

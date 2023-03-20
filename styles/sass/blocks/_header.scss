@@ -32,7 +32,7 @@
     display: flex;
     line-height: 0;
     font-size: 0;
-    background-image: url(../../../images/logos/main-logo.svg);
+    background-image: url(../../images/logos/main-logo.svg);
     background-size: cover;
     background-position: center;
     width: 74px;
@@ -40,7 +40,7 @@
     z-index: 98;
 
     @media screen and (max-width: $tablet) {
-      background-image: url(../../../images/logos/main-logo-old-black.svg);  
+      background-image: url(../../images/logos/main-logo-old-black.svg);  
       width: 83px;
       height: 40px; 
       position: absolute;

@@ -61,6 +61,7 @@
 
   .ideas__cardtitle {
     @extend %title-h4;
+    margin-bottom: 4px;
     
     a {
       @extend %silly-link;
@@ -77,6 +78,7 @@
 
   .ideas__description {
     @extend %text-circe-16;
+    line-height: 20px;
   }
   .ideas__footer {
     display: flex;
@@ -87,6 +89,7 @@
 
   .ideas__author {
     @extend %text-circe-16;
+    color: $middle-dark-color-default;
   }
   .ideas__like {
     @extend %button;
@@ -100,7 +103,7 @@
     svg {
       @extend %transition;
 
-      stroke:$middle-dark-color-default;
+      stroke:$dark-color-hovered;
       fill: none;
     }
 
@@ -127,7 +130,7 @@
   }
   .ideas__like-counter {
     @extend %text-circe-16;
-    color: $middle-dark-color-default;
+    color: $dark-color-hovered;
   }
 
   .ideas__showmore {
