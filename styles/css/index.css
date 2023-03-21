@@ -72,7 +72,7 @@ ul {
 /*----------------------------------- spacers -----------------------------------*/
 /*----------------------------------- transitions -----------------------------------*/
 /*----------------------------------- titles -----------------------------------*/
-.cover .cover__title, .about-project .about-project__item-title, .ideas .ideas__cardtitle, .about .about__card-title, .project .project__tag, .project .project__title, .footer .footer__emails p, .header .header__link, .idea .idea__cardtitle, .classificator .classificator__title, .titleblock .title, .about-project .about-project__title, .publication .publication__title, .publications .publications__title, .ideas .ideas__title, .map .map__title, .article .article__title, .lead-buttons__button .lead-buttons__city, .title, .city .city__title, .lead__slide .lead__title-wrapper a, .lead__slide .lead__title-wrapper p {
+.cover .cover__title, .about-project .about-project__item-title, .ideas__cardtitle, .about .about__card-title, .project .project__tag, .project .project__title, .footer .footer__emails p, .header .header__link, .idea .idea__cardtitle, .classificator .classificator__title, .titleblock .title, .about-project .about-project__title, .publication .publication__title, .publications .publications__title, .ideas .ideas__title, .map .map__title, .article .article__title, .lead-buttons__button .lead-buttons__city, .title, .city .city__title, .lead__slide .lead__title-wrapper a, .lead__slide .lead__title-wrapper p {
   font-family: "Circe";
   font-style: normal;
   font-weight: 700;
@@ -117,7 +117,7 @@ ul {
   line-height: 24px;
 }
 
-.about-project .about-project__item-title, .ideas .ideas__cardtitle, .about .about__card-title, .project .project__tag, .project .project__title, .footer .footer__emails p, .header .header__link {
+.about-project .about-project__item-title, .ideas__cardtitle, .about .about__card-title, .project .project__tag, .project .project__title, .footer .footer__emails p, .header .header__link {
   font-size: 16px;
   line-height: 24px;
 }
@@ -134,7 +134,7 @@ ul {
 }
 
 /*----------------------------------- circe text -----------------------------------*/
-.idea .idea__like-box .idea__like-counter, .idea .idea__author, .idea .idea__description, .idea .idea__tag, .ideas .ideas__like-counter, .ideas .ideas__author, .ideas .ideas__description, .ideas .ideas__tag, .breadcrumb__item, .footer .footer__links a, .footer .footer__copyright, .footer .footer__emails a, .classificator .classificator__item a, .idea .idea__button, .ideas .ideas__showmore, .lead__slide .lead__button, .publication .publication__date, .publication .publication__type, .lead-buttons__button .lead-buttons__advice {
+.idea .idea__like-box .idea__like-counter, .idea .idea__author, .idea .idea__description, .idea .idea__tag, .ideas__like-counter, .ideas__author, .ideas__description, .ideas__tag, .breadcrumb__item, .footer .footer__links a, .footer .footer__copyright, .footer .footer__emails a, .catalog__ideas .catalog__item a, .classificator .classificator__item a, .idea .idea__button, .ideas__showmore, .lead__slide .lead__button, .publication .publication__date, .publication .publication__type, .lead-buttons__button .lead-buttons__advice {
   font-family: "Circe";
   font-style: normal;
   font-weight: 400;
@@ -145,12 +145,12 @@ ul {
   line-height: 24px;
 }
 
-.classificator .classificator__item a, .idea .idea__button, .ideas .ideas__showmore, .lead__slide .lead__button {
+.catalog__ideas .catalog__item a, .classificator .classificator__item a, .idea .idea__button, .ideas__showmore, .lead__slide .lead__button {
   font-size: 18px;
   line-height: 24px;
 }
 
-.idea .idea__like-box .idea__like-counter, .idea .idea__author, .idea .idea__description, .idea .idea__tag, .ideas .ideas__like-counter, .ideas .ideas__author, .ideas .ideas__description, .ideas .ideas__tag, .breadcrumb__item, .footer .footer__links a, .footer .footer__copyright, .footer .footer__emails a {
+.idea .idea__like-box .idea__like-counter, .idea .idea__author, .idea .idea__description, .idea .idea__tag, .ideas__like-counter, .ideas__author, .ideas__description, .ideas__tag, .breadcrumb__item, .footer .footer__links a, .footer .footer__copyright, .footer .footer__emails a {
   font-size: 16px;
   line-height: 24px;
 }
@@ -170,18 +170,18 @@ ul {
 }
 
 /*----------------------------------- custom cursor -----------------------------------*/
-.carousel__dots .carousel__dot:hover, .carousel__button:hover, .idea .idea__like-box .idea__like:hover, .idea .idea__button:hover, .ideas .ideas__showmore:hover, .ideas .ideas__like:hover, .lead-buttons__button:hover, .lead__slide .lead__button:hover, .classificator .classificator__item a:hover, .idea .idea__cardtitle a:hover, .idea .idea__tag a:hover, .publication .publication__title a:hover, .publication .publication__img:hover, .publication .publication__type:hover, .ideas .ideas__cardtitle a:hover, .ideas .ideas__tag a:hover, .project:hover, .city .city__title a:hover, .lead__slide .lead__title-wrapper a:hover, .breadcrumb__item a:hover, .footer .footer__links a:hover, .footer .footer__emails a:hover, .header .header__link:hover, .header .header__burger:hover, .header .header__logo:hover {
+.carousel__dots .carousel__dot:hover, .carousel__button:hover, .idea .idea__like-box .idea__like:hover, .idea .idea__button:hover, .ideas__showmore:hover, .ideas__like:hover, .lead-buttons__button:hover, .lead__slide .lead__button:hover, .pagination .pagination__link:hover, .catalog__ideas .catalog__item a:hover, .classificator .classificator__item a:hover, .idea .idea__cardtitle a:hover, .idea .idea__tag a:hover, .publication .publication__title a:hover, .publication .publication__img:hover, .publication .publication__type:hover, .ideas__cardtitle a:hover, .ideas__tag a:hover, .article .article__text a:hover, .project:hover, .city .city__title a:hover, .lead__slide .lead__title-wrapper a:hover, .breadcrumb__item a:hover, .footer .footer__links a:hover, .footer .footer__emails a:hover, .header .header__link:hover, .header .header__burger:hover, .header .header__logo:hover {
   cursor: url(../../images/Cursor-hand.svg), pointer;
 }
 
 /*----------------------------------- silly-link -----------------------------------*/
-.classificator .classificator__item a, .idea .idea__cardtitle a, .idea .idea__tag a, .publication .publication__title a, .publication .publication__img, .publication .publication__type, .ideas .ideas__cardtitle a, .ideas .ideas__tag a, .project, .city .city__title a, .lead__slide .lead__title-wrapper a, .breadcrumb__item a, .footer .footer__links a, .footer .footer__emails a, .header .header__link, .header .header__burger, .header .header__logo {
+.pagination .pagination__link, .catalog__ideas .catalog__item a, .classificator .classificator__item a, .idea .idea__cardtitle a, .idea .idea__tag a, .publication .publication__title a, .publication .publication__img, .publication .publication__type, .ideas__cardtitle a, .ideas__tag a, .article .article__text a, .project, .city .city__title a, .lead__slide .lead__title-wrapper a, .breadcrumb__item a, .footer .footer__links a, .footer .footer__emails a, .header .header__link, .header .header__burger, .header .header__logo {
   color: inherit;
   text-decoration: none;
 }
 
 /*----------------------------------- transition -----------------------------------*/
-.idea .idea__like-box .idea__like svg, .idea .idea__cardtitle a, .idea .idea__tag a, .publication .publication__title a, .publication .publication__img img, .publication .publication__type, .ideas .ideas__like svg, .ideas .ideas__cardtitle a, .ideas .ideas__tag a, .project .project__title, .project, .footer .footer__links a, .footer .footer__emails a, .header .header__link, .header .header__list-social ul svg, .header .header__burger-lines, .lead .carousel__button, .idea .idea__like-box .idea__like, .idea .idea__button, .ideas .ideas__showmore, .ideas .ideas__like, .lead-buttons__button, .lead__slide .lead__button {
+.pagination .pagination__link, .idea .idea__like-box .idea__like svg, .idea .idea__cardtitle a, .idea .idea__tag a, .publication .publication__title a, .publication .publication__img img, .publication .publication__type, .ideas__like svg, .ideas__cardtitle a, .ideas__tag a, .project .project__title, .project, .footer .footer__links a, .footer .footer__emails a, .header .header__link, .header .header__list-social ul svg, .header .header__burger-lines, .lead .carousel__button, .idea .idea__like-box .idea__like, .idea .idea__button, .ideas__showmore, .ideas__like, .lead-buttons__button, .lead__slide .lead__button {
   -moz-transition-duration: 0.2s;
   -o-transition-duration: 0.2s;
   transition-duration: 0.2s;
@@ -191,7 +191,7 @@ ul {
 }
 
 /*----------------------------------- buttons -----------------------------------*/
-.idea .idea__like-box .idea__like, .idea .idea__button, .ideas .ideas__showmore, .ideas .ideas__like, .lead-buttons__button, .lead__slide .lead__button {
+.idea .idea__like-box .idea__like, .idea .idea__button, .ideas__showmore, .ideas__like, .lead-buttons__button, .lead__slide .lead__button {
   transition-property: color, background-color;
   text-decoration: none;
   text-align: center;
@@ -1359,6 +1359,16 @@ ul {
   flex-direction: column;
   row-gap: 16px;
 }
+.article .article__text a {
+  color: #2D8BF1;
+}
+.article .article__text a:hover {
+  color: #106CD1;
+}
+.article .article__text a:active {
+  color: #0C5FBA;
+}
+
 .map {
   width: 100%;
 }
@@ -1385,39 +1395,43 @@ ul {
 .ideas .ideas__title {
   margin-bottom: 32px;
 }
-.ideas .ideas__list {
+
+.ideas__list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   width: 100%;
   list-style: none;
   padding: 0;
   margin: 0;
-  column-gap: 32px;
+  gap: 32px;
 }
 @media screen and (max-width: 1024px) {
-  .ideas .ideas__list {
+  .ideas__list {
     grid-template-columns: repeat(2, 1fr);
     row-gap: 64px;
   }
 }
 @media screen and (max-width: 550px) {
-  .ideas .ideas__list {
+  .ideas__list {
     grid-template-columns: 1fr;
   }
 }
-.ideas .ideas__item {
+
+.ideas__item {
   display: flex;
   flex-direction: column;
   background-color: #F0F0F4;
   min-height: 412px;
 }
-.ideas .ideas__img {
+
+.ideas__img {
   width: 100%;
   height: auto;
   object-fit: cover;
   object-position: center;
 }
-.ideas .ideas__card {
+
+.ideas__card {
   width: 100%;
   box-sizing: border-box;
   padding: 16px;
@@ -1426,37 +1440,43 @@ ul {
   row-gap: 4px;
   height: 100%;
 }
-.ideas .ideas__tag {
+
+.ideas__tag {
   color: #A7A6B5;
 }
-.ideas .ideas__tag a:hover {
+.ideas__tag a:hover {
   color: #7E7D90;
 }
-.ideas .ideas__tag a:active {
+.ideas__tag a:active {
   color: #5A596E;
 }
-.ideas .ideas__cardtitle {
+
+.ideas__cardtitle {
   margin-bottom: 4px;
 }
-.ideas .ideas__cardtitle a:hover {
+.ideas__cardtitle a:hover {
   color: #605D7C;
 }
-.ideas .ideas__cardtitle a:active {
+.ideas__cardtitle a:active {
   color: #201E33;
 }
-.ideas .ideas__description {
+
+.ideas__description {
   line-height: 20px;
 }
-.ideas .ideas__footer {
+
+.ideas__footer {
   display: flex;
   flex-direction: row;
   align-items: center;
   margin-top: auto;
 }
-.ideas .ideas__author {
+
+.ideas__author {
   color: #A7A6B5;
 }
-.ideas .ideas__like {
+
+.ideas__like {
   padding: 0;
   margin: 0 4px 0 auto;
   width: 18px;
@@ -1464,35 +1484,37 @@ ul {
   min-height: 0;
   display: block;
 }
-.ideas .ideas__like svg {
+.ideas__like svg {
   stroke: #605D7C;
   fill: none;
 }
-.ideas .ideas__like:hover svg {
+.ideas__like:hover svg {
   stroke: #FF005C;
 }
-.ideas .ideas__like.liked svg {
+.ideas__like.liked svg {
   stroke: #FF005C;
   fill: #FF005C;
 }
-.ideas .ideas__like.liked:hover svg {
+.ideas__like.liked:hover svg {
   stroke: #AD003E;
   fill: #AD003E;
 }
-.ideas .ideas__like-counter {
+
+.ideas__like-counter {
   color: #605D7C;
 }
-.ideas .ideas__showmore {
+
+.ideas__showmore {
   margin: 40px auto 0;
   background-color: #2D8BF1;
   color: #F6F6F7;
   width: fit-content;
 }
-.ideas .ideas__showmore:hover {
+.ideas__showmore:hover {
   background-color: #106CD1;
   color: #F0F0F4;
 }
-.ideas .ideas__showmore:active {
+.ideas__showmore:active {
   background-color: #0C5FBA;
   color: #FFFFFF;
 }
@@ -1786,6 +1808,135 @@ ul {
 }
 .classificator .classificator__item.active a {
   color: #0C5FBA;
+}
+.classificator.classificator__pushed {
+  margin-top: 32px;
+}
+
+.catalog__ideas {
+  background-color: #F0F0F4;
+  box-sizing: border-box;
+  padding: 80px 0;
+}
+.catalog__ideas .ideas__list {
+  max-width: calc(1440px - 10%);
+  width: 90%;
+  margin: 0 auto;
+}
+.catalog__ideas .catalog__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  column-gap: 32px;
+  margin-bottom: 32px;
+  justify-content: center;
+}
+.catalog__ideas .catalog__item {
+  flex-shrink: 0;
+}
+.catalog__ideas .catalog__item:hover a {
+  color: #106CD1;
+}
+.catalog__ideas .catalog__item:active a {
+  color: #0C5FBA;
+}
+.catalog__ideas .catalog__item.active a {
+  color: #0C5FBA;
+}
+
+.pagination {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  margin: 40px 0 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  column-gap: 4px;
+}
+.pagination .pagination__item {
+  color: #201E33;
+  stroke: #2D8BF1;
+  font-family: "Lora";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  color: inherit;
+  fill: none;
+  transition: all 0.3s ease;
+  min-width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  text-align: center;
+}
+.pagination .pagination__item circle {
+  fill: #F6F6F7;
+}
+.pagination .pagination__item:hover {
+  stroke: #F0F0F4;
+  background-color: #DFDFDF;
+}
+.pagination .pagination__item:hover .pagination__link {
+  fill: #106CD1;
+  stroke: #F0F0F4;
+  color: #106CD1;
+}
+.pagination .pagination__item:hover circle {
+  stroke: #2D8BF1;
+  fill: #2D8BF1;
+}
+.pagination .pagination__item:active circle {
+  stroke: #0C5FBA;
+  fill: #0C5FBA;
+}
+.pagination .pagination__item:active .pagination__link {
+  color: var(--blue-onclick);
+  fill: var(--blue-onclick);
+  stroke: var(--white-hovered);
+}
+.pagination .pagination__item.active {
+  color: #2D8BF1;
+  font-weight: 900;
+}
+.pagination .pagination__item.disabled svg {
+  cursor: unset;
+  stroke: #F6F6F7;
+  fill: #6990BA;
+}
+.pagination .pagination__item.disabled:hover {
+  cursor: unset;
+}
+.pagination .pagination__item.disabled:hover a {
+  cursor: unset;
+}
+@media screen and (max-width: 1024px) {
+  .pagination .pagination__item:nth-of-type(2) {
+    position: relative;
+  }
+  .pagination .pagination__item:nth-of-type(2)::after {
+    position: absolute;
+    top: 0;
+    left: 50px;
+    content: "...";
+  }
+  .pagination .pagination__item:nth-of-type(n+4):nth-of-type(-n+7) {
+    display: none;
+  }
+}
+.pagination .pagination__link {
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+  height: 100%;
+  display: block;
+  fill: #F6F6F7;
+  stroke: #2D8BF1;
+}
+.pagination .pagination__link svg {
+  color: #2D8BF1;
 }
 
 /*# sourceMappingURL=index.css.map */

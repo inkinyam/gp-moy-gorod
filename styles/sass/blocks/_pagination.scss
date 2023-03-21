@@ -1,0 +1,116 @@
+.pagination {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  margin: 40px 0 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  column-gap: 4px;
+
+
+
+  .pagination__item {
+    color: $dark-color-default;;
+    stroke: $primary-color-default;
+    font-family: 'Lora';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    color: inherit;
+    fill: none;
+    transition: all 0.3s ease;
+    min-width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    text-align: center;
+
+    circle {
+      fill: $light-color-default;
+    }
+
+    &:hover {
+      stroke: $light-color-hovered;
+      background-color: #DFDFDF;
+
+      .pagination__link {
+        fill: $primary-color-hovered;
+        stroke: $light-color-hovered;
+        color: $primary-color-hovered;
+      }
+
+      circle {
+        stroke: $primary-color-default;
+        fill: $primary-color-default;
+      }
+    }
+
+    &:active {
+      circle {
+        stroke: $primary-color-onclick;
+        fill: $primary-color-onclick;
+      }
+
+      .pagination__link {
+        color: var(--blue-onclick);
+        fill: var(--blue-onclick);
+        stroke: var(--white-hovered);
+      }
+    }
+
+    &.active {
+      color: $primary-color-default;
+      font-weight: 900;
+    }
+
+    &.disabled {
+      svg {
+        cursor: unset;
+        stroke: $light-color-default;
+        fill:$active-text-color;
+      }
+
+      &:hover {
+        cursor: unset;
+        a {
+          cursor: unset;
+        }
+      }
+    }
+
+    @media screen and (max-width: $tablet) {
+      &:nth-of-type(2) {
+        position: relative;
+        &::after {
+          position: absolute;
+          top: 0;
+          left: 50px;
+          content: '...';
+        }
+      }
+
+      &:nth-of-type(n+4):nth-of-type(-n+7) {
+        display: none;
+      }
+    }
+  }
+
+  .pagination__link  {
+    @extend %transition;
+    @extend %silly-link;
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+    height: 100%;
+    display: block;
+  
+    fill: $light-color-default;
+    stroke: $primary-color-default;
+
+    svg {
+      color:$primary-color-default;
+    }
+  }
+}
+
