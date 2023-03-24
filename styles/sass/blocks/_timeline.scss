@@ -1,0 +1,110 @@
+.timeline {
+  width: 100%;
+
+  .timeline__item {
+    display: flex;
+    flex-direction: row;
+    column-gap: 24px;
+
+    transition: all 0.3s ease;
+
+    &:last-of-type {
+      .timeline__text-box{
+        margin-bottom: 0;
+      }
+
+      .timeline__filler {
+        display: none;
+      }
+    }
+
+    @media screen and (max-width: $tablet) {
+      column-gap: 12px;
+      margin-left: 0;      
+    }
+  }
+    
+  .timeline__counter {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .timeline__step {
+    @extend %text-lora;
+    font-size: 15px;
+    display: block;
+    margin: 0;
+    border: 1px solid $primary-color-default;
+    border-radius: 50%;
+    background-color: $light-color-default;
+    width: 32px;
+    height: 32px;
+    min-height: 32px;
+    flex-shrink: 0;
+
+    text-align: center;
+
+    overflow: hidden;
+    img {
+      object-fit: cover;
+      object-position: center;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .timeline__filler {
+    border-left: 1px dashed $primary-color-default;
+    height: 100%;
+    width: 1px;
+    align-self: center;
+    flex-shrink: 2;
+  }
+
+  .timeline__text-box {
+    max-width: 100%;
+    width: 100%;
+    position: relative;
+    margin-bottom: 40px;
+
+    @media screen and (max-width: $tablet) {
+      margin-bottom: 32px;
+    }
+  }
+
+  .timeline__item-title {
+    @extend %title-h4;
+    margin: 5px 0 16px;
+    @media screen and (max-width: $tablet) {
+      margin: 5px 0 8px;
+    }
+  }
+  
+  .timeline__item-text {
+    max-width: 100%;
+    width: 100%;
+
+    a {
+      @extend %silly-link;
+      @extend %transition;
+      color: $primary-color-default;
+
+      &:hover {
+        color: $primary-color-hovered;
+      }
+      &:active {
+        color: $primary-color-onclick;
+      }
+    }
+
+    p {
+      @extend %text-lora;
+      margin-bottom: 4px;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+  
+}

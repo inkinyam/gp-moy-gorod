@@ -17,14 +17,7 @@
   
     color: $middle-dark-color-default;
     a {
-      @extend %silly-link;
-      @extend %transition;
-        &:hover {
-        color: $middle-dark-color-hovered;
-      }
-      &:active {
-        color: $middle-dark-color-onclick;
-      }
+      @extend %black-link;
     }
   }
 
@@ -33,15 +26,7 @@
     margin: 8px 0 16px;
     
     a {
-      @extend %silly-link;
-      @extend %transition;
-
-      &:hover {
-        color: $dark-color-hovered;
-      }
-      &:active {
-        color: $dark-color-onclick;
-      }
+      @extend %black-link;
     }
   }
 

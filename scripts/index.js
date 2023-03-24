@@ -35,7 +35,6 @@ function initAccordion (selector) {
   let accordion = document.querySelector(selector);
 
   if (!accordion) {
-        console.log('ERROR: Указан некорректный идентификатор блока для функции initAccordion');
     return;
   } else {
     let accordionTriggers = Array.from(accordion.querySelectorAll('.accordion__trigger'));

@@ -72,7 +72,7 @@ ul {
 /*----------------------------------- spacers -----------------------------------*/
 /*----------------------------------- transitions -----------------------------------*/
 /*----------------------------------- titles -----------------------------------*/
-.cover .cover__title, .accordions .accordion .accordion__title, .about-project .about-project__item-title, .ideas__cardtitle, .about .about__card-title, .project .project__tag, .project .project__title, .footer .footer__emails p, .header .header__link, .idea .idea__cardtitle, .accordions .accordions__title, .classificator .classificator__title, .titleblock .title, .about-project .about-project__title, .publication .publication__title, .publications .publications__title, .ideas .ideas__title, .map .map__title, .article .article__title, .lead-buttons__button .lead-buttons__city, .title, .city .city__title, .lead__slide .lead__title-wrapper a, .lead__slide .lead__title-wrapper p {
+.cover .cover__title, .timeline .timeline__item-title, .about-service .about-service__section-subtitle, .accordions .accordion .accordion__title, .about-project .about-project__item-title, .ideas__cardtitle, .about .about__card-title, .project .project__tag, .project .project__title, .footer .footer__emails p, .header .header__link, .idea .idea__cardtitle, .about-service .about-service__section-title, .accordions .accordions__title, .classificator .classificator__title, .titleblock .title, .about-project .about-project__title, .publication .publication__title, .publications .publications__title, .ideas .ideas__title, .map .map__title, .article .article__title, .lead-buttons__button .lead-buttons__city, .title, .city .city__title, .lead__slide .lead__title-wrapper a, .lead__slide .lead__title-wrapper p {
   font-family: "Circe";
   font-style: normal;
   font-weight: 700;
@@ -101,12 +101,12 @@ ul {
   }
 }
 
-.accordions .accordions__title, .classificator .classificator__title, .titleblock .title, .about-project .about-project__title, .publication .publication__title, .publications .publications__title, .ideas .ideas__title, .map .map__title, .article .article__title, .lead-buttons__button .lead-buttons__city {
+.about-service .about-service__section-title, .accordions .accordions__title, .classificator .classificator__title, .titleblock .title, .about-project .about-project__title, .publication .publication__title, .publications .publications__title, .ideas .ideas__title, .map .map__title, .article .article__title, .lead-buttons__button .lead-buttons__city {
   font-size: 26px;
   line-height: 34px;
 }
 @media screen and (max-width: 1024px) {
-  .accordions .accordions__title, .classificator .classificator__title, .titleblock .title, .about-project .about-project__title, .publication .publication__title, .publications .publications__title, .ideas .ideas__title, .map .map__title, .article .article__title, .lead-buttons__button .lead-buttons__city {
+  .about-service .about-service__section-title, .accordions .accordions__title, .classificator .classificator__title, .titleblock .title, .about-project .about-project__title, .publication .publication__title, .publications .publications__title, .ideas .ideas__title, .map .map__title, .article .article__title, .lead-buttons__button .lead-buttons__city {
     font-size: 22px;
     line-height: 24px;
   }
@@ -117,7 +117,7 @@ ul {
   line-height: 24px;
 }
 
-.accordions .accordion .accordion__title, .about-project .about-project__item-title, .ideas__cardtitle, .about .about__card-title, .project .project__tag, .project .project__title, .footer .footer__emails p, .header .header__link {
+.timeline .timeline__item-title, .about-service .about-service__section-subtitle, .accordions .accordion .accordion__title, .about-project .about-project__item-title, .ideas__cardtitle, .about .about__card-title, .project .project__tag, .project .project__title, .footer .footer__emails p, .header .header__link {
   font-size: 16px;
   line-height: 24px;
 }
@@ -156,7 +156,7 @@ ul {
 }
 
 /*----------------------------------- lora text -----------------------------------*/
-.accordions .accordion .accordion__container p, .about-project .about-project__item-text, .publication .publication__text, .article .article__text p, .cover .cover__subtitle, .about .about__card-text, .city .city__description, .city .city__subtitle {
+.timeline .timeline__item-text p, .timeline .timeline__step, .about-service .about-service__section-text, .accordions .accordion .accordion__container p, .about-project .about-project__item-text, .publication .publication__text, .article .article__text p, .cover .cover__subtitle, .about .about__card-text, .city .city__description, .city .city__subtitle {
   font-family: "Lora";
   font-style: normal;
   font-weight: 400;
@@ -170,18 +170,63 @@ ul {
 }
 
 /*----------------------------------- custom cursor -----------------------------------*/
-.carousel__dots .carousel__dot:hover, .carousel__button:hover, .idea .idea__like-box .idea__like:hover, .idea .idea__button:hover, .ideas__showmore:hover, .ideas__like:hover, .lead-buttons__button:hover, .lead__slide .lead__button:hover, .accordions .accordion .accordion__trigger:hover, .pagination .pagination__link:hover, .catalog__ideas .catalog__item a:hover, .classificator .classificator__item a:hover, .idea .idea__cardtitle a:hover, .idea .idea__tag a:hover, .publication .publication__title a:hover, .publication .publication__img:hover, .publication .publication__type:hover, .ideas__cardtitle a:hover, .ideas__tag a:hover, .article .article__text a:hover, .project:hover, .city .city__title a:hover, .lead__slide .lead__title-wrapper a:hover, .breadcrumb__item a:hover, .footer .footer__links a:hover, .footer .footer__emails a:hover, .header .header__link:hover, .header .header__burger:hover, .header .header__logo:hover {
+.carousel__dots .carousel__dot:hover, .carousel__button:hover, .idea .idea__like-box .idea__like:hover, .idea .idea__button:hover, .ideas__showmore:hover, .ideas__like:hover, .lead-buttons__button:hover, .lead__slide .lead__button:hover, .timeline .timeline__item-text a:hover, .accordions .accordion .accordion__trigger:hover, .pagination .pagination__link:hover, .catalog__ideas .catalog__item a:hover, .classificator .classificator__item a:hover, .publication .publication__img:hover, .project:hover, .lead__slide .lead__title-wrapper a:hover, .breadcrumb__item a:hover, .footer .footer__links a:hover, .footer .footer__emails a:hover, .header .header__link:hover, .header .header__burger:hover, .header .header__logo:hover, .ideas__tag a:hover, .idea .idea__cardtitle a:hover, .idea .idea__tag a:hover, .publication .publication__title a:hover, .ideas__cardtitle a:hover, .city .city__title a:hover, .about-service .about-service__section-subtitle a:hover, .publication .publication__type:hover, .article .article__text a:hover {
   cursor: url(../../images/Cursor-hand.svg), pointer;
 }
 
 /*----------------------------------- silly-link -----------------------------------*/
-.accordions .accordion .accordion__trigger, .pagination .pagination__link, .catalog__ideas .catalog__item a, .classificator .classificator__item a, .idea .idea__cardtitle a, .idea .idea__tag a, .publication .publication__title a, .publication .publication__img, .publication .publication__type, .ideas__cardtitle a, .ideas__tag a, .article .article__text a, .project, .city .city__title a, .lead__slide .lead__title-wrapper a, .breadcrumb__item a, .footer .footer__links a, .footer .footer__emails a, .header .header__link, .header .header__burger, .header .header__logo {
+.timeline .timeline__item-text a, .accordions .accordion .accordion__trigger, .pagination .pagination__link, .catalog__ideas .catalog__item a, .classificator .classificator__item a, .publication .publication__img, .project, .lead__slide .lead__title-wrapper a, .breadcrumb__item a, .footer .footer__links a, .footer .footer__emails a, .header .header__link, .header .header__burger, .header .header__logo, .ideas__tag a, .idea .idea__cardtitle a, .idea .idea__tag a, .publication .publication__title a, .ideas__cardtitle a, .city .city__title a, .about-service .about-service__section-subtitle a, .publication .publication__type, .article .article__text a {
   color: inherit;
   text-decoration: none;
 }
 
+.about-service .about-service__section-subtitle a, .publication .publication__type, .article .article__text a {
+  color: #2D8BF1;
+}
+.about-service .about-service__section-subtitle a:hover, .publication .publication__type:hover, .article .article__text a:hover {
+  color: #106CD1;
+}
+.about-service .about-service__section-subtitle a:active, .publication .publication__type:active, .article .article__text a:active {
+  color: #0C5FBA;
+}
+@media screen and (max-width: 1024px) {
+  .about-service .about-service__section-subtitle a:hover, .publication .publication__type:hover, .article .article__text a:hover {
+    color: #2D8BF1;
+  }
+}
+
+.idea .idea__cardtitle a, .idea .idea__tag a, .publication .publication__title a, .ideas__cardtitle a, .city .city__title a {
+  color: #201E33;
+}
+.idea .idea__cardtitle a:hover, .idea .idea__tag a:hover, .publication .publication__title a:hover, .ideas__cardtitle a:hover, .city .city__title a:hover {
+  color: #605D7C;
+}
+.idea .idea__cardtitle a:active, .idea .idea__tag a:active, .publication .publication__title a:active, .ideas__cardtitle a:active, .city .city__title a:active {
+  color: #201E33;
+}
+@media screen and (max-width: 1024px) {
+  .idea .idea__cardtitle a:hover, .idea .idea__tag a:hover, .publication .publication__title a:hover, .ideas__cardtitle a:hover, .city .city__title a:hover {
+    color: #201E33;
+  }
+}
+
+.ideas__tag a {
+  color: #A7A6B5;
+}
+.ideas__tag a:hover {
+  color: #7E7D90;
+}
+.ideas__tag a:active {
+  color: #5A596E;
+}
+@media screen and (max-width: 1024px) {
+  .ideas__tag a:hover {
+    color: #A7A6B5;
+  }
+}
+
 /*----------------------------------- transition -----------------------------------*/
-.accordions .accordion .accordion__title, .accordions .accordion .accordion__trigger svg, .pagination .pagination__link, .idea .idea__like-box .idea__like svg, .idea .idea__cardtitle a, .idea .idea__tag a, .publication .publication__title a, .publication .publication__img img, .publication .publication__type, .ideas__like svg, .ideas__cardtitle a, .ideas__tag a, .project .project__title, .project, .footer .footer__links a, .footer .footer__emails a, .header .header__link, .header .header__list-social ul svg, .header .header__burger-lines, .lead .carousel__button, .idea .idea__like-box .idea__like, .idea .idea__button, .ideas__showmore, .ideas__like, .lead-buttons__button, .lead__slide .lead__button {
+.timeline .timeline__item-text a, .accordions .accordion .accordion__title, .accordions .accordion .accordion__trigger svg, .pagination .pagination__link, .idea .idea__like-box .idea__like svg, .publication .publication__img img, .ideas__like svg, .project .project__title, .project, .footer .footer__links a, .footer .footer__emails a, .header .header__link, .header .header__list-social ul svg, .header .header__burger-lines, .lead .carousel__button, .idea .idea__like-box .idea__like, .idea .idea__button, .ideas__showmore, .ideas__like, .lead-buttons__button, .lead__slide .lead__button, .about-service .about-service__section-subtitle a, .publication .publication__type, .article .article__text a, .idea .idea__cardtitle a, .idea .idea__tag a, .publication .publication__title a, .ideas__cardtitle a, .city .city__title a, .ideas__tag a {
   -moz-transition-duration: 0.2s;
   -o-transition-duration: 0.2s;
   transition-duration: 0.2s;
@@ -1128,12 +1173,6 @@ ul {
 .city .city__title {
   grid-area: title;
 }
-.city .city__title:hover {
-  color: #605D7C;
-}
-.city .city__title:active {
-  color: #201E33;
-}
 .city .city__subtitle {
   grid-area: subtitle;
 }
@@ -1359,16 +1398,6 @@ ul {
   flex-direction: column;
   row-gap: 16px;
 }
-.article .article__text a {
-  color: #2D8BF1;
-}
-.article .article__text a:hover {
-  color: #106CD1;
-}
-.article .article__text a:active {
-  color: #0C5FBA;
-}
-
 .map {
   width: 100%;
 }
@@ -1383,6 +1412,11 @@ ul {
   background-image: url(../../images/pic.png);
   background-size: cover;
   background-repeat: no-repeat;
+}
+@media screen and (max-width: 1024px) {
+  .map .map__map {
+    height: 470px;
+  }
 }
 
 .ideas {
@@ -1444,23 +1478,9 @@ ul {
 .ideas__tag {
   color: #A7A6B5;
 }
-.ideas__tag a:hover {
-  color: #7E7D90;
-}
-.ideas__tag a:active {
-  color: #5A596E;
-}
-
 .ideas__cardtitle {
   margin-bottom: 4px;
 }
-.ideas__cardtitle a:hover {
-  color: #605D7C;
-}
-.ideas__cardtitle a:active {
-  color: #201E33;
-}
-
 .ideas__description {
   line-height: 20px;
 }
@@ -1581,13 +1601,6 @@ ul {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  color: #2D8BF1;
-}
-.publication .publication__type:hover {
-  color: #106CD1;
-}
-.publication .publication__type:active {
-  color: #0C5FBA;
 }
 .publication .publication__filler {
   flex-shrink: 1;
@@ -1609,12 +1622,6 @@ ul {
   object-fit: cover;
   width: 100%;
   transition: all 0.5s ease-in-out;
-}
-.publication .publication__title a:hover {
-  color: #605D7C;
-}
-.publication .publication__title a:active {
-  color: #201E33;
 }
 .about-project {
   max-width: calc(1440px - 10%);
@@ -1672,20 +1679,8 @@ ul {
 .idea .idea__tag {
   color: #A7A6B5;
 }
-.idea .idea__tag a:hover {
-  color: #7E7D90;
-}
-.idea .idea__tag a:active {
-  color: #5A596E;
-}
 .idea .idea__cardtitle {
   margin: 8px 0 16px;
-}
-.idea .idea__cardtitle a:hover {
-  color: #605D7C;
-}
-.idea .idea__cardtitle a:active {
-  color: #201E33;
 }
 .idea .idea__author {
   margin: 16px 0 8px;
@@ -1989,6 +1984,125 @@ ul {
 }
 .accordions .accordion.accordion_opened .accordion__trigger:hover svg {
   transform: rotate(0);
+}
+
+.about-service {
+  display: flex;
+  flex-direction: column;
+  max-width: 644px;
+  width: 90%;
+  margin: 80px auto;
+  row-gap: 40px;
+}
+@media screen and (max-width: 1024px) {
+  .about-service {
+    margin: 40px auto 80px;
+  }
+}
+.about-service .about-service__section img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}
+.about-service .about-service__section-text {
+  margin-top: 8px;
+}
+.about-service .about-service__section-text ul {
+  margin: 16px 0 0;
+  padding-left: 24px;
+  list-style: disc;
+}
+
+.timeline {
+  width: 100%;
+}
+.timeline .timeline__item {
+  display: flex;
+  flex-direction: row;
+  column-gap: 24px;
+  transition: all 0.3s ease;
+}
+.timeline .timeline__item:last-of-type .timeline__text-box {
+  margin-bottom: 0;
+}
+.timeline .timeline__item:last-of-type .timeline__filler {
+  display: none;
+}
+@media screen and (max-width: 1024px) {
+  .timeline .timeline__item {
+    column-gap: 12px;
+    margin-left: 0;
+  }
+}
+.timeline .timeline__counter {
+  display: flex;
+  flex-direction: column;
+}
+.timeline .timeline__step {
+  font-size: 15px;
+  display: block;
+  margin: 0;
+  border: 1px solid #2D8BF1;
+  border-radius: 50%;
+  background-color: #F6F6F7;
+  width: 32px;
+  height: 32px;
+  min-height: 32px;
+  flex-shrink: 0;
+  text-align: center;
+  overflow: hidden;
+}
+.timeline .timeline__step img {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+}
+.timeline .timeline__filler {
+  border-left: 1px dashed #2D8BF1;
+  height: 100%;
+  width: 1px;
+  align-self: center;
+  flex-shrink: 2;
+}
+.timeline .timeline__text-box {
+  max-width: 100%;
+  width: 100%;
+  position: relative;
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 1024px) {
+  .timeline .timeline__text-box {
+    margin-bottom: 32px;
+  }
+}
+.timeline .timeline__item-title {
+  margin: 5px 0 16px;
+}
+@media screen and (max-width: 1024px) {
+  .timeline .timeline__item-title {
+    margin: 5px 0 8px;
+  }
+}
+.timeline .timeline__item-text {
+  max-width: 100%;
+  width: 100%;
+}
+.timeline .timeline__item-text a {
+  color: #2D8BF1;
+}
+.timeline .timeline__item-text a:hover {
+  color: #106CD1;
+}
+.timeline .timeline__item-text a:active {
+  color: #0C5FBA;
+}
+.timeline .timeline__item-text p {
+  margin-bottom: 4px;
+}
+.timeline .timeline__item-text p:last-of-type {
+  margin-bottom: 0;
 }
 
 /*# sourceMappingURL=index.css.map */

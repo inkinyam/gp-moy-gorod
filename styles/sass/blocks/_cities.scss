@@ -107,15 +107,7 @@
     @extend %giant-text;
     
     a {
-      @extend %silly-link;
-    }
-
-    &:hover {
-      color: $dark-color-hovered;
-    }
-
-    &:active {
-      color: $dark-color-onclick;
+      @extend %black-link;
     }
   }
 

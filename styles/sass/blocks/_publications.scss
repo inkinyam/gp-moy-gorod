@@ -66,21 +66,13 @@
   }
   
   .publication__type {
-    @extend %silly-link;
+    @extend %blue-link;
     @extend %text-circe-20;
-    @extend %transition;
-  
+   
     max-width: 70%;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-    color: $primary-color-default;
-    &:hover {
-      color: $primary-color-hovered;
-    }
-    &:active {
-      color: $primary-color-onclick;
-    }
   }
   
   .publication__filler {
@@ -116,16 +108,7 @@
     @extend %title-h2;
   
     a {
-      @extend %silly-link;
-      @extend %transition;
-  
-      &:hover {
-        color: $dark-color-hovered;
-      }
-  
-      &:active {
-        color: $dark-color-onclick;
-      }
+      @extend %black-link;
     }
   }
   

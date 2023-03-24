@@ -19,16 +19,7 @@
     }
 
     a {
-      @extend %silly-link;
-      color: $primary-color-default;
-
-      &:hover {
-        color: $primary-color-hovered;
-      }
-
-      &:active {
-        color: $primary-color-onclick;
-      }
+      @extend %blue-link;
     }
   }
 }
