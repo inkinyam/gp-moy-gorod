@@ -33,7 +33,7 @@
 
     display: flex;
     justify-content: flex-end;
-    column-gap: $spacer-xxs / 2;
+    column-gap: 4px;
 
     @media screen and (max-width: $tablet) {
       text-transform: lowercase;

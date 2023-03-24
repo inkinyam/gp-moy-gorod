@@ -6,7 +6,4 @@ let likeButtons = Array.from(document.querySelectorAll('.like'));
       })
     })
   } 
-  else {
-    console.log('ERR: карточки с лайками не нашлись')
-  }
 
