@@ -72,7 +72,7 @@ ul {
 /*----------------------------------- spacers -----------------------------------*/
 /*----------------------------------- transitions -----------------------------------*/
 /*----------------------------------- titles -----------------------------------*/
-.cover .cover__title, .timeline .timeline__item-title, .about-service .about-service__section-subtitle, .accordions .accordion .accordion__title, .about-project .about-project__item-title, .ideas__cardtitle, .about .about__card-title, .project .project__tag, .project .project__title, .footer .footer__emails p, .header .header__link, .idea .idea__cardtitle, .about-service .about-service__section-title, .accordions .accordions__title, .classificator .classificator__title, .titleblock .title, .about-project .about-project__title, .publication .publication__title, .publications .publications__title, .ideas .ideas__title, .map .map__title, .article .article__title, .lead-buttons__button .lead-buttons__city, .title, .city .city__title, .lead__slide .lead__title-wrapper a, .lead__slide .lead__title-wrapper p {
+.cover .cover__title, .timeline .timeline__item-title, .about-service .about-service__section-subtitle, .accordions .accordion .accordion__title, .about-project .about-project__item-title, .ideas__cardtitle, .about .about__card-title, .project .project__tag, .project .project__title, .footer .footer__emails p, .header .header__link, .auth__message h3, .idea .idea__cardtitle, .about-service .about-service__section-title, .accordions .accordions__title, .classificator .classificator__title, .titleblock .title, .about-project .about-project__title, .publication .publication__title, .publications .publications__title, .ideas .ideas__title, .map .map__title, .article .article__title, .lead-buttons__button .lead-buttons__city, .title, .city .city__title, .lead__slide .lead__title-wrapper a, .lead__slide .lead__title-wrapper p {
   font-family: "Circe";
   font-style: normal;
   font-weight: 700;
@@ -112,7 +112,7 @@ ul {
   }
 }
 
-.idea .idea__cardtitle {
+.auth__message h3, .idea .idea__cardtitle {
   font-size: 22px;
   line-height: 24px;
 }
@@ -134,23 +134,23 @@ ul {
 }
 
 /*----------------------------------- circe text -----------------------------------*/
-.idea .idea__like-box .idea__like-counter, .idea .idea__author, .idea .idea__description, .idea .idea__tag, .ideas__like-counter, .ideas__author, .ideas__description, .ideas__tag, .breadcrumb__item, .footer .footer__links a, .footer .footer__copyright, .footer .footer__emails a, .catalog__ideas .catalog__item a, .classificator .classificator__item a, .idea .idea__button, .ideas__showmore, .lead__slide .lead__button, .publication .publication__date, .publication .publication__type, .lead-buttons__button .lead-buttons__advice {
+.auth__input, .idea .idea__like-box .idea__like-counter, .idea .idea__author, .idea .idea__description, .idea .idea__tag, .ideas__like-counter, .ideas__author, .ideas__description, .ideas__tag, .breadcrumb__item, .footer .footer__links a, .footer .footer__copyright, .footer .footer__emails a, .auth__message, .auth__check-description, .auth__helplink, .catalog__ideas .catalog__item a, .classificator .classificator__item a, .idea .idea__button, .ideas__showmore, .lead__slide .lead__button, .auth__label, .publication .publication__date, .publication .publication__type, .lead-buttons__button .lead-buttons__advice {
   font-family: "Circe";
   font-style: normal;
   font-weight: 400;
 }
 
-.publication .publication__date, .publication .publication__type, .lead-buttons__button .lead-buttons__advice {
+.auth__label, .publication .publication__date, .publication .publication__type, .lead-buttons__button .lead-buttons__advice {
   font-size: 20px;
   line-height: 24px;
 }
 
-.catalog__ideas .catalog__item a, .classificator .classificator__item a, .idea .idea__button, .ideas__showmore, .lead__slide .lead__button {
+.auth__message, .auth__check-description, .auth__helplink, .catalog__ideas .catalog__item a, .classificator .classificator__item a, .idea .idea__button, .ideas__showmore, .lead__slide .lead__button {
   font-size: 18px;
   line-height: 24px;
 }
 
-.idea .idea__like-box .idea__like-counter, .idea .idea__author, .idea .idea__description, .idea .idea__tag, .ideas__like-counter, .ideas__author, .ideas__description, .ideas__tag, .breadcrumb__item, .footer .footer__links a, .footer .footer__copyright, .footer .footer__emails a {
+.auth__input, .idea .idea__like-box .idea__like-counter, .idea .idea__author, .idea .idea__description, .idea .idea__tag, .ideas__like-counter, .ideas__author, .ideas__description, .ideas__tag, .breadcrumb__item, .footer .footer__links a, .footer .footer__copyright, .footer .footer__emails a {
   font-size: 16px;
   line-height: 24px;
 }
@@ -170,12 +170,12 @@ ul {
 }
 
 /*----------------------------------- custom cursor -----------------------------------*/
-.carousel__dots .carousel__dot:hover, .carousel__button:hover, .idea .idea__like-box .idea__like:hover, .idea .idea__button:hover, .ideas__showmore:hover, .ideas__like:hover, .lead-buttons__button:hover, .lead__slide .lead__button:hover, .timeline .timeline__item-text a:hover, .accordions .accordion .accordion__trigger:hover, .pagination .pagination__link:hover, .catalog__ideas .catalog__item a:hover, .classificator .classificator__item a:hover, .publication .publication__img:hover, .project:hover, .lead__slide .lead__title-wrapper a:hover, .breadcrumb__item a:hover, .footer .footer__links a:hover, .footer .footer__emails a:hover, .header .header__link:hover, .header .header__burger:hover, .header .header__logo:hover, .ideas__tag a:hover, .idea .idea__cardtitle a:hover, .idea .idea__tag a:hover, .publication .publication__title a:hover, .ideas__cardtitle a:hover, .city .city__title a:hover, .about-service .about-service__section-subtitle a:hover, .publication .publication__type:hover, .article .article__text a:hover {
+.carousel__dots .carousel__dot:hover, .carousel__button:hover, .auth__button:hover, .idea .idea__like-box .idea__like:hover, .idea .idea__button:hover, .ideas__showmore:hover, .ideas__like:hover, .lead-buttons__button:hover, .lead__slide .lead__button:hover, .auth__check-label:hover, .auth__input:hover, .timeline .timeline__item-text a:hover, .accordions .accordion .accordion__trigger:hover, .pagination .pagination__link:hover, .catalog__ideas .catalog__item a:hover, .classificator .classificator__item a:hover, .publication .publication__img:hover, .project:hover, .lead__slide .lead__title-wrapper a:hover, .breadcrumb__item a:hover, .footer .footer__links a:hover, .footer .footer__emails a:hover, .header .header__link:hover, .header .header__burger:hover, .header .header__logo:hover, .ideas__tag a:hover, .auth__helplink:hover, .idea .idea__cardtitle a:hover, .idea .idea__tag a:hover, .publication .publication__title a:hover, .ideas__cardtitle a:hover, .city .city__title a:hover, .about-service .about-service__section-subtitle a:hover, .publication .publication__type:hover, .article .article__text a:hover {
   cursor: url(../../images/Cursor-hand.svg), pointer;
 }
 
 /*----------------------------------- silly-link -----------------------------------*/
-.timeline .timeline__item-text a, .accordions .accordion .accordion__trigger, .pagination .pagination__link, .catalog__ideas .catalog__item a, .classificator .classificator__item a, .publication .publication__img, .project, .lead__slide .lead__title-wrapper a, .breadcrumb__item a, .footer .footer__links a, .footer .footer__emails a, .header .header__link, .header .header__burger, .header .header__logo, .ideas__tag a, .idea .idea__cardtitle a, .idea .idea__tag a, .publication .publication__title a, .ideas__cardtitle a, .city .city__title a, .about-service .about-service__section-subtitle a, .publication .publication__type, .article .article__text a {
+.auth__check-label, .auth__input, .timeline .timeline__item-text a, .accordions .accordion .accordion__trigger, .pagination .pagination__link, .catalog__ideas .catalog__item a, .classificator .classificator__item a, .publication .publication__img, .project, .lead__slide .lead__title-wrapper a, .breadcrumb__item a, .footer .footer__links a, .footer .footer__emails a, .header .header__link, .header .header__burger, .header .header__logo, .ideas__tag a, .auth__helplink, .idea .idea__cardtitle a, .idea .idea__tag a, .publication .publication__title a, .ideas__cardtitle a, .city .city__title a, .about-service .about-service__section-subtitle a, .publication .publication__type, .article .article__text a {
   color: inherit;
   text-decoration: none;
 }
@@ -195,17 +195,17 @@ ul {
   }
 }
 
-.idea .idea__cardtitle a, .idea .idea__tag a, .publication .publication__title a, .ideas__cardtitle a, .city .city__title a {
+.auth__helplink, .idea .idea__cardtitle a, .idea .idea__tag a, .publication .publication__title a, .ideas__cardtitle a, .city .city__title a {
   color: #201E33;
 }
-.idea .idea__cardtitle a:hover, .idea .idea__tag a:hover, .publication .publication__title a:hover, .ideas__cardtitle a:hover, .city .city__title a:hover {
+.auth__helplink:hover, .idea .idea__cardtitle a:hover, .idea .idea__tag a:hover, .publication .publication__title a:hover, .ideas__cardtitle a:hover, .city .city__title a:hover {
   color: #605D7C;
 }
-.idea .idea__cardtitle a:active, .idea .idea__tag a:active, .publication .publication__title a:active, .ideas__cardtitle a:active, .city .city__title a:active {
+.auth__helplink:active, .idea .idea__cardtitle a:active, .idea .idea__tag a:active, .publication .publication__title a:active, .ideas__cardtitle a:active, .city .city__title a:active {
   color: #201E33;
 }
 @media screen and (max-width: 1024px) {
-  .idea .idea__cardtitle a:hover, .idea .idea__tag a:hover, .publication .publication__title a:hover, .ideas__cardtitle a:hover, .city .city__title a:hover {
+  .auth__helplink:hover, .idea .idea__cardtitle a:hover, .idea .idea__tag a:hover, .publication .publication__title a:hover, .ideas__cardtitle a:hover, .city .city__title a:hover {
     color: #201E33;
   }
 }
@@ -226,7 +226,7 @@ ul {
 }
 
 /*----------------------------------- transition -----------------------------------*/
-.timeline .timeline__item-text a, .accordions .accordion .accordion__title, .accordions .accordion .accordion__trigger svg, .pagination .pagination__link, .idea .idea__like-box .idea__like svg, .publication .publication__img img, .ideas__like svg, .project .project__title, .project, .footer .footer__links a, .footer .footer__emails a, .header .header__link, .header .header__list-social ul svg, .header .header__burger-lines, .lead .carousel__button, .idea .idea__like-box .idea__like, .idea .idea__button, .ideas__showmore, .ideas__like, .lead-buttons__button, .lead__slide .lead__button, .about-service .about-service__section-subtitle a, .publication .publication__type, .article .article__text a, .idea .idea__cardtitle a, .idea .idea__tag a, .publication .publication__title a, .ideas__cardtitle a, .city .city__title a, .ideas__tag a {
+.auth__input, .auth__label, .timeline .timeline__item-text a, .accordions .accordion .accordion__title, .accordions .accordion .accordion__trigger svg, .pagination .pagination__link, .idea .idea__like-box .idea__like svg, .publication .publication__img img, .ideas__like svg, .project .project__title, .project, .footer .footer__links a, .footer .footer__emails a, .header .header__link, .header .header__list-social ul svg, .header .header__burger-lines, .lead .carousel__button, .auth__button, .idea .idea__like-box .idea__like, .idea .idea__button, .ideas__showmore, .ideas__like, .lead-buttons__button, .lead__slide .lead__button, .about-service .about-service__section-subtitle a, .publication .publication__type, .article .article__text a, .auth__helplink, .idea .idea__cardtitle a, .idea .idea__tag a, .publication .publication__title a, .ideas__cardtitle a, .city .city__title a, .ideas__tag a {
   -moz-transition-duration: 0.2s;
   -o-transition-duration: 0.2s;
   transition-duration: 0.2s;
@@ -236,7 +236,7 @@ ul {
 }
 
 /*----------------------------------- buttons -----------------------------------*/
-.idea .idea__like-box .idea__like, .idea .idea__button, .ideas__showmore, .ideas__like, .lead-buttons__button, .lead__slide .lead__button {
+.auth__button, .idea .idea__like-box .idea__like, .idea .idea__button, .ideas__showmore, .ideas__like, .lead-buttons__button, .lead__slide .lead__button {
   transition-property: color, background-color;
   text-decoration: none;
   text-align: center;
@@ -666,6 +666,16 @@ ul {
   box-sizing: border-box;
   padding: 24px 0 50px;
   width: 100%;
+}
+.footer.footer_sticked {
+  position: fixed;
+  bottom: 0;
+}
+@media screen and (max-width: 1024px) {
+  .footer.footer_sticked {
+    position: static;
+    bottom: unset;
+  }
 }
 .footer .footer__container {
   max-width: calc(1440px - 10%);
@@ -2103,6 +2113,245 @@ ul {
 }
 .timeline .timeline__item-text p:last-of-type {
   margin-bottom: 0;
+}
+
+.auth {
+  width: 90%;
+  max-width: 644px;
+  margin: 80px auto 120px;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (max-width: 1024px) {
+  .auth {
+    margin: 60px auto 60px;
+  }
+}
+
+.auth__input-group {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.auth__input-group.required .auth__label::after {
+  content: "*";
+}
+.auth__input-group:hover .auth__input {
+  border-bottom: 1px solid #201E33;
+}
+.auth__input-group:hover .auth__label {
+  color: #605D7C;
+}
+.auth__input-group:last-of-type {
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.auth__helplink {
+  margin-right: 4px;
+}
+
+.auth__label {
+  color: #6990BA;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  width: 226px;
+}
+.auth__label.form__label_active {
+  top: -10px;
+  font-size: 12px;
+}
+
+.auth__input {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #6990BA;
+  color: #605D7C;
+  min-height: 56px;
+  box-sizing: border-box;
+  padding-left: 8px;
+  padding-right: 30px;
+  background: transparent;
+  border-radius: 0;
+}
+.auth__input:focus {
+  outline: none;
+}
+
+.auth__err {
+  visibility: hidden;
+  color: #F13D53;
+  font-size: 16px;
+  min-height: 40px;
+  margin: 8px 0 0 3px;
+  font-family: "Circe";
+}
+.auth__err.auth__err_show {
+  visibility: visible;
+}
+
+.auth__check-box {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.auth__check {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin: 3px 0 0;
+  padding: 0;
+  border: 1px solid #6990BA;
+  background-color: #F6F6F7;
+  outline: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border-radius: 0;
+}
+
+.auth__check-label {
+  display: flex;
+  position: relative;
+  padding: 1px 5px 5px 5px;
+  box-sizing: content-box;
+  /* Hover */
+  /* checked */
+  /* checked hover */
+  /*галочка*/
+  /* Active */
+  /* Disabled */
+}
+.auth__check-label input[type=checkbox]:hover {
+  border: 1px solid #2D8BF1;
+}
+.auth__check-label input[type=checkbox]:checked {
+  background-color: #2D8BF1;
+  border: 1px solid #2D8BF1;
+}
+.auth__check-label input[type=checkbox]:checked:hover {
+  background-color: #106CD1;
+  border: 1px solid #106CD1;
+}
+.auth__check-label input[type=checkbox]:checked + .auth__check-v {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 10px;
+  height: 5px;
+  border-radius: 1px;
+  border-left: 2px solid #F6F6F7;
+  border-bottom: 2px solid #FFFFFF;
+  transform: rotate(-45deg);
+}
+.auth__check-label input[type=checkbox]:active {
+  background-color: var(--blue-onclick);
+}
+.auth__check-label input[type=checkbox]:disabled {
+  background-color: #0C5FBA;
+  border: 1px solid #0C5FBA;
+  cursor: default;
+}
+
+.auth__check-description {
+  color: #201E33;
+  padding: 0;
+  margin: 0;
+  width: 90%;
+  margin-left: 6px;
+}
+
+/***************************************** ВАЛИДАЦИЯ *****************************************/
+/* проверка на корректность */
+.is-invalid .auth__check-label input[type=checkbox] {
+  background-color: #F13D53;
+  border: 1px solid #F13D53;
+}
+
+.is-invalid .auth__check-label input[type=checkbox]:checked {
+  background-color: #2D8BF1;
+  border: 1px solid #2D8BF1;
+}
+
+/* проверка на корректность */
+.is-valid .auth__check-label input[type=checkbox]:checked {
+  background-color: #4BB96A;
+  border: 1px solid #4BB96A;
+}
+
+/*правильно заполненное поле ввода*/
+.auth__input-group.is-valid .auth__input {
+  background-image: url(../../../images/icons/Check.png);
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+/*НЕПРАВИЛЬНО заполненное поле ввода*/
+.auth__input-group.is-invalid .auth__input {
+  background-image: url(../../../images/icons/err.png);
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.auth__input-group.is-invalid .auth__err {
+  visibility: visible;
+}
+
+/***************************************** КНОПКА ФОРМЫ *****************************************/
+.auth__button {
+  max-width: 244px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #2D8BF1;
+  color: #F6F6F7;
+}
+.auth__button:hover {
+  background-color: #106CD1;
+  color: #F0F0F4;
+}
+.auth__button:active {
+  background-color: #0C5FBA;
+  color: #FFFFFF;
+}
+
+/***************************************** СООБЩЕНИЕ ОБ ОТПРАВКЕ *****************************************/
+.auth__message {
+  margin: 40px auto 0;
+  width: 100%;
+  color: #6990BA;
+  box-sizing: border-box;
+  padding: 0;
+}
+.auth__message h3 {
+  color: #201E33;
+  margin: 0 0 16px;
+}
+.auth__message p {
+  color: #6990BA;
+}
+
+@media screen and (max-width: 960px) {
+  .auth__check-description {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .auth__check {
+    margin: 2px 0 0;
+  }
+  .auth__check-label {
+    margin: 0 8px 0 0;
+  }
+  .auth__message h3 {
+    font-size: 18px;
+    line-height: 26px;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

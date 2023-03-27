@@ -5,6 +5,15 @@
   padding: 24px 0 50px;
   width: 100%;
   
+  &.footer_sticked {
+    position: fixed;
+    bottom: 0;
+
+    @media screen and (max-width: $tablet) {
+      position: static;
+      bottom: unset;      
+    }
+  }
 
   .footer__container {
     max-width: calc(1440px - 10%);

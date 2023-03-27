@@ -51,3 +51,13 @@ function initAccordion (selector) {
   }
 }
 window.initAccordion = initAccordion;
+
+import LabeledInput from './LabeledInput.js'
+
+let labeledInputs = Array.from(document.querySelectorAll('.labeledinput'));
+if (labeledInputs.length != 0) {
+  labeledInputs.forEach(item => {
+    let el = new LabeledInput(item);
+    el.setEventListeners();
+  })
+}

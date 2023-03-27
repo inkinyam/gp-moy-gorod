@@ -1,0 +1,297 @@
+.auth {
+  width:90%;
+  max-width: 644px;
+  margin: 80px auto 120px;
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (max-width: $tablet) {
+    margin: 60px auto 60px;
+  }
+}
+
+
+.auth__input-group {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &.required .auth__label::after {
+    content: '*';
+  }
+
+  &:hover {
+    .auth__input{
+      border-bottom: 1px solid $dark-color-default;
+    }
+
+    .auth__label{
+      color:$dark-color-hovered;
+    }
+  }
+
+  &:last-of-type {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+}
+
+.auth__helplink {
+  @extend %text-circe-18;
+  @extend %black-link;
+  margin-right: 4px;
+}
+
+.auth__label {
+  color:  $active-text-color;
+  @extend %text-circe-20;
+  @extend %transition;
+
+  position: absolute;
+  pointer-events: none;
+	left: 5px;
+	top: 10px;
+  width: 226px;
+
+  &.form__label_active {
+    top: -10px;
+    font-size: 12px;
+  } 
+}
+
+
+
+
+.auth__input {
+  @extend %silly-link;
+  @extend %text-circe-16; 
+  @extend %transition;
+
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid $active-text-color;
+  color: $dark-color-hovered;
+  min-height: 56px;
+  box-sizing: border-box;
+  padding-left: 8px;
+  padding-right: 30px;
+  background: transparent;
+  border-radius: 0;
+  
+  &:focus {
+    outline: none;
+  }
+}
+
+
+
+.auth__err {
+  visibility: hidden;
+  color: $danger-color-default;
+  font-size: 16px;
+  min-height: 40px;
+  margin: 8px 0 0 3px;
+  font-family: 'Circe';
+
+  &.auth__err_show {
+    visibility: visible;
+  }
+}
+
+
+
+.auth__check-box{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.auth__check {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+  margin: 3px 0 0;
+	padding: 0;
+  border: 1px solid $active-text-color;
+  background-color: #F6F6F7;
+	outline: none;
+	transition: all 0.3s ease;
+	cursor: pointer;
+	border-radius: 0;
+}
+
+.auth__check-label {
+	display: flex;
+  position: relative;
+	padding: 1px 5px 5px 5px;
+	box-sizing: content-box;
+  @extend %silly-link;
+
+  /* Hover */
+  input[type=checkbox]:hover {
+    border: 1px solid $primary-color-default;
+  }
+
+  /* checked */
+  input[type=checkbox]:checked {
+    background-color: $primary-color-default;
+    border: 1px solid $primary-color-default;
+  }
+
+  /* checked hover */
+  input[type=checkbox]:checked:hover {
+    background-color: $primary-color-hovered;
+    border: 1px solid $primary-color-hovered;
+  }
+
+  /*галочка*/
+  input[type=checkbox]:checked +.auth__check-v {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    width: 10px;
+    height: 5px;
+    border-radius: 1px;
+    border-left: 2px solid $light-color-default;
+    border-bottom: 2px solid $light-color-onclick;
+    transform: rotate(-45deg);
+  }
+
+  /* Active */
+  input[type=checkbox]:active {
+    background-color: var(--blue-onclick);
+  }
+
+  /* Disabled */
+  input[type=checkbox]:disabled {
+    background-color: $primary-color-onclick;
+    border: 1px solid $primary-color-onclick;
+    cursor: default;
+  }
+
+}
+
+
+
+.auth__check-description {
+  @extend %text-circe-18;
+  color: $dark-color-default;
+  padding: 0;
+  margin: 0;
+  width: 90%;
+  margin-left: 6px;
+}
+
+
+
+
+/***************************************** ВАЛИДАЦИЯ *****************************************/
+/* проверка на корректность */
+.is-invalid .auth__check-label input[type=checkbox] {
+	background-color: $danger-color-default;
+  border: 1px solid $danger-color-default;
+}
+
+.is-invalid .auth__check-label input[type=checkbox]:checked {
+	background-color: $primary-color-default;
+  border: 1px solid $primary-color-default;
+}
+
+/* проверка на корректность */
+.is-valid .auth__check-label input[type=checkbox]:checked {
+	background-color: $succes-color-default;
+  border: 1px solid $succes-color-default;
+}
+
+
+/*правильно заполненное поле ввода*/
+.auth__input-group.is-valid .auth__input {
+  background-image: url(../../../images/icons/Check.png);
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+
+/*НЕПРАВИЛЬНО заполненное поле ввода*/
+.auth__input-group.is-invalid .auth__input {
+  background-image: url(../../../images/icons/err.png);
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.auth__input-group.is-invalid .auth__err{
+  visibility: visible;
+}
+
+/***************************************** КНОПКА ФОРМЫ *****************************************/
+.auth__button {
+  @extend %button;
+  max-width: 244px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: $primary-color-default;
+  color: $light-color-default;
+
+  &:hover {
+    background-color: $primary-color-hovered;
+    color: $light-color-hovered;
+  }
+
+  &:active {
+    background-color: $primary-color-onclick;
+    color: $light-color-onclick;
+  }
+
+}
+
+/***************************************** СООБЩЕНИЕ ОБ ОТПРАВКЕ *****************************************/
+.auth__message {
+  @extend %text-circe-18;
+  margin: 40px auto 0;
+  width: 100%;
+
+  color: $active-text-color;
+  box-sizing: border-box;
+  padding: 0;
+
+  h3 {
+    @extend %title-h3 ;
+    color: $dark-color-default;
+    margin: 0 0 16px ;
+  }
+
+  p {
+    color: $active-text-color;
+  }
+
+}
+
+
+
+
+@media screen and (max-width: 960px) {
+
+  .auth__check-description  {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+	.auth__check {
+		margin: 2px 0 0;
+	}
+
+
+	.auth__check-label {
+		margin: 0 8px 0 0;
+	}
+
+  .auth__message h3 {
+    font-size: 18px;
+    line-height: 26px;
+   }
+}
