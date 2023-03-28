@@ -80,17 +80,17 @@
     }
 
     @media screen and (max-width: $tablet) {
-      &:nth-of-type(2) {
+      &:nth-of-type(3) {
         position: relative;
         &::after {
           position: absolute;
           top: 0;
-          left: 50px;
+          left: 23px;
           content: '...';
         }
       }
 
-      &:nth-of-type(n+4):nth-of-type(-n+7) {
+      &:nth-of-type(n+4):nth-of-type(-n+8) {
         display: none;
       }
     }
