@@ -134,7 +134,7 @@ ul {
 }
 
 /*----------------------------------- circe text -----------------------------------*/
-.auth__input, .idea .idea__like-box .idea__like-counter, .idea .idea__author, .idea .idea__description, .idea .idea__tag, .ideas__like-counter, .ideas__author, .ideas__description, .ideas__tag, .breadcrumb__item, .footer .footer__links a, .footer .footer__copyright, .footer .footer__emails a, .auth__message, .auth__check-description, .auth__helplink, .catalog__ideas .catalog__item a, .classificator .classificator__item a, .idea .idea__button, .ideas__showmore, .lead__slide .lead__button, .auth__label, .publication .publication__date, .publication .publication__type, .lead-buttons__button .lead-buttons__advice {
+.profile, .auth__input, .idea .idea__like-box .idea__like-counter, .idea .idea__author, .idea .idea__description, .idea .idea__tag, .ideas__like-counter, .ideas__author, .ideas__description, .ideas__tag, .breadcrumb__item, .footer .footer__links a, .footer .footer__copyright, .footer .footer__emails a, .moderation__table, .tabs__nav-btn, .tabs__links .tabs__link, .auth__message, .auth__check-description, .auth__helplink, .catalog__ideas .catalog__item a, .classificator .classificator__item a, .idea .idea__button, .ideas__showmore, .lead__slide .lead__button, .auth__label, .publication .publication__date, .publication .publication__type, .lead-buttons__button .lead-buttons__advice {
   font-family: "Circe";
   font-style: normal;
   font-weight: 400;
@@ -145,7 +145,7 @@ ul {
   line-height: 24px;
 }
 
-.auth__message, .auth__check-description, .auth__helplink, .catalog__ideas .catalog__item a, .classificator .classificator__item a, .idea .idea__button, .ideas__showmore, .lead__slide .lead__button {
+.moderation__table, .tabs__nav-btn, .tabs__links .tabs__link, .auth__message, .auth__check-description, .auth__helplink, .catalog__ideas .catalog__item a, .classificator .classificator__item a, .idea .idea__button, .ideas__showmore, .lead__slide .lead__button {
   font-size: 18px;
   line-height: 24px;
 }
@@ -153,6 +153,11 @@ ul {
 .auth__input, .idea .idea__like-box .idea__like-counter, .idea .idea__author, .idea .idea__description, .idea .idea__tag, .ideas__like-counter, .ideas__author, .ideas__description, .ideas__tag, .breadcrumb__item, .footer .footer__links a, .footer .footer__copyright, .footer .footer__emails a {
   font-size: 16px;
   line-height: 24px;
+}
+
+.profile {
+  font-size: 15px;
+  line-height: 18px;
 }
 
 /*----------------------------------- lora text -----------------------------------*/
@@ -170,63 +175,63 @@ ul {
 }
 
 /*----------------------------------- custom cursor -----------------------------------*/
-.carousel__dots .carousel__dot:hover, .carousel__button:hover, .auth__button:hover, .idea .idea__like-box .idea__like:hover, .idea .idea__button:hover, .ideas__showmore:hover, .ideas__like:hover, .lead-buttons__button:hover, .lead__slide .lead__button:hover, .auth__check-label:hover, .auth__input:hover, .timeline .timeline__item-text a:hover, .accordions .accordion .accordion__trigger:hover, .pagination .pagination__link:hover, .catalog__ideas .catalog__item a:hover, .classificator .classificator__item a:hover, .publication .publication__img:hover, .project:hover, .lead__slide .lead__title-wrapper a:hover, .breadcrumb__item a:hover, .footer .footer__links a:hover, .footer .footer__emails a:hover, .header .header__link:hover, .header .header__burger:hover, .header .header__logo:hover, .ideas__tag a:hover, .auth__helplink:hover, .idea .idea__cardtitle a:hover, .idea .idea__tag a:hover, .publication .publication__title a:hover, .ideas__cardtitle a:hover, .city .city__title a:hover, .about-service .about-service__section-subtitle a:hover, .publication .publication__type:hover, .article .article__text a:hover {
+.carousel__dots .carousel__dot:hover, .carousel__button:hover, .auth__button:hover, .idea .idea__like-box .idea__like:hover, .idea .idea__button:hover, .ideas__showmore:hover, .ideas__like:hover, .lead-buttons__button:hover, .lead__slide .lead__button:hover, .moderation__tables .moderation__tables-item:hover, .tabs__nav-btn:hover, .auth__check-label:hover, .auth__input:hover, .timeline .timeline__item-text a:hover, .accordions .accordion .accordion__trigger:hover, .pagination .pagination__link:hover, .catalog__ideas .catalog__item a:hover, .classificator .classificator__item a:hover, .publication .publication__img:hover, .project:hover, .lead__slide .lead__title-wrapper a:hover, .breadcrumb__item a:hover, .footer .footer__links a:hover, .footer .footer__emails a:hover, .header .header__link:hover, .header .header__burger:hover, .header .header__logo:hover, .profile .profile__link:hover, .ideas__tag a:hover, .profile .profile__email a:hover, .auth__helplink:hover, .idea .idea__cardtitle a:hover, .idea .idea__tag a:hover, .publication .publication__title a:hover, .ideas__cardtitle a:hover, .city .city__title a:hover, .tabs__links .tabs__link:hover, .about-service .about-service__section-subtitle a:hover, .publication .publication__type:hover, .article .article__text a:hover {
   cursor: url(../../images/Cursor-hand.svg), pointer;
 }
 
 /*----------------------------------- silly-link -----------------------------------*/
-.auth__check-label, .auth__input, .timeline .timeline__item-text a, .accordions .accordion .accordion__trigger, .pagination .pagination__link, .catalog__ideas .catalog__item a, .classificator .classificator__item a, .publication .publication__img, .project, .lead__slide .lead__title-wrapper a, .breadcrumb__item a, .footer .footer__links a, .footer .footer__emails a, .header .header__link, .header .header__burger, .header .header__logo, .ideas__tag a, .auth__helplink, .idea .idea__cardtitle a, .idea .idea__tag a, .publication .publication__title a, .ideas__cardtitle a, .city .city__title a, .about-service .about-service__section-subtitle a, .publication .publication__type, .article .article__text a {
+.moderation__tables .moderation__tables-item, .tabs__nav-btn, .auth__check-label, .auth__input, .timeline .timeline__item-text a, .accordions .accordion .accordion__trigger, .pagination .pagination__link, .catalog__ideas .catalog__item a, .classificator .classificator__item a, .publication .publication__img, .project, .lead__slide .lead__title-wrapper a, .breadcrumb__item a, .footer .footer__links a, .footer .footer__emails a, .header .header__link, .header .header__burger, .header .header__logo, .profile .profile__link, .ideas__tag a, .profile .profile__email a, .auth__helplink, .idea .idea__cardtitle a, .idea .idea__tag a, .publication .publication__title a, .ideas__cardtitle a, .city .city__title a, .tabs__links .tabs__link, .about-service .about-service__section-subtitle a, .publication .publication__type, .article .article__text a {
   color: inherit;
   text-decoration: none;
 }
 
-.about-service .about-service__section-subtitle a, .publication .publication__type, .article .article__text a {
+.tabs__links .tabs__link, .about-service .about-service__section-subtitle a, .publication .publication__type, .article .article__text a {
   color: #2D8BF1;
 }
-.about-service .about-service__section-subtitle a:hover, .publication .publication__type:hover, .article .article__text a:hover {
+.tabs__links .tabs__link:hover, .about-service .about-service__section-subtitle a:hover, .publication .publication__type:hover, .article .article__text a:hover {
   color: #106CD1;
 }
-.about-service .about-service__section-subtitle a:active, .publication .publication__type:active, .article .article__text a:active {
+.tabs__links .tabs__link:active, .about-service .about-service__section-subtitle a:active, .publication .publication__type:active, .article .article__text a:active {
   color: #0C5FBA;
 }
 @media screen and (max-width: 1024px) {
-  .about-service .about-service__section-subtitle a:hover, .publication .publication__type:hover, .article .article__text a:hover {
+  .tabs__links .tabs__link:hover, .about-service .about-service__section-subtitle a:hover, .publication .publication__type:hover, .article .article__text a:hover {
     color: #2D8BF1;
   }
 }
 
-.auth__helplink, .idea .idea__cardtitle a, .idea .idea__tag a, .publication .publication__title a, .ideas__cardtitle a, .city .city__title a {
-  color: #201E33;
+.profile .profile__email a, .auth__helplink, .idea .idea__cardtitle a, .idea .idea__tag a, .publication .publication__title a, .ideas__cardtitle a, .city .city__title a {
+  color: #25253B;
 }
-.auth__helplink:hover, .idea .idea__cardtitle a:hover, .idea .idea__tag a:hover, .publication .publication__title a:hover, .ideas__cardtitle a:hover, .city .city__title a:hover {
+.profile .profile__email a:hover, .auth__helplink:hover, .idea .idea__cardtitle a:hover, .idea .idea__tag a:hover, .publication .publication__title a:hover, .ideas__cardtitle a:hover, .city .city__title a:hover {
   color: #605D7C;
 }
-.auth__helplink:active, .idea .idea__cardtitle a:active, .idea .idea__tag a:active, .publication .publication__title a:active, .ideas__cardtitle a:active, .city .city__title a:active {
+.profile .profile__email a:active, .auth__helplink:active, .idea .idea__cardtitle a:active, .idea .idea__tag a:active, .publication .publication__title a:active, .ideas__cardtitle a:active, .city .city__title a:active {
   color: #201E33;
 }
 @media screen and (max-width: 1024px) {
-  .auth__helplink:hover, .idea .idea__cardtitle a:hover, .idea .idea__tag a:hover, .publication .publication__title a:hover, .ideas__cardtitle a:hover, .city .city__title a:hover {
-    color: #201E33;
+  .profile .profile__email a:hover, .auth__helplink:hover, .idea .idea__cardtitle a:hover, .idea .idea__tag a:hover, .publication .publication__title a:hover, .ideas__cardtitle a:hover, .city .city__title a:hover {
+    color: #25253B;
   }
 }
 
-.ideas__tag a {
+.profile .profile__link, .ideas__tag a {
   color: #A7A6B5;
 }
-.ideas__tag a:hover {
+.profile .profile__link:hover, .ideas__tag a:hover {
   color: #7E7D90;
 }
-.ideas__tag a:active {
+.profile .profile__link:active, .ideas__tag a:active {
   color: #5A596E;
 }
 @media screen and (max-width: 1024px) {
-  .ideas__tag a:hover {
+  .profile .profile__link:hover, .ideas__tag a:hover {
     color: #A7A6B5;
   }
 }
 
 /*----------------------------------- transition -----------------------------------*/
-.auth__input, .auth__label, .timeline .timeline__item-text a, .accordions .accordion .accordion__title, .accordions .accordion .accordion__trigger svg, .pagination .pagination__link, .idea .idea__like-box .idea__like svg, .publication .publication__img img, .ideas__like svg, .project .project__title, .project, .footer .footer__links a, .footer .footer__emails a, .header .header__link, .header .header__list-social ul svg, .header .header__burger-lines, .lead .carousel__button, .auth__button, .idea .idea__like-box .idea__like, .idea .idea__button, .ideas__showmore, .ideas__like, .lead-buttons__button, .lead__slide .lead__button, .about-service .about-service__section-subtitle a, .publication .publication__type, .article .article__text a, .auth__helplink, .idea .idea__cardtitle a, .idea .idea__tag a, .publication .publication__title a, .ideas__cardtitle a, .city .city__title a, .ideas__tag a {
+.moderation__tables .moderation__tables-item, .auth__input, .auth__label, .timeline .timeline__item-text a, .accordions .accordion .accordion__title, .accordions .accordion .accordion__trigger svg, .pagination .pagination__link, .idea .idea__like-box .idea__like svg, .publication .publication__img img, .ideas__like svg, .project .project__title, .project, .footer .footer__links a, .footer .footer__emails a, .header .header__link, .header .header__list-social ul svg, .header .header__burger-lines, .lead .carousel__button, .auth__button, .idea .idea__like-box .idea__like, .idea .idea__button, .ideas__showmore, .ideas__like, .lead-buttons__button, .lead__slide .lead__button, .tabs__links .tabs__link, .about-service .about-service__section-subtitle a, .publication .publication__type, .article .article__text a, .profile .profile__email a, .auth__helplink, .idea .idea__cardtitle a, .idea .idea__tag a, .publication .publication__title a, .ideas__cardtitle a, .city .city__title a, .profile .profile__link, .ideas__tag a {
   -moz-transition-duration: 0.2s;
   -o-transition-duration: 0.2s;
   transition-duration: 0.2s;
@@ -258,7 +263,7 @@ ul {
 
 .page {
   background-color: #FFFFFF;
-  color: #201E33;
+  color: #25253B;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -270,7 +275,7 @@ ul {
 
 /*настройки карусельки*/
 .carousel {
-  color: #201E33;
+  color: #25253B;
   --carousel-button-bg: transparent;
   --carousel-button-shadow: none;
   --carousel-button-svg-width: 28px;
@@ -459,7 +464,7 @@ ul {
   opacity: 0.8;
 }
 .lead .carousel__dots .carousel__dot.is-selected::after {
-  background-color: #201E33;
+  background-color: #25253B;
   opacity: 1;
 }
 
@@ -576,7 +581,7 @@ ul {
     height: calc(100vh - 80px);
     top: -100vh;
     left: 0;
-    background-color: #201E33;
+    background-color: #25253B;
     color: #F6F6F7;
     box-sizing: border-box;
     padding-top: 80px;
@@ -633,7 +638,7 @@ ul {
 }
 @media screen and (max-width: 1024px) {
   .header.open {
-    background-color: #201E33;
+    background-color: #25253B;
     border-bottom: 2px solid #6990BA;
   }
   .header.open .header__list {
@@ -661,7 +666,7 @@ ul {
 }
 
 .footer {
-  background-color: #201E33;
+  background-color: #25253B;
   color: #F6F6F7;
   box-sizing: border-box;
   padding: 24px 0 50px;
@@ -1020,7 +1025,7 @@ ul {
 .lead__slide .lead__button {
   margin-top: 114px;
   background-color: #DAE856;
-  color: #201E33;
+  color: #25253B;
 }
 @media screen and (max-width: 960px) {
   .lead__slide .lead__button {
@@ -1070,10 +1075,10 @@ ul {
   display: flex;
   width: 100%;
   background-color: #FFFFFF;
-  color: #201E33;
+  color: #25253B;
   min-height: 80px;
   padding: 0;
-  border-bottom: 1px solid #201E33;
+  border-bottom: 1px solid #25253B;
 }
 .lead-buttons__button .lead-buttons__container {
   width: 90%;
@@ -1236,8 +1241,8 @@ ul {
   display: flex;
   flex-direction: column;
   width: 100%;
-  border-top: 2px solid #201E33;
-  border-right: 2px solid #201E33;
+  border-top: 2px solid #25253B;
+  border-right: 2px solid #25253B;
   box-sizing: border-box;
   padding: 16px 16px 0 0;
   min-height: 310px;
@@ -1301,8 +1306,8 @@ ul {
 .about .about__card {
   width: 100%;
   padding: 24px 24px 0 0;
-  border-top: 2px solid #201E33;
-  border-right: 2px solid #201E33;
+  border-top: 2px solid #25253B;
+  border-right: 2px solid #25253B;
   display: flex;
   flex-direction: column;
   row-gap: 16px;
@@ -1659,6 +1664,7 @@ ul {
   row-gap: 8px;
 }
 .titleblock {
+  max-width: calc(1440px - 10%);
   width: 90%;
   margin: 0 auto;
   display: flex;
@@ -1862,7 +1868,7 @@ ul {
   column-gap: 4px;
 }
 .pagination .pagination__item {
-  color: #201E33;
+  color: #25253B;
   stroke: #2D8BF1;
   font-family: "Lora";
   font-style: normal;
@@ -1967,7 +1973,7 @@ ul {
   flex-direction: row;
   justify-content: space-between;
   min-height: 38px;
-  border-bottom: 1px solid #201E33;
+  border-bottom: 1px solid #25253B;
 }
 .accordions .accordion .accordion__trigger:hover .accordion__title {
   color: #605D7C;
@@ -2127,6 +2133,12 @@ ul {
     margin: 60px auto 60px;
   }
 }
+.auth .auth__field {
+  border: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+}
 
 .auth__input-group {
   position: relative;
@@ -2138,15 +2150,20 @@ ul {
   content: "*";
 }
 .auth__input-group:hover .auth__input {
-  border-bottom: 1px solid #201E33;
+  border-bottom: 1px solid #25253B;
 }
 .auth__input-group:hover .auth__label {
   color: #605D7C;
 }
-.auth__input-group:last-of-type {
+.auth__input-group.auth__input-group_line {
   flex-direction: row;
   justify-content: space-between;
-  margin-bottom: 40px;
+}
+@media screen and (max-width: 1024px) {
+  .auth__input-group.auth__input-group_line {
+    flex-direction: column;
+    row-gap: 12px;
+  }
 }
 
 .auth__helplink {
@@ -2159,7 +2176,7 @@ ul {
   pointer-events: none;
   left: 5px;
   top: 10px;
-  width: 226px;
+  width: 276px;
 }
 .auth__label.form__label_active {
   top: -10px;
@@ -2261,7 +2278,7 @@ ul {
 }
 
 .auth__check-description {
-  color: #201E33;
+  color: #25253B;
   padding: 0;
   margin: 0;
   width: 90%;
@@ -2308,7 +2325,7 @@ ul {
 .auth__button {
   max-width: 244px;
   width: 100%;
-  margin: 0 auto;
+  margin: 40px auto 0;
   background-color: #2D8BF1;
   color: #F6F6F7;
 }
@@ -2323,14 +2340,15 @@ ul {
 
 /***************************************** СООБЩЕНИЕ ОБ ОТПРАВКЕ *****************************************/
 .auth__message {
-  margin: 40px auto 0;
+  margin: 40px auto;
   width: 100%;
-  color: #6990BA;
+  text-align: center;
+  color: #25253B;
   box-sizing: border-box;
   padding: 0;
 }
 .auth__message h3 {
-  color: #201E33;
+  color: #25253B;
   margin: 0 0 16px;
 }
 .auth__message p {
@@ -2338,10 +2356,6 @@ ul {
 }
 
 @media screen and (max-width: 960px) {
-  .auth__check-description {
-    font-size: 14px;
-    line-height: 20px;
-  }
   .auth__check {
     margin: 2px 0 0;
   }
@@ -2352,6 +2366,194 @@ ul {
     font-size: 18px;
     line-height: 26px;
   }
+}
+.profile {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: calc(1440px - 10%);
+  width: 90%;
+  margin: 0 auto;
+  color: #A7A6B5;
+  margin-top: 16px;
+}
+.profile .profile__name,
+.profile .profile__email {
+  display: flex;
+  flex-direction: row;
+  column-gap: 4px;
+}
+.profile .profile__info {
+  display: flex;
+  flex-direction: row;
+  column-gap: 16px;
+}
+.tabs {
+  display: flex;
+  flex-direction: column;
+  max-width: calc(1440px - 10%);
+  width: 90%;
+  margin: 56px auto 0px;
+}
+
+.tabs_pushed {
+  margin-bottom: 56px;
+}
+@media screen and (max-width: 960px) {
+  .tabs_pushed {
+    margin-bottom: 12px;
+  }
+}
+
+.tabs__links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto 40px;
+  width: 100%;
+}
+.tabs__nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  column-gap: 28px;
+  row-gap: 24px;
+  padding: 0;
+  list-style: none;
+}
+@media screen and (max-width: 650px) {
+  .tabs__nav {
+    flex-direction: column;
+    row-gap: 16px;
+    margin-bottom: 32px;
+  }
+}
+
+.tabs__nav-btn {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  color: #25253B;
+  padding: 0;
+  text-decoration: none;
+  overflow-anchor: none;
+}
+.tabs__nav-btn:hover {
+  color: #2D8BF1;
+}
+.tabs__nav-btn:active {
+  color: #0C5FBA;
+}
+.tabs__nav-btn.tabs__nav-btn_disabled {
+  color: #A7A6B5;
+  cursor: default;
+  pointer-events: none;
+}
+.tabs__nav-btn.tabs__nav-btn_disabled:hover {
+  color: #A7A6B5;
+}
+.tabs__nav-btn.tabs__nav-btn_active {
+  color: #0C5FBA;
+}
+
+.tabs__panel {
+  display: none;
+}
+.tabs__panel.tabs__panel_active {
+  display: block;
+}
+
+.tabs ~ .pagination {
+  margin-bottom: 80px;
+}
+
+.moderation__tables .moderation__tables-item {
+  border-top: 1px solid #25253B;
+  min-height: 90px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 18px 0;
+}
+.moderation__tables .moderation__tables-item:hover {
+  background-color: rgba(156, 203, 255, 0.15);
+  color: #A7A6B5;
+}
+
+.moderation__table {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 2fr 5fr 1fr 2fr;
+}
+.moderation__table li {
+  text-align: left;
+}
+.moderation__table li:nth-last-of-type(2) {
+  text-align: center;
+}
+.moderation__table li:nth-last-of-type(1) {
+  text-align: right;
+}
+.moderation__table.moderation__table_header {
+  color: #A7A6B5;
+  min-height: 44px;
+  align-items: center;
+}
+.moderation__table .moderation__table-idea-name {
+  display: flex;
+  flex-direction: row;
+  column-gap: 8px;
+}
+.moderation__table .moderation__table-idea-status {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 19px;
+  height: 19px;
+  min-width: 19px;
+  min-height: 19px;
+  border-radius: 50%;
+  background-color: #F6F6F7;
+  border: 1px solid #0C5FBA;
+  margin-top: 2px;
+}
+.moderation__table .moderation__table-idea-status span {
+  background-color: transparent;
+}
+.moderation__table .moderation__table-idea-status.approved {
+  background-color: #4BB96A;
+  border: 1px solid #4BB96A;
+}
+.moderation__table .moderation__table-idea-status.approved span {
+  width: 10px;
+  height: 5px;
+  background-color: transparent;
+  transform: rotate(-45deg) translate(1px, -1px);
+  border-color: transparent transparent #fff #fff;
+  border-width: 1px;
+  border-style: solid;
+}
+.moderation__table .moderation__table-idea-status.approved span:last-of-type {
+  display: none;
+}
+.moderation__table .moderation__table-idea-status.declined {
+  background-color: #F13D53;
+  position: relative;
+  border: 1px solid #F13D53;
+}
+.moderation__table .moderation__table-idea-status.declined span {
+  width: 10px;
+  height: 1px;
+  border-color: transparent transparent #fff transparent;
+  border-width: 1px;
+  border-style: solid;
+}
+.moderation__table .moderation__table-idea-status.declined span:first-of-type {
+  transform: rotate(45deg) translate(1px, 0px);
+}
+.moderation__table .moderation__table-idea-status.declined span:last-of-type {
+  transform: rotate(-45deg) translate(1px, -1px);
 }
 
 /*# sourceMappingURL=index.css.map */

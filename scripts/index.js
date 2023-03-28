@@ -1,3 +1,9 @@
+import { Carousel } from "https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.esm.js"; 
+import { Autoplay } from "https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/carousel.autoplay.esm.js";
+import LabeledInput from './LabeledInput.js'
+import Tabs from "./LinkedTabs.js";
+
+// хедер, обработка клика на бургер
 let header = document.querySelector('header');
 if (header) {
   let burgerButton = header.querySelector('.header__burger');
@@ -10,9 +16,7 @@ if (header) {
 };
 
 
-import { Carousel } from "https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.esm.js"; 
-import { Autoplay } from "https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/carousel.autoplay.esm.js";
-
+// инициализация карусели на главной
 Carousel.Plugins.Autoplay = Autoplay; 
 let leadCrsl = document.querySelector("#leadcrsl");
 if (leadCrsl) {
@@ -30,7 +34,7 @@ if (leadCrsl) {
 }
 
 
-
+// функция для инициализации аккордеона, вызов функции в html
 function initAccordion (selector) {
   let accordion = document.querySelector(selector);
 
@@ -52,12 +56,19 @@ function initAccordion (selector) {
 }
 window.initAccordion = initAccordion;
 
-import LabeledInput from './LabeledInput.js'
 
+// инициализация "всплывающих" лейблов в формах
 let labeledInputs = Array.from(document.querySelectorAll('.labeledinput'));
 if (labeledInputs.length != 0) {
   labeledInputs.forEach(item => {
     let el = new LabeledInput(item);
     el.setEventListeners();
+  })
+}
+
+let tabs =Array.from(document.querySelectorAll('.tabs'));
+if (tabs.length != 0) {
+  tabs.forEach(item => {
+    let el = new Tabs(`.${item.classList[0]}`);
   })
 }

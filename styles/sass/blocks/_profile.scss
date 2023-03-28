@@ -1,0 +1,38 @@
+.profile {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: calc(1440px - 10%);
+  width: 90%;
+  margin: 0 auto;
+
+  @extend %text-circe-15;
+  color: $middle-dark-color-default;
+  margin-top: $spacer-xs;
+
+
+  .profile__name,
+  .profile__email {
+    display: flex;
+    flex-direction: row;
+    column-gap: 4px;
+  }
+
+  .profile__email {
+   a {
+    @extend %black-link;
+   } 
+  }
+
+  .profile__info {
+    display: flex;
+    flex-direction: row;
+    column-gap: 16px;
+  }
+
+  .profile__link {
+    @extend %gray-link;
+  }
+
+}
+

@@ -1,0 +1,116 @@
+.moderation__tables {
+  .moderation__tables-item {
+    @extend %silly-link;
+    @extend %transition;
+    border-top: 1px solid $dark-color-default;
+    min-height: 90px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 18px 0;
+    
+
+    &:hover {
+      background-color: rgba(156, 203, 255, 0.15);
+      color: $middle-dark-color-default;
+      
+    }
+  }
+
+  
+}
+
+
+.moderation__table {
+  @extend %text-circe-18;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 2fr 5fr 1fr 2fr;
+
+  
+  li {
+    text-align: left;
+    &:nth-last-of-type(2){
+      text-align: center;
+    }
+    &:nth-last-of-type(1){
+      text-align: right;
+    }
+  }
+
+  &.moderation__table_header {
+    color: $middle-dark-color-default;
+    min-height: 44px;
+    align-items: center;
+  }
+
+  .moderation__table-idea-name {
+    display: flex;
+    flex-direction: row;
+    column-gap: 8px;
+  
+  }
+
+  .moderation__table-idea-status {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 19px;
+    height: 19px;
+    min-width: 19px;
+    min-height: 19px;
+    border-radius: 50%;
+    background-color: $light-color-default;
+    border: 1px solid $primary-color-onclick;
+    margin-top: 2px;
+
+   span {
+    background-color: transparent;
+   }
+
+   &.approved {
+    background-color: $succes-color-default;
+    border: 1px solid $succes-color-default;
+   
+    span {
+      width: 10px;
+      height: 5px;
+      background-color:transparent;
+      transform: rotate(-45deg) translate(1px, -1px);
+      border-color: transparent transparent #fff #fff;
+      border-width: 1px;
+      border-style: solid;
+
+  
+      &:last-of-type {
+        display: none;
+      }
+     }
+   }
+
+  &.declined {
+    background-color: $danger-color-default;
+    position: relative;
+    border: 1px solid $danger-color-default;
+    
+
+    span {
+      width: 10px;
+      height: 1px;
+      border-color: transparent transparent #fff transparent;
+      border-width: 1px;
+      border-style: solid;
+
+      &:first-of-type {
+        transform: rotate(45deg) translate(1px, 0px);
+      }
+      &:last-of-type {
+        transform: rotate(-45deg) translate(1px, -1px);
+      }
+    }
+  } 
+ 
+  
+  }
+}

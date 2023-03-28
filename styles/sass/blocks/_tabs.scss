@@ -1,0 +1,95 @@
+.tabs {
+  display: flex;
+  flex-direction: column;
+  max-width: calc(1440px - 10%);
+  width: 90%;
+  margin: 56px auto 0px;
+}
+
+.tabs_pushed {
+  margin-bottom: 56px;
+
+  @media screen and (max-width: 960px) {
+    margin-bottom: 12px;
+  }
+}
+
+.tabs__links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto 40px;
+  width: 100%;
+
+  .tabs__link {
+    @extend %text-circe-18;
+    @extend %blue-link;
+  }
+}
+
+.tabs__nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  column-gap: 28px;
+  row-gap: 24px;
+  padding: 0;
+  list-style: none;
+
+  @media screen and (max-width: 650px) {
+    flex-direction: column;
+    row-gap: 16px;
+    margin-bottom: 32px;
+  }
+}
+
+
+.tabs__nav-btn {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  color: $dark-color-default;
+  @extend %text-circe-18;
+  @extend %silly-link;
+
+  padding: 0;
+  text-decoration: none;    
+  overflow-anchor: none;
+
+  &:hover {
+    color: $primary-color-default;
+  }
+
+  &:active {
+    color: $primary-color-onclick;
+  }
+
+  &.tabs__nav-btn_disabled {
+    color: $middle-dark-color-default;
+    cursor: default;
+    pointer-events: none;
+
+    &:hover {
+      color: $middle-dark-color-default;
+    }
+  }
+
+  &.tabs__nav-btn_active {
+    color: $primary-color-onclick;
+  }
+  
+}
+
+
+.tabs__panel {
+  display: none;
+
+  &.tabs__panel_active {
+    display: block;  
+  }
+}
+
+
+.tabs ~ .pagination  {
+  margin-bottom: 80px;
+}

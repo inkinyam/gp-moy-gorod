@@ -15,7 +15,7 @@
   <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../images/favicons/favicon-180x180.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Вход в личный кабинет</title>
+  <title>Смена пароля</title>
   <link rel="stylesheet" href="../styles/css/index.css">
 </head>
 <body class="page">
@@ -73,33 +73,46 @@
           <meta itemprop="position" content="1">
         </li>
       </ul>
-      <h1 class="title">Вход в личный кабинет</h1>
+      <h1 class="title">Смена пароля</h1>
+    </section>
+
+    <section class="profile">
+      <div class="profile__name">
+
+        Здравствуйте, <p>Иван</p>!
+      </div>
+
+      <div class="profile__info">
+        <div class="profile__email">
+          Мой профиль (<a href="./profile.html">ivanov@ivan.ru</a>)
+        </div>
+        <a href="./profile.html" class="profile__link">Вернуться в профиль</a>
+        <a href="../index.html" class="profile__link">Выйти</a>
+
+      </div>
     </section>
 
     <form action="" class="auth" novalidate>
+
       <div class="auth__input-group is-invalid required">
-        <label class="auth__label" for="email">Е - mail</label>
-        <input class="auth__input labeledinput" id="email" type="text" value="" maxlength="70" required>
-        <span class="auth__err">То, как будет выглядеть ошибка поля</span>
+        <label class="auth__label" for="oldpass">Старый пароль</label>
+        <input class="auth__input labeledinput" id="oldpass" type="text" value="" maxlength="70" required>
+        <span class="auth__err">Вы указали некорректный пароль</span>
       </div>
 
-      <div class="auth__input-group is-valid required">
-        <label class="auth__label" for="pass">Пароль</label>
-        <input class="auth__input  labeledinput " id="pass" type="password" value="" placeholder="" maxlength="30" required>
+      <div class="auth__input-group required">
+        <label class="auth__label" for="newpass1">Новый пароль</label>
+        <input class="auth__input labeledinput" id="newpass1" type="text" value="" maxlength="70" required>
         <span class="auth__err"></span>
       </div>
 
-
-      <div class="auth__input-group auth__input-group_line">
-        <label class="auth__check-label" for="feedbackForm_consent">
-          <input class="auth__check" type="checkbox" value="0" id="feedbackForm_consent" required>
-          <span class="auth__check-v"></span>
-          <span class="auth__check-description">Запомнить меня</span>
-        </label>
-
-        <a href="./restore-pass.html" class="auth__helplink">Забыли пароль?</a>
+      <div class="auth__input-group required">
+        <label class="auth__label" for="newpass2">Повторите новый пароль</label>
+        <input class="auth__input labeledinput" id="newpass2" type="text" value="" maxlength="70" required>
+        <span class="auth__err"></span>
       </div>
-      <button type="submit" class="auth__button">Войти в личный кабинет</button>
+
+      <button type="submit" class="auth__button">Изменить пароль</button>
     </form>
 
   </main>

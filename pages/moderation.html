@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+ <meta charset="UTF-8">
+  <!-- For all browsers -->
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../images/favicons/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="120x120" href="../images/favicons/favicon-120x120.png">
+  <!-- For Google and Android -->
+  <link rel="icon" type="image/png" sizes="48x48" href="../images/favicons/favicon-48x48.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../images/favicons/favicon-192x192.png">
+  <!-- For iPad -->
+  <link rel="apple-touch-icon" type="image/png" sizes="167x167" href="../images/favicons/favicon-167x167.png">
+  <!-- For iPhone -->
+  <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../images/favicons/favicon-180x180.png">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Модерация идей</title>
+  <link rel="stylesheet" href="../styles/css/index.css">
+</head>
+<body class="page">
+  <header class="header">
+    <div class="header__container">
+      <a href="../index.html" class="header__logo" title="Перейти на главную"> </a>
+
+      <div class="header__body">
+        <button class="header__burger">
+          <span class="header__burger-lines"></span>
+          <span class="header__burger-lines"></span>
+          <span class="header__burger-lines"></span>
+        </button>
+
+        <ul class="header__list">
+          <li class="header__item"><a href="./city.html" class="header__link">Екатеринбург</a></li>
+          <li class="header__item"><a href="./city.html" class="header__link">Уфа</a></li>
+          <li class="header__item"><a href="./city.html" class="header__link">Южно-Сахалинск</a></li>
+          <li class="header__item"><a href="./about-service.html" class="header__link">О сервисе</a></li>
+          <li class="header__item"><a href="./login.html" class="header__link">Модерация</a></li>
+
+          <li class="header__list-social">
+            <ul>
+              <li class="header__item">
+                <a href="#" class="header__link">
+                  <svg width="20" height="12" viewBox="0 0 20 12">
+                    <use xlink:href="../images/sprite.svg#logo-vk"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="header__item">
+                <a href="#" class="header__link">
+                  <svg width="17" height="14" viewBox="0 0 17 14" >
+                    <use xlink:href="../images/sprite.svg#logo-telegramm"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="titleblock">
+      <ul class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
+        <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+          <a itemprop="item" href="../index.html"> 
+            <span itemprop="name">Главная</span> 
+          </a>
+          <meta itemprop="position" content="1">
+        </li>
+      </ul>
+      <h1 class="title">Модерация идей</h1>
+    </section>
+
+    <section class="profile">
+      <div class="profile__name">
+        Здравствуйте, <p>Иван</p>!
+      </div>
+
+      <div class="profile__info">
+        <div class="profile__email">
+          Мой профиль (<a href="./profile.html">ivanov@ivan.ru</a>)
+        </div>
+        <a href="./new-pass.html" class="profile__link">Сменить пароль</a>
+        <a href="../index.html" class="profile__link">Выйти</a>
+      </div>
+    </section>
+
+    <section class="tabs">
+      <div class="tabs__links">
+        <ul class="tabs__nav"> 
+          <li class="tabs__nav-item"><a class="tabs__nav-btn tabs__nav-all tabs__nav-btn_active" type="button" href="#all">Всего идей</a></li>
+          <li class="tabs__nav-item"><a class="tabs__nav-btn" type="button" href="#process">На рассмотрении</a></li>
+          <li class="tabs__nav-item"><a class="tabs__nav-btn" type="button" href="#approved">Одобрено</a></li>
+          <li class="tabs__nav-item"><a class="tabs__nav-btn" type="button" href="#declined">Не одобрено</a></li>
+        </ul>
+
+        <a href="./add-idea.html" class="tabs__link">Добавить идею +</a>
+      </div>
+
+      <ul class="moderation__table moderation__table_header">
+        <li> Идея </li>
+        <li> Категория </li>
+        <li> Описание </li>
+        <li> Создано </li>
+        <li> Источник </li>
+      </ul>
+
+      <div class="tabs__content">
+        <div class="tabs__panel tabs__panel_active" data-tab-name="all"></div> 
+        <div class="tabs__panel" data-tab-name="process">
+          <div class="moderation__tables">
+            <a href="#" class="moderation__tables-item">
+              <ul class="moderation__table ">
+                <li class="moderation__table-idea-name"> 
+                  <div class="moderation__table-idea-status">
+                    <span></span>
+                    <span></span>
+                  </div> 
+                  <p>Спортивная площадка</p>  
+                </li>
+                <li> Функциональные пространства </li>
+                <li> Все плохо! </li>
+                <li> 17.06.2022 </li>
+                <li> Telegram-бот </li>
+              </ul>
+            </a>
+            <a href="#" class="moderation__tables-item">
+              <ul class="moderation__table ">
+                <li class="moderation__table-idea-name"> 
+                  <div class="moderation__table-idea-status ">
+                    <span></span>
+                    <span></span>
+                  </div> 
+                  <p>Придомовая территория</p>  
+                </li>
+                <li> Жилая застройка</li>
+                <li> С другой стороны дальнейшее развитие различных форм деятельности в значительной степени обуславливает создание направлений прогрессивного развития. </li>
+                <li> 17.06.2022 </li>
+                <li> Vkontakte </li>
+              </ul>
+            </a>
+            <a href="#" class="moderation__tables-item">
+              <ul class="moderation__table ">
+                <li class="moderation__table-idea-name"> 
+                  <div class="moderation__table-idea-status ">
+                    <span></span>
+                    <span></span>
+                  </div> 
+                  <p>Ямы на дороге</p>  
+                </li>
+                <li> Дороги </li>
+                <li> Повседневная практика показывает, что реализация намеченных плановых заданий способствует подготовки и реализации соответствующий условий активизации. </li>
+                <li> 22.05.2022 </li>
+                <li> Сайт </li>
+              </ul>
+            </a>
+            <a href="#" class="moderation__tables-item">
+              <ul class="moderation__table ">
+                <li class="moderation__table-idea-name"> 
+                  <div class="moderation__table-idea-status ">
+                    <span></span>
+                    <span></span>
+                  </div> 
+                  <p>Детский сад</p>  
+                </li>
+                <li> Соц. инфраструктура </li>
+                <li> Внезапно, акционеры крупнейших компаний могут быть смешаны с не уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус бесполезности. </li>
+                <li> 22.05.2022 </li>
+                <li> Сайт </li>
+              </ul>
+            </a>
+          </div>
+
+        </div> 
+        <div class="tabs__panel" data-tab-name="approved">
+          <div class="moderation__tables">
+            <a href="#" class="moderation__tables-item">
+              <ul class="moderation__table ">
+                <li class="moderation__table-idea-name"> 
+                  <div class="moderation__table-idea-status approved">
+                    <span></span>
+                    <span></span>
+                  </div> 
+                  <p>Рыба в пруду</p>  
+                </li>
+                <li> Общественное пространство </li>
+                <li> Повседневная практика показывает, что постоянный количественный рост и сфера нашей активности способствует подготовки и реализации соответствующий условий активизации. </li>
+                <li> 17.06.2022 </li>
+                <li> Telegram-бот </li>
+              </ul>
+            </a>
+            <a href="#" class="moderation__tables-item">
+              <ul class="moderation__table ">
+                <li class="moderation__table-idea-name"> 
+                  <div class="moderation__table-idea-status approved">
+                    <span></span>
+                    <span></span>
+                  </div> 
+                  <p>Почистить улицы от мусора</p>  
+                </li>
+                <li> Жилая застройка</li>
+                <li> Разнообразный и богатый опыт начало повседневной работы по формированию позиции обеспечивает широкому кругу (специалистов) 
+                  участие в формировании существенных финансовых и административных условий. Задача организации, в особенности же постоянное 
+                  информационно-пропагандистское обеспечение нашей деятельности позволяет оценить значение системы обучения кадров, соответствует 
+                  насущным потребностям.  </li>
+                <li> 17.06.2022 </li>
+                <li> Vkontakte </li>
+              </ul>
+            </a>
+            <a href="#" class="moderation__tables-item">
+              <ul class="moderation__table ">
+                <li class="moderation__table-idea-name"> 
+                  <div class="moderation__table-idea-status approved">
+                    <span></span>
+                    <span></span>
+                  </div> 
+                  <p>Организация труда</p>  
+                </li>
+                <li> Соц. инфраструктура </li>
+                <li> Задача организации, в особенности же дальнейшее развитие различных форм деятельности позволяет оценить значение существенных финансовых и административных условий.  </li>
+                <li> 22.05.2022 </li>
+                <li> Сайт </li>
+              </ul>
+            </a>
+          </div>
+
+        </div> 
+        <div class="tabs__panel" data-tab-name="declined">
+          <div class="moderation__tables">
+            <a href="#" class="moderation__tables-item">
+              <ul class="moderation__table ">
+                <li class="moderation__table-idea-name"> 
+                  <div class="moderation__table-idea-status declined">
+                    <span></span>
+                    <span></span>
+                  </div> 
+                  <p>Деревья</p>  
+                </li>
+                <li> Социальные структуры </li>
+                <li> Таким образом консультация с широким активом играет важную роль в формировании системы обучения кадров, 
+                  соответствует насущным потребностям. Разнообразный и богатый опыт новая модель организационной деятельности позволяет оценить значение 
+                  существенных финансовых и административных условий. </li>
+                <li> 17.06.2022 </li>
+                <li> Telegram-бот </li>
+              </ul>
+            </a>
+            <a href="#" class="moderation__tables-item">
+              <ul class="moderation__table ">
+                <li class="moderation__table-idea-name"> 
+                  <div class="moderation__table-idea-status declined">
+                    <span></span>
+                    <span></span>
+                  </div> 
+                  <p>Парикмахерская</p>  
+                </li>
+                <li> Жилая застройка</li>
+                <li>  Повседневная практика показывает, что начало повседневной работы по формированию позиции требуют от нас анализа направлений 
+                  прогрессивного развития. Идейные соображения высшего порядка, а также новая модель организационной деятельности позволяет оценить 
+                  значение дальнейших направлений развития. Повседневная практика показывает, что начало повседневной работы по формированию позиции в 
+                  значительной степени обуславливает создание дальнейших направлений развития. </li>
+                <li> 17.06.2022 </li>
+                <li> Vkontakte </li>
+              </ul>
+            </a>
+            <a href="#" class="moderation__tables-item">
+              <ul class="moderation__table ">
+                <li class="moderation__table-idea-name"> 
+                  <div class="moderation__table-idea-status declined">
+                    <span></span>
+                    <span></span>
+                  </div> 
+                  <p>Спорт.площадка</p>  
+                </li>
+                <li> Соц. инфраструктура </li>
+                <li> Повседневная практика показывает, что начало повседневной работы по формированию позиции способствует подготовки и реализации 
+                  новых предложений. Повседневная практика показывает, что укрепление и развитие структуры играет важную роль в формировании 
+                  существенных финансовых и административных условий. </li>
+                <li> 22.05.2022 </li>
+                <li> Сайт </li>
+              </ul>
+            </a>
+          </div>
+        </div> 
+      </div>    
+    </section>
+
+    <ul class="pagination">
+      <li class="pagination__item">
+        <a href="#" class="pagination__link">
+          <svg width="28" height="28" viewBox="0 0 28 28" >
+            <use xlink:href="../images/sprite.svg#small-button-left-rounded"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="pagination__item active">
+        <a href="#" class="pagination__link">
+          1
+        </a>
+      </li>
+      <li class="pagination__item ">
+        <a href="#" class="pagination__link">
+          2
+        </a>
+      </li>
+      <li class="pagination__item">
+        <a href="#" class="pagination__link">
+          3
+        </a>
+      </li>
+      <li class="pagination__item">
+        <a href="#" class="pagination__link">
+          4
+        </a>
+      </li>
+      <li class="pagination__item">
+        <a href="#" class="pagination__link">
+          5
+        </a>
+      </li>
+      <li class="pagination__item">
+        <a href="#" class="pagination__link">
+          6
+        </a>
+      </li>
+      <li class="pagination__item">
+        <a href="#" class="pagination__link">
+          7
+        </a>
+      </li>
+      <li class="pagination__item">
+        <a href="#" class="pagination__link">
+          8
+        </a>
+      </li>
+      <li class="pagination__item">
+        <a href="#" class="pagination__link">
+          9
+        </a>
+      </li>
+      <li class="pagination__item">
+        <a href="#" class="pagination__link">
+          <svg width="28" height="28" viewBox="0 0 28 28" >
+            <use xlink:href="../images/sprite.svg#small-button-right-rounded"></use>
+          </svg>
+      </a>
+      </li>
+    </ul>
+
+  </main>
+
+
+  <footer class="footer">
+    <div class="footer__container">
+      <img src="../images/logos/main-logo-white.svg" alt="логотип Института Генплана" class="footer__logo">
+      <div class="footer__emails">
+        <div><p>техническая поддержка:</p> <a href="mailto:gorod@genplanmos.ru" class="">gorod@genplanmos.ru</a></div>
+        <div><p>пресс-служба:</p>  <a href="mailto:press@genplanmos.ru" class="">press@genplanmos.ru</a></div>
+      </div>
+      <p class="footer__copyright">© 2023 Платформа «Мой город»  Разработана Институтом Генплана Москвы</p>
+      <div class="footer__links">
+        <a href="https://genplanmos.ru/useragreement/" title="пользовательское соглашение">Пользовательское соглашение</a>
+        <a href="https://genplanmos.ru/policypersonaldata/" title="политика конфиденциальности">Политика обработки персональных данных</a>
+        <a href="https://genplanmos.ru/" title="сайт Института Генплана Москвы">Государственное автономное учреждение «Институт Генплана Москвы»</a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+<script type="module" src="../scripts/index.js"></script>
+
+</html>
