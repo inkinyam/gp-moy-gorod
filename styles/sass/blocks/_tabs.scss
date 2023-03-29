@@ -79,6 +79,12 @@
     color: $primary-color-onclick;
   }
 
+  @media screen and (max-width: 550px) {
+    width: 100%;
+    display: block;
+    
+  }
+
   &.tabs__nav-btn_disabled {
     color: $middle-dark-color-default;
     cursor: default;

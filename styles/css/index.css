@@ -181,12 +181,12 @@ ul {
 }
 
 /*----------------------------------- custom cursor -----------------------------------*/
-.carousel__dots .carousel__dot:hover, .carousel__button:hover, .moderation__table .moderation__buttons .moderation__button:hover, .auth__button:hover, .idea .idea__like-box .idea__like:hover, .idea .idea__button:hover, .ideas__showmore:hover, .ideas__like:hover, .lead-buttons__button:hover, .lead__slide .lead__button:hover, .moderation__tables .moderation__tables-item:hover, .tabs__nav-btn:hover, .auth__check-label:hover, .auth__input:hover, .timeline .timeline__item-text a:hover, .accordions .accordion .accordion__trigger:hover, .pagination .pagination__link:hover, .catalog__ideas .catalog__item a:hover, .classificator .classificator__item a:hover, .publication .publication__img:hover, .project:hover, .lead__slide .lead__title-wrapper a:hover, .breadcrumb__item a:hover, .footer .footer__links a:hover, .footer .footer__emails a:hover, .header .header__link:hover, .header .header__burger:hover, .header .header__logo:hover, .profile .profile__link:hover, .ideas__tag a:hover, .profile .profile__email a:hover, .auth__helplink:hover, .idea .idea__cardtitle a:hover, .idea .idea__tag a:hover, .publication .publication__title a:hover, .ideas__cardtitle a:hover, .city .city__title a:hover, .tabs__links .tabs__link:hover, .about-service .about-service__section-subtitle a:hover, .publication .publication__type:hover, .article .article__text a:hover {
+.carousel__dots .carousel__dot:hover, .carousel__button:hover, .moderation__table .moderation__buttons .moderation__button:hover, .auth__button:hover, .idea .idea__like-box .idea__like:hover, .idea .idea__button:hover, .ideas__showmore:hover, .ideas__like:hover, .lead-buttons__button:hover, .lead__slide .lead__button:hover, .tabs__nav-btn:hover, .auth__check-label:hover, .auth__input:hover, .timeline .timeline__item-text a:hover, .accordions .accordion .accordion__trigger:hover, .pagination .pagination__link:hover, .catalog__ideas .catalog__item a:hover, .classificator .classificator__item a:hover, .publication .publication__img:hover, .project:hover, .lead__slide .lead__title-wrapper a:hover, .breadcrumb__item a:hover, .footer .footer__links a:hover, .footer .footer__emails a:hover, .header .header__link:hover, .header .header__burger:hover, .header .header__logo:hover, .profile .profile__link:hover, .ideas__tag a:hover, .moderation__table li a:hover, .profile .profile__email a:hover, .auth__helplink:hover, .idea .idea__cardtitle a:hover, .idea .idea__tag a:hover, .publication .publication__title a:hover, .ideas__cardtitle a:hover, .city .city__title a:hover, .tabs__links .tabs__link:hover, .about-service .about-service__section-subtitle a:hover, .publication .publication__type:hover, .article .article__text a:hover {
   cursor: url(../../images/Cursor-hand.svg), pointer;
 }
 
 /*----------------------------------- silly-link -----------------------------------*/
-.moderation__tables .moderation__tables-item, .tabs__nav-btn, .auth__check-label, .auth__input, .timeline .timeline__item-text a, .accordions .accordion .accordion__trigger, .pagination .pagination__link, .catalog__ideas .catalog__item a, .classificator .classificator__item a, .publication .publication__img, .project, .lead__slide .lead__title-wrapper a, .breadcrumb__item a, .footer .footer__links a, .footer .footer__emails a, .header .header__link, .header .header__burger, .header .header__logo, .profile .profile__link, .ideas__tag a, .profile .profile__email a, .auth__helplink, .idea .idea__cardtitle a, .idea .idea__tag a, .publication .publication__title a, .ideas__cardtitle a, .city .city__title a, .tabs__links .tabs__link, .about-service .about-service__section-subtitle a, .publication .publication__type, .article .article__text a {
+.tabs__nav-btn, .auth__check-label, .auth__input, .timeline .timeline__item-text a, .accordions .accordion .accordion__trigger, .pagination .pagination__link, .catalog__ideas .catalog__item a, .classificator .classificator__item a, .publication .publication__img, .project, .lead__slide .lead__title-wrapper a, .breadcrumb__item a, .footer .footer__links a, .footer .footer__emails a, .header .header__link, .header .header__burger, .header .header__logo, .profile .profile__link, .ideas__tag a, .moderation__table li a, .profile .profile__email a, .auth__helplink, .idea .idea__cardtitle a, .idea .idea__tag a, .publication .publication__title a, .ideas__cardtitle a, .city .city__title a, .tabs__links .tabs__link, .about-service .about-service__section-subtitle a, .publication .publication__type, .article .article__text a {
   color: inherit;
   text-decoration: none;
 }
@@ -206,17 +206,17 @@ ul {
   }
 }
 
-.profile .profile__email a, .auth__helplink, .idea .idea__cardtitle a, .idea .idea__tag a, .publication .publication__title a, .ideas__cardtitle a, .city .city__title a {
+.moderation__table li a, .profile .profile__email a, .auth__helplink, .idea .idea__cardtitle a, .idea .idea__tag a, .publication .publication__title a, .ideas__cardtitle a, .city .city__title a {
   color: #25253B;
 }
-.profile .profile__email a:hover, .auth__helplink:hover, .idea .idea__cardtitle a:hover, .idea .idea__tag a:hover, .publication .publication__title a:hover, .ideas__cardtitle a:hover, .city .city__title a:hover {
+.moderation__table li a:hover, .profile .profile__email a:hover, .auth__helplink:hover, .idea .idea__cardtitle a:hover, .idea .idea__tag a:hover, .publication .publication__title a:hover, .ideas__cardtitle a:hover, .city .city__title a:hover {
   color: #605D7C;
 }
-.profile .profile__email a:active, .auth__helplink:active, .idea .idea__cardtitle a:active, .idea .idea__tag a:active, .publication .publication__title a:active, .ideas__cardtitle a:active, .city .city__title a:active {
+.moderation__table li a:active, .profile .profile__email a:active, .auth__helplink:active, .idea .idea__cardtitle a:active, .idea .idea__tag a:active, .publication .publication__title a:active, .ideas__cardtitle a:active, .city .city__title a:active {
   color: #201E33;
 }
 @media screen and (max-width: 1024px) {
-  .profile .profile__email a:hover, .auth__helplink:hover, .idea .idea__cardtitle a:hover, .idea .idea__tag a:hover, .publication .publication__title a:hover, .ideas__cardtitle a:hover, .city .city__title a:hover {
+  .moderation__table li a:hover, .profile .profile__email a:hover, .auth__helplink:hover, .idea .idea__cardtitle a:hover, .idea .idea__tag a:hover, .publication .publication__title a:hover, .ideas__cardtitle a:hover, .city .city__title a:hover {
     color: #25253B;
   }
 }
@@ -237,7 +237,7 @@ ul {
 }
 
 /*----------------------------------- transition -----------------------------------*/
-.moderation__tables .moderation__tables-item, .tabs__nav-btn, .auth__input, .auth__label, .timeline .timeline__item-text a, .accordions .accordion .accordion__title, .accordions .accordion .accordion__trigger svg, .pagination .pagination__link, .idea .idea__like-box .idea__like svg, .publication .publication__img img, .ideas__like svg, .project .project__title, .project, .footer .footer__links a, .footer .footer__emails a, .header .header__link, .header .header__list-social ul svg, .header .header__burger-lines, .lead .carousel__button, .moderation__table .moderation__buttons .moderation__button, .auth__button, .idea .idea__like-box .idea__like, .idea .idea__button, .ideas__showmore, .ideas__like, .lead-buttons__button, .lead__slide .lead__button, .tabs__links .tabs__link, .about-service .about-service__section-subtitle a, .publication .publication__type, .article .article__text a, .profile .profile__email a, .auth__helplink, .idea .idea__cardtitle a, .idea .idea__tag a, .publication .publication__title a, .ideas__cardtitle a, .city .city__title a, .profile .profile__link, .ideas__tag a {
+.moderation__table .moderation__buttons .moderation__button:active svg path, .moderation__table .moderation__buttons .moderation__button:hover svg path, .tabs__nav-btn, .auth__input, .auth__label, .timeline .timeline__item-text a, .accordions .accordion .accordion__title, .accordions .accordion .accordion__trigger svg, .pagination .pagination__link, .idea .idea__like-box .idea__like svg, .publication .publication__img img, .ideas__like svg, .project .project__title, .project, .footer .footer__links a, .footer .footer__emails a, .header .header__link, .header .header__list-social ul svg, .header .header__burger-lines, .lead .carousel__button, .moderation__table .moderation__buttons .moderation__button, .auth__button, .idea .idea__like-box .idea__like, .idea .idea__button, .ideas__showmore, .ideas__like, .lead-buttons__button, .lead__slide .lead__button, .tabs__links .tabs__link, .about-service .about-service__section-subtitle a, .publication .publication__type, .article .article__text a, .moderation__table li a, .profile .profile__email a, .auth__helplink, .idea .idea__cardtitle a, .idea .idea__tag a, .publication .publication__title a, .ideas__cardtitle a, .city .city__title a, .profile .profile__link, .ideas__tag a {
   -moz-transition-duration: 0.2s;
   -o-transition-duration: 0.2s;
   transition-duration: 0.2s;
@@ -2480,6 +2480,12 @@ ul {
 .tabs__nav-btn:active {
   color: #0C5FBA;
 }
+@media screen and (max-width: 550px) {
+  .tabs__nav-btn {
+    width: 100%;
+    display: block;
+  }
+}
 .tabs__nav-btn.tabs__nav-btn_disabled {
   color: #A7A6B5;
   cursor: default;
@@ -2511,7 +2517,19 @@ ul {
   display: flex;
   align-items: center;
   box-sizing: border-box;
-  padding: 18px 0;
+  padding: 18px 4px;
+}
+.moderation__tables .moderation__tables-item.approved {
+  background-color: rgba(75, 185, 106, 0.1);
+}
+.moderation__tables .moderation__tables-item.approved .moderation__button.aprove svg path {
+  fill: #4BB96A;
+}
+.moderation__tables .moderation__tables-item.declined {
+  background-color: rgba(241, 61, 83, 0.1);
+}
+.moderation__tables .moderation__tables-item.declined .moderation__button.decline svg path {
+  fill: #F13D53;
 }
 
 .moderation__table {
@@ -2523,6 +2541,7 @@ ul {
 @media screen and (max-width: 800px) {
   .moderation__table {
     grid-template-columns: 2fr 2fr 5fr;
+    row-gap: 16px;
   }
 }
 @media screen and (max-width: 550px) {
@@ -2542,11 +2561,11 @@ ul {
   text-align: right;
 }
 @media screen and (max-width: 800px) {
-  .moderation__table li:nth-last-of-type(1) {
-    display: none;
+  .moderation__table li:first-of-type {
+    font-weight: 600;
   }
   .moderation__table li:nth-last-of-type(2) {
-    display: none;
+    text-align: left;
   }
 }
 @media screen and (max-width: 550px) {
@@ -2562,23 +2581,29 @@ ul {
   min-height: 44px;
   align-items: center;
 }
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 800px) {
   .moderation__table.moderation__table_header {
     display: none;
   }
 }
 .moderation__table .moderation__buttons {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  row-gap: 4px;
+  flex-direction: row;
+  justify-content: end;
+  column-gap: 4px;
 }
 .moderation__table .moderation__buttons .moderation__button {
   background-color: transparent;
   padding: 0;
   min-height: auto;
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
+}
+.moderation__table .moderation__buttons .moderation__button:hover svg path {
+  fill: #106CD1;
+}
+.moderation__table .moderation__buttons .moderation__button:active svg path {
+  fill: #0C5FBA;
 }
 
 /*# sourceMappingURL=index.css.map */

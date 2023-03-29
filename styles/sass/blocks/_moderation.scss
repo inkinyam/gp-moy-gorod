@@ -1,13 +1,34 @@
 .moderation__tables {
   .moderation__tables-item {
-    @extend %silly-link;
-    @extend %transition;
     border-top: 1px solid $dark-color-default;
     min-height: 90px;
     display: flex;
     align-items: center;
     box-sizing: border-box;
-    padding: 18px 0;
+    padding: 18px 4px;
+
+    &.approved {
+      background-color: rgba(75, 185, 106, 0.1);
+      .moderation__button.aprove {
+        svg {
+          path {
+            fill: $succes-color-default;
+          }
+        }
+      }
+
+    }
+
+    &.declined {
+      background-color: rgba(241, 61, 83, 0.1);
+      .moderation__button.decline {
+        svg {
+          path {
+            fill: $danger-color-default;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -20,7 +41,8 @@
   column-gap: 8px;
 
   @media screen and (max-width: 800px) {
-    grid-template-columns: 2fr 2fr 5fr
+    grid-template-columns: 2fr 2fr 5fr;
+    row-gap: 16px;
   }
 
   @media screen and (max-width: 550px) {
@@ -32,6 +54,11 @@
   li {
     text-align: left;
     word-break: break-word;
+
+    a {
+      @extend %black-link;
+    }
+
     &:nth-last-of-type(2){
       text-align: center;
     }
@@ -40,12 +67,14 @@
     }
 
     @media screen and (max-width: 800px) {
-      &:nth-last-of-type(1){
-        display: none;
+      &:first-of-type {
+        font-weight: 600;
       }
+
       &:nth-last-of-type(2){
-        display: none;
+        text-align: left;
       }
+      
     }
 
     @media screen and (max-width: 550px) {
@@ -63,7 +92,7 @@
     min-height: 44px;
     align-items: center;
 
-    @media screen and (max-width: 550px) {
+    @media screen and (max-width: 800px) {
       display: none;
     }
   }
@@ -71,17 +100,36 @@
 
   .moderation__buttons {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    row-gap: 4px;
+    flex-direction: row;
+    justify-content: end;
+    column-gap: 4px;
 
     .moderation__button {
       @extend %button; 
       background-color: transparent;
       padding: 0;
       min-height: auto;
-      width: 24px;
-      height: 24px; 
+      width: 20px;
+      height: 20px; 
+
+      &:hover {
+        svg {
+          path {
+            @extend %transition;
+            fill: $primary-color-hovered;
+          }
+        }
+      }
+
+      &:active {
+        svg {
+          path {
+            @extend %transition;
+            fill: $primary-color-onclick;
+          }
+        }
+      }
     }
+    
   }
 }
