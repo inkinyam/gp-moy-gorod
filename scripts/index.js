@@ -11,8 +11,6 @@ if (header) {
     header.classList.toggle('open')
   })
 
-} else {
-  console.log('ERR: header не найден, опять накосячила');
 };
 
 
@@ -71,4 +69,17 @@ if (tabs.length != 0) {
   tabs.forEach(item => {
     let el = new Tabs(`.${item.classList[0]}`);
   })
+}
+
+const upButton = document.querySelector('.up');
+if (upButton) {
+  // обработка нажатия на кнопку "вверх" и ее появление
+  upButton.addEventListener('click', function(e) {
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+  })
+
+  window.onscroll = () =>
+  window.scrollY > 600
+    ? (upButton.classList.add('up_showed'))
+    : (upButton.classList.remove('up_showed'));
 }

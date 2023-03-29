@@ -2,6 +2,7 @@
 /*sass styles/sass:styles/css --watch*/
 @import url(../../vendors/fonts.css);
 @import url("https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css");
 *,
 *::before,
 *::after {
@@ -237,7 +238,7 @@ ul {
 }
 
 /*----------------------------------- transition -----------------------------------*/
-.idea-edit .idea-edit__select .idea-edit__select-label, .idea-edit .idea-edit__select .idea-edit__select-content, .idea-edit .idea-edit__select .idea-edit__select-title::before, .idea-edit .idea-edit__select .idea-edit__select-title::after, .moderation__table .moderation__buttons .moderation__button:active svg path, .moderation__table .moderation__buttons .moderation__button:hover svg path, .tabs__nav-btn, .auth__input, .auth__label, .timeline .timeline__item-text a, .accordions .accordion .accordion__title, .accordions .accordion .accordion__trigger svg, .pagination .pagination__link, .idea .idea__like-box .idea__like svg, .publication .publication__img img, .ideas__like svg, .project .project__title, .project, .footer .footer__links a, .footer .footer__emails a, .header .header__link, .header .header__list-social ul svg, .header .header__burger-lines, .lead .carousel__button, .idea-edit .idea-edit__submit, .moderation__table .moderation__buttons .moderation__button, .auth__button, .idea .idea__like-box .idea__like, .idea .idea__button, .ideas__showmore, .ideas__like, .lead-buttons__button, .lead__slide .lead__button, .tabs__links .tabs__link, .about-service .about-service__section-subtitle a, .publication .publication__type, .article .article__text a, .moderation__table li a, .profile .profile__email a, .auth__helplink, .idea .idea__cardtitle a, .idea .idea__tag a, .publication .publication__title a, .ideas__cardtitle a, .city .city__title a, .profile .profile__link, .ideas__tag a {
+.up::before, .up::after, .idea-edit .idea-edit__select .idea-edit__select-label, .idea-edit .idea-edit__select .idea-edit__select-content, .idea-edit .idea-edit__select .idea-edit__select-title::before, .idea-edit .idea-edit__select .idea-edit__select-title::after, .moderation__table .moderation__buttons .moderation__button:active svg path, .moderation__table .moderation__buttons .moderation__button:hover svg path, .tabs__nav-btn, .auth__input, .auth__label, .timeline .timeline__item-text a, .accordions .accordion .accordion__title, .accordions .accordion .accordion__trigger svg, .pagination .pagination__link, .idea .idea__like-box .idea__like svg, .publication .publication__img img, .ideas__like svg, .project .project__title, .project, .footer .footer__links a, .footer .footer__emails a, .header .header__link, .header .header__list-social ul svg, .header .header__burger-lines, .lead .carousel__button, .idea-edit .idea-edit__submit, .moderation__table .moderation__buttons .moderation__button, .auth__button, .idea .idea__like-box .idea__like, .idea .idea__button, .ideas__showmore, .ideas__like, .lead-buttons__button, .lead__slide .lead__button, .tabs__links .tabs__link, .about-service .about-service__section-subtitle a, .publication .publication__type, .article .article__text a, .moderation__table li a, .profile .profile__email a, .auth__helplink, .idea .idea__cardtitle a, .idea .idea__tag a, .publication .publication__title a, .ideas__cardtitle a, .city .city__title a, .profile .profile__link, .ideas__tag a {
   -moz-transition-duration: 0.2s;
   -o-transition-duration: 0.2s;
   transition-duration: 0.2s;
@@ -2763,6 +2764,67 @@ ul {
 .idea-edit .idea-edit__submit:active {
   background-color: #0C5FBA;
   color: #FFFFFF;
+}
+
+.add-idea {
+  margin: 0 0 40px;
+}
+
+/*вспомогательные*/
+.up {
+  visibility: hidden;
+  position: fixed;
+  bottom: 7%;
+  right: 5%;
+  color: #25253B;
+  border: none;
+  background-color: #F6F6F7;
+  opacity: 0;
+  box-shadow: 0 2px 4px rgba(33, 31, 51, 0.25);
+  opacity: 0.7;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  margin: 0;
+  border-radius: 50%;
+  transition: all 0.2s ease-in;
+  animation: zoomOut 0.2s ease-in forwards;
+  z-index: 999999;
+}
+.up:hover {
+  color: #F0F0F4;
+  background-color: #2D8BF1;
+}
+.up:active {
+  color: #FFFFFF;
+}
+@media screen and (max-width: 960px) {
+  .up {
+    bottom: 10%;
+  }
+  .up:hover {
+    color: #25253B;
+    background-color: #F6F6F7;
+  }
+}
+.up.up_showed {
+  visibility: visible;
+  opacity: 1;
+  animation: zoomIn 0.2s ease-in forwards;
+}
+.up::before, .up::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  display: block;
+  width: 10px;
+  height: 2px;
+  background-color: currentColor;
+  transform: translate(-3px, -50%) rotate(45deg);
+}
+.up::after {
+  transform: translate(3px, -50%) rotate(-45deg);
 }
 
 /*# sourceMappingURL=index.css.map */

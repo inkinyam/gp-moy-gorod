@@ -1,0 +1,73 @@
+.up {
+  visibility: hidden;
+  position: fixed;
+  bottom: 7%;
+  right: 5%;
+  color: $dark-color-default;
+
+  border: none;
+  background-color: $light-color-default;
+  opacity: 0;
+  box-shadow: 0 2px 4px rgb(33 31 51 / 25%);
+  opacity: 0.7;
+
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  margin: 0;
+  border-radius: 50%;
+  transition: all 0.2s ease-in;
+  animation: zoomOut 0.2s ease-in forwards;
+  z-index: 999999;
+
+
+  &:hover {
+    color: $light-color-hovered;
+    background-color: $primary-color-default;
+  }
+
+  &:active {
+    color: $light-color-onclick;
+  }
+
+  @media screen and (max-width: 960px) {
+    bottom: 10%;
+    &:hover {
+      color: $dark-color-default;
+      background-color: $light-color-default;
+    }
+  }
+
+  &.up_showed {
+    visibility: visible;
+    opacity: 1;
+    animation: zoomIn 0.2s ease-in forwards;
+  }
+
+
+  &::before,
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    right: 16px;
+
+    display: block;
+    width: 10px;
+    height: 2px;
+
+    @extend %transition;
+
+    background-color: currentColor;
+
+    transform: translate(-3px, -50%) rotate(45deg);
+  }
+  &::after {
+    transform: translate(3px, -50%) rotate(-45deg);
+  }
+
+  
+}
+
+
