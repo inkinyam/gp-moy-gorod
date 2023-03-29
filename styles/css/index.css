@@ -134,7 +134,7 @@ ul {
 }
 
 /*----------------------------------- circe text -----------------------------------*/
-.profile, .auth__input, .idea .idea__like-box .idea__like-counter, .idea .idea__author, .idea .idea__description, .idea .idea__tag, .ideas__like-counter, .ideas__author, .ideas__description, .ideas__tag, .breadcrumb__item, .footer .footer__links a, .footer .footer__copyright, .footer .footer__emails a, .moderation__table, .tabs__nav-btn, .tabs__links .tabs__link, .auth__message, .auth__check-description, .auth__helplink, .catalog__ideas .catalog__item a, .classificator .classificator__item a, .idea .idea__button, .ideas__showmore, .lead__slide .lead__button, .auth__label, .publication .publication__date, .publication .publication__type, .lead-buttons__button .lead-buttons__advice {
+.profile, .idea-edit .idea-edit__line .idea-edit__txtarea, .auth__input, .idea .idea__like-box .idea__like-counter, .idea .idea__author, .idea .idea__description, .idea .idea__tag, .ideas__like-counter, .ideas__author, .ideas__description, .ideas__tag, .breadcrumb__item, .footer .footer__links a, .footer .footer__copyright, .footer .footer__emails a, .idea-edit .idea-edit__submit, .idea-edit .idea-edit__select, .idea-edit .idea-edit__line .idea-edit__line-inp, .idea-edit .idea-edit__line .idea-edit__line-lbl, .moderation__table, .tabs__nav-btn, .tabs__links .tabs__link, .auth__message, .auth__check-description, .auth__helplink, .catalog__ideas .catalog__item a, .classificator .classificator__item a, .idea .idea__button, .ideas__showmore, .lead__slide .lead__button, .auth__label, .publication .publication__date, .publication .publication__type, .lead-buttons__button .lead-buttons__advice {
   font-family: "Circe";
   font-style: normal;
   font-weight: 400;
@@ -145,18 +145,18 @@ ul {
   line-height: 24px;
 }
 
-.moderation__table, .tabs__nav-btn, .tabs__links .tabs__link, .auth__message, .auth__check-description, .auth__helplink, .catalog__ideas .catalog__item a, .classificator .classificator__item a, .idea .idea__button, .ideas__showmore, .lead__slide .lead__button {
+.idea-edit .idea-edit__submit, .idea-edit .idea-edit__select, .idea-edit .idea-edit__line .idea-edit__line-inp, .idea-edit .idea-edit__line .idea-edit__line-lbl, .moderation__table, .tabs__nav-btn, .tabs__links .tabs__link, .auth__message, .auth__check-description, .auth__helplink, .catalog__ideas .catalog__item a, .classificator .classificator__item a, .idea .idea__button, .ideas__showmore, .lead__slide .lead__button {
   font-size: 18px;
   line-height: 24px;
 }
 @media screen and (max-width: 1024px) {
-  .moderation__table, .tabs__nav-btn, .tabs__links .tabs__link, .auth__message, .auth__check-description, .auth__helplink, .catalog__ideas .catalog__item a, .classificator .classificator__item a, .idea .idea__button, .ideas__showmore, .lead__slide .lead__button {
+  .idea-edit .idea-edit__submit, .idea-edit .idea-edit__select, .idea-edit .idea-edit__line .idea-edit__line-inp, .idea-edit .idea-edit__line .idea-edit__line-lbl, .moderation__table, .tabs__nav-btn, .tabs__links .tabs__link, .auth__message, .auth__check-description, .auth__helplink, .catalog__ideas .catalog__item a, .classificator .classificator__item a, .idea .idea__button, .ideas__showmore, .lead__slide .lead__button {
     font-size: 15px;
     line-height: 18px;
   }
 }
 
-.auth__input, .idea .idea__like-box .idea__like-counter, .idea .idea__author, .idea .idea__description, .idea .idea__tag, .ideas__like-counter, .ideas__author, .ideas__description, .ideas__tag, .breadcrumb__item, .footer .footer__links a, .footer .footer__copyright, .footer .footer__emails a {
+.idea-edit .idea-edit__line .idea-edit__txtarea, .auth__input, .idea .idea__like-box .idea__like-counter, .idea .idea__author, .idea .idea__description, .idea .idea__tag, .ideas__like-counter, .ideas__author, .ideas__description, .ideas__tag, .breadcrumb__item, .footer .footer__links a, .footer .footer__copyright, .footer .footer__emails a {
   font-size: 16px;
   line-height: 24px;
 }
@@ -181,7 +181,7 @@ ul {
 }
 
 /*----------------------------------- custom cursor -----------------------------------*/
-.carousel__dots .carousel__dot:hover, .carousel__button:hover, .moderation__table .moderation__buttons .moderation__button:hover, .auth__button:hover, .idea .idea__like-box .idea__like:hover, .idea .idea__button:hover, .ideas__showmore:hover, .ideas__like:hover, .lead-buttons__button:hover, .lead__slide .lead__button:hover, .tabs__nav-btn:hover, .auth__check-label:hover, .auth__input:hover, .timeline .timeline__item-text a:hover, .accordions .accordion .accordion__trigger:hover, .pagination .pagination__link:hover, .catalog__ideas .catalog__item a:hover, .classificator .classificator__item a:hover, .publication .publication__img:hover, .project:hover, .lead__slide .lead__title-wrapper a:hover, .breadcrumb__item a:hover, .footer .footer__links a:hover, .footer .footer__emails a:hover, .header .header__link:hover, .header .header__burger:hover, .header .header__logo:hover, .profile .profile__link:hover, .ideas__tag a:hover, .moderation__table li a:hover, .profile .profile__email a:hover, .auth__helplink:hover, .idea .idea__cardtitle a:hover, .idea .idea__tag a:hover, .publication .publication__title a:hover, .ideas__cardtitle a:hover, .city .city__title a:hover, .tabs__links .tabs__link:hover, .about-service .about-service__section-subtitle a:hover, .publication .publication__type:hover, .article .article__text a:hover {
+.idea-edit .idea-edit__select .idea-edit__select-title:hover, .carousel__dots .carousel__dot:hover, .carousel__button:hover, .idea-edit .idea-edit__submit:hover, .moderation__table .moderation__buttons .moderation__button:hover, .auth__button:hover, .idea .idea__like-box .idea__like:hover, .idea .idea__button:hover, .ideas__showmore:hover, .ideas__like:hover, .lead-buttons__button:hover, .lead__slide .lead__button:hover, .tabs__nav-btn:hover, .auth__check-label:hover, .auth__input:hover, .timeline .timeline__item-text a:hover, .accordions .accordion .accordion__trigger:hover, .pagination .pagination__link:hover, .catalog__ideas .catalog__item a:hover, .classificator .classificator__item a:hover, .publication .publication__img:hover, .project:hover, .lead__slide .lead__title-wrapper a:hover, .breadcrumb__item a:hover, .footer .footer__links a:hover, .footer .footer__emails a:hover, .header .header__link:hover, .header .header__burger:hover, .header .header__logo:hover, .profile .profile__link:hover, .ideas__tag a:hover, .moderation__table li a:hover, .profile .profile__email a:hover, .auth__helplink:hover, .idea .idea__cardtitle a:hover, .idea .idea__tag a:hover, .publication .publication__title a:hover, .ideas__cardtitle a:hover, .city .city__title a:hover, .tabs__links .tabs__link:hover, .about-service .about-service__section-subtitle a:hover, .publication .publication__type:hover, .article .article__text a:hover {
   cursor: url(../../images/Cursor-hand.svg), pointer;
 }
 
@@ -237,7 +237,7 @@ ul {
 }
 
 /*----------------------------------- transition -----------------------------------*/
-.moderation__table .moderation__buttons .moderation__button:active svg path, .moderation__table .moderation__buttons .moderation__button:hover svg path, .tabs__nav-btn, .auth__input, .auth__label, .timeline .timeline__item-text a, .accordions .accordion .accordion__title, .accordions .accordion .accordion__trigger svg, .pagination .pagination__link, .idea .idea__like-box .idea__like svg, .publication .publication__img img, .ideas__like svg, .project .project__title, .project, .footer .footer__links a, .footer .footer__emails a, .header .header__link, .header .header__list-social ul svg, .header .header__burger-lines, .lead .carousel__button, .moderation__table .moderation__buttons .moderation__button, .auth__button, .idea .idea__like-box .idea__like, .idea .idea__button, .ideas__showmore, .ideas__like, .lead-buttons__button, .lead__slide .lead__button, .tabs__links .tabs__link, .about-service .about-service__section-subtitle a, .publication .publication__type, .article .article__text a, .moderation__table li a, .profile .profile__email a, .auth__helplink, .idea .idea__cardtitle a, .idea .idea__tag a, .publication .publication__title a, .ideas__cardtitle a, .city .city__title a, .profile .profile__link, .ideas__tag a {
+.idea-edit .idea-edit__select .idea-edit__select-label, .idea-edit .idea-edit__select .idea-edit__select-content, .idea-edit .idea-edit__select .idea-edit__select-title::before, .idea-edit .idea-edit__select .idea-edit__select-title::after, .moderation__table .moderation__buttons .moderation__button:active svg path, .moderation__table .moderation__buttons .moderation__button:hover svg path, .tabs__nav-btn, .auth__input, .auth__label, .timeline .timeline__item-text a, .accordions .accordion .accordion__title, .accordions .accordion .accordion__trigger svg, .pagination .pagination__link, .idea .idea__like-box .idea__like svg, .publication .publication__img img, .ideas__like svg, .project .project__title, .project, .footer .footer__links a, .footer .footer__emails a, .header .header__link, .header .header__list-social ul svg, .header .header__burger-lines, .lead .carousel__button, .idea-edit .idea-edit__submit, .moderation__table .moderation__buttons .moderation__button, .auth__button, .idea .idea__like-box .idea__like, .idea .idea__button, .ideas__showmore, .ideas__like, .lead-buttons__button, .lead__slide .lead__button, .tabs__links .tabs__link, .about-service .about-service__section-subtitle a, .publication .publication__type, .article .article__text a, .moderation__table li a, .profile .profile__email a, .auth__helplink, .idea .idea__cardtitle a, .idea .idea__tag a, .publication .publication__title a, .ideas__cardtitle a, .city .city__title a, .profile .profile__link, .ideas__tag a {
   -moz-transition-duration: 0.2s;
   -o-transition-duration: 0.2s;
   transition-duration: 0.2s;
@@ -247,7 +247,7 @@ ul {
 }
 
 /*----------------------------------- buttons -----------------------------------*/
-.moderation__table .moderation__buttons .moderation__button, .auth__button, .idea .idea__like-box .idea__like, .idea .idea__button, .ideas__showmore, .ideas__like, .lead-buttons__button, .lead__slide .lead__button {
+.idea-edit .idea-edit__submit, .moderation__table .moderation__buttons .moderation__button, .auth__button, .idea .idea__like-box .idea__like, .idea .idea__button, .ideas__showmore, .ideas__like, .lead-buttons__button, .lead__slide .lead__button {
   transition-property: color, background-color;
   text-decoration: none;
   text-align: center;
@@ -2604,6 +2604,165 @@ ul {
 }
 .moderation__table .moderation__buttons .moderation__button:active svg path {
   fill: #0C5FBA;
+}
+
+.idea-edit {
+  padding: 64px 0 80px;
+  width: 90%;
+  max-width: calc(1440px - 10%);
+  margin: 0 auto;
+  border-bottom: 1px solid #A7A6B5;
+}
+.idea-edit .idea-edit__form {
+  width: 100%;
+  max-width: 644px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.idea-edit .idea-edit__line {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  padding: 0;
+  border: none;
+  border-bottom: 1px solid #A7A6B5;
+  outline: none;
+  min-height: 44px;
+}
+.idea-edit .idea-edit__line.idea-edit__line_txt {
+  grid-template-columns: 1fr;
+}
+.idea-edit .idea-edit__line .idea-edit__line-lbl {
+  color: #A7A6B5;
+  line-height: 44px;
+}
+.idea-edit .idea-edit__line .idea-edit__line-inp {
+  line-height: 44px;
+  padding: 0 8px;
+  border: none;
+  outline: none;
+}
+.idea-edit .idea-edit__line .idea-edit__line-inp:disabled {
+  background-color: transparent;
+}
+.idea-edit .idea-edit__line .idea-edit__txtarea {
+  border: none;
+  outline: none;
+  resize: none;
+  padding: 0;
+  max-height: 300px;
+  height: 150px;
+  overflow: -moz-scrollbars-none;
+}
+.idea-edit .idea-edit__line:disabled .idea-edit__line-inp {
+  color: #7E7D90;
+}
+.idea-edit .idea-edit__line .idea-edit__line {
+  margin-top: 24px;
+}
+.idea-edit .idea-edit__select {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.idea-edit .idea-edit__select[data-state=active] .idea-edit__select-title::before {
+  transform: translate(-3px, -50%) rotate(-45deg);
+}
+.idea-edit .idea-edit__select[data-state=active] .idea-edit__select-title::after {
+  transform: translate(3px, -50%) rotate(45deg);
+}
+.idea-edit .idea-edit__select[data-state=active] .idea-edit__select-content {
+  opacity: 1;
+}
+.idea-edit .idea-edit__select[data-state=active] .idea-edit__select-label + .idea-edit__select-input + .idea-edit__select-label {
+  max-height: 40px;
+  border-top-width: 1px;
+}
+.idea-edit .idea-edit__select .idea-edit__select-title {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 0 8px;
+}
+.idea-edit .idea-edit__select .idea-edit__select-title::before, .idea-edit .idea-edit__select .idea-edit__select-title::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  display: block;
+  width: 10px;
+  height: 2px;
+  background-color: #A7A6B5;
+  transform: translate(-3px, -50%) rotate(45deg);
+}
+.idea-edit .idea-edit__select .idea-edit__select-title::after {
+  transform: translate(3px, -50%) rotate(-45deg);
+}
+.idea-edit .idea-edit__select .idea-edit__select-title:hover {
+  border-color: #2D8BF1;
+}
+.idea-edit .idea-edit__select .idea-edit__select-title:hover::before, .idea-edit .idea-edit__select .idea-edit__select-title:hover::after {
+  background-color: #106CD1;
+}
+.idea-edit .idea-edit__select .idea-edit__select-content {
+  position: absolute;
+  top: 44px;
+  left: 0px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #ffffff;
+  border: 1px solid #c7ccd1;
+  opacity: 0;
+  z-index: 8;
+}
+.idea-edit .idea-edit__select .idea-edit__select-input {
+  display: none;
+}
+.idea-edit .idea-edit__select .idea-edit__select-input:checked + label {
+  background-color: #dedede;
+}
+.idea-edit .idea-edit__select .idea-edit__select-input:disabled + label {
+  opacity: 0.6;
+  pointer-events: none;
+}
+.idea-edit .idea-edit__select .idea-edit__select-label {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  max-height: 0;
+  padding: 0 8px;
+  cursor: pointer;
+  overflow: hidden;
+}
+.idea-edit .idea-edit__select .idea-edit__select-label + input + .idea-edit .idea-edit__select .idea-edit__select-label {
+  border-top: 0 solid #2D8BF1;
+}
+.idea-edit .idea-edit__select .idea-edit__select-label:hover {
+  background-color: #2D8BF1 !important;
+  color: #ffffff;
+}
+.idea-edit .idea-edit__map {
+  width: 100%;
+  min-height: 433px;
+  background-image: url(../../../images/pic2.png);
+}
+.idea-edit .idea-edit__submit {
+  width: 224px;
+  margin: 40px auto 0;
+  background-color: #2D8BF1;
+  color: #F6F6F7;
+}
+.idea-edit .idea-edit__submit:hover {
+  background-color: #106CD1;
+  color: #F0F0F4;
+}
+.idea-edit .idea-edit__submit:active {
+  background-color: #0C5FBA;
+  color: #FFFFFF;
 }
 
 /*# sourceMappingURL=index.css.map */
