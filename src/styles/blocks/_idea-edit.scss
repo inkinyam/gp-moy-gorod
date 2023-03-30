@@ -1,0 +1,217 @@
+.idea-edit {
+  padding: 64px 0 80px;
+  width: 90%;
+  max-width: calc(1440px - 10%);
+  margin: 0 auto;
+  border-bottom: 1px solid $middle-dark-color-default;
+
+  .idea-edit__form {
+    width: 100%;
+    max-width: 644px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  .idea-edit__line {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    padding: 0;
+    border: none;
+    border-bottom: 1px solid $middle-dark-color-default;
+    outline: none;
+    min-height: 44px;
+
+    &.idea-edit__line_txt {
+      grid-template-columns: 1fr;
+    }
+
+    .idea-edit__line-lbl {
+      @extend %text-circe-18;
+      color: $middle-dark-color-default;
+      line-height: 44px;
+    }
+
+    .idea-edit__line-inp {
+      @extend %text-circe-18;
+      line-height: 44px;
+      padding: 0 8px;
+      border: none;
+      outline: none;
+
+      &:disabled {
+        background-color: transparent;
+      }
+    }
+
+    .idea-edit__txtarea {
+      @extend %text-circe-16;
+      border: none;
+      outline: none;
+      resize: none;
+      padding: 0;
+      max-height: 300px;
+      height: 150px;
+      overflow: -moz-scrollbars-none;
+    }
+
+    &:disabled {
+      .idea-edit__line-inp {
+        color: $middle-dark-color-hovered;
+      }
+    }
+
+    .idea-edit__line {
+      margin-top: 24px;
+      border: none;
+    }
+    
+  }
+
+  .idea-edit__select {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    @extend %text-circe-18;
+
+    &[data-state="active"] {
+      .idea-edit__select-title {
+        &::before {
+          transform: translate(-3px, -50%) rotate(-45deg);
+        }
+  
+        &::after {
+          transform: translate(3px, -50%) rotate(45deg);
+        }
+      }
+      
+      .idea-edit__select-content {
+        opacity: 1;
+      }
+      
+      .idea-edit__select-label + .idea-edit__select-input + .idea-edit__select-label {
+        max-height: 40px;
+        border-top-width: 1px;
+      }
+    }
+
+    .idea-edit__select-title {
+      display: flex;
+      align-items: center;
+      width: calc(100% - 24px);
+      height: 100%;
+      padding: 0 8px;
+      
+      @extend %custom-cursor;
+    
+      &::before,
+      &::after {
+        content: "";
+    
+        position: absolute;
+        top: 50%;
+        right: 16px;
+    
+        display: block;
+        width: 10px;
+        height: 2px;
+    
+        @extend %transition;
+    
+        background-color: $middle-dark-color-default;
+    
+        transform: translate(-3px, -50%) rotate(45deg);
+      }
+      &::after {
+        transform: translate(3px, -50%) rotate(-45deg);
+      }
+    
+      &:hover {
+        border-color: $primary-color-default;
+    
+        &::before,
+        &::after {
+          background-color: $primary-color-hovered;
+        }
+      }
+    }
+  
+    .idea-edit__select-content {
+      @extend %transition;
+      position: absolute;
+      top: 44px;
+      left: 0px;
+    
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      background-color: #ffffff;
+      border: 1px solid #c7ccd1;
+      opacity: 0;
+      z-index: 8;
+    }
+  
+    .idea-edit__select-input {
+      display: none;
+    
+      &:checked + label {
+        background-color: #dedede;
+      }
+      &:disabled + label {
+        opacity: 0.6;
+        pointer-events: none;
+      }
+    }
+  
+    .idea-edit__select-label {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 40px;
+      max-height: 0;
+      padding: 0 8px;
+      
+      @extend %transition;
+    
+      cursor: pointer;
+      
+      overflow: hidden;
+    
+      & + input + & {
+        border-top: 0 solid  $primary-color-default;
+      }
+    
+      &:hover {
+        background-color: $primary-color-default !important;
+        color: #ffffff;
+      }
+    }
+  }
+
+  .idea-edit__map {
+    width: 100%;
+    min-height: 433px;
+    background-image: url(../../images/pic2.png);
+  }
+
+  .idea-edit__submit {
+    @extend %button;
+    @extend %text-circe-18;
+    width: 224px;
+    margin: 40px auto 0;
+    background-color: $primary-color-default;
+    color: $light-color-default;
+
+    &:hover {
+      background-color: $primary-color-hovered;
+      color: $light-color-hovered;
+    }
+
+    &:active {
+      background-color: $primary-color-onclick;
+      color: $light-color-onclick;
+    }
+  }
+}

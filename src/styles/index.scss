@@ -1,0 +1,51 @@
+/*sass styles/sass:styles/css --watch*/
+
+@import './vendors/fonts.css';
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+
+
+@import './utils/reset';                // убираем лишнее
+@import './utils/variables';            // переменные
+@import './utils/samples';              // шаблоны для основных стилей
+@import './utils/root';                 // стили для .page
+ 
+@import './utils/_animation.scss';      // анимации
+@import './utils/fansy-custom.css';        // настройки fancy-box с основного сайта
+
+@import './blocks/header';
+@import './blocks/main';
+@import './blocks/footer';
+@import './blocks/breadcrumb';
+
+@import './blocks/title';
+@import './blocks/lead';
+@import './blocks/lead-buttons';
+@import './blocks/cities';
+@import './blocks/project';
+@import './blocks/about';
+@import './blocks/cover';
+@import './blocks/article';
+@import './blocks/map';
+@import './blocks/ideas';
+@import './blocks/publications';
+@import './blocks/about-project';
+@import './blocks/titleblock';
+@import './blocks/idea';
+@import './blocks/classificator';
+@import './blocks/catalog';
+@import './blocks/pagination';
+@import './blocks/accordions';
+@import './blocks/about-service';
+@import './blocks//timeline';
+@import './blocks/auth';
+@import './blocks/profile';
+@import './blocks/tabs';
+@import './blocks/moderation';
+@import './blocks/idea-edit';
+@import './blocks/add-idea';
+
+/*вспомогательные*/
+@import './blocks/up';
+@import './blocks/cursor';
+@import './utils/withLine';
+

@@ -1,0 +1,23 @@
+.map {
+  width: 100%;
+
+
+  .map__title {
+    @extend %title-h2;
+    max-width: calc(1440px - 10%);
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .map__map {
+    width: 100%;
+    height: 861px;
+    background-image: url(../../images/pic2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @media screen and (max-width: $tablet ) {
+      height: 470px;
+    }
+  }
+}

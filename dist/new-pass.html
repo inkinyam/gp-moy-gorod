@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../images/favicons/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="120x120" href="../images/favicons/favicon-120x120.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="../images/favicons/favicon-48x48.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../images/favicons/favicon-192x192.png">
+  <link rel="apple-touch-icon" type="image/png" sizes="167x167" href="../images/favicons/favicon-167x167.png">
+  <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../images/favicons/favicon-180x180.png">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Смена пароля</title>
+  <script defer="defer" src="scripts/index.js"></script>
+  <link href="main.css" rel="stylesheet">
+</head>
+
+<body class="page">
+  <header class="header">
+    <div class="header__container"><a href="../index.html" class="header__logo" title="Перейти на главную"></a>
+      <div class="header__body"><button class="header__burger"><span class="header__burger-lines"></span> <span class="header__burger-lines"></span> <span class="header__burger-lines"></span></button>
+        <ul class="header__list">
+          <li class="header__item"><a href="./city.html" class="header__link">Екатеринбург</a></li>
+          <li class="header__item"><a href="./city.html" class="header__link">Уфа</a></li>
+          <li class="header__item"><a href="./city.html" class="header__link">Южно-Сахалинск</a></li>
+          <li class="header__item"><a href="./about-service.html" class="header__link">О сервисе</a></li>
+          <li class="header__item"><a href="./moderation.html" class="header__link">Модерация</a></li>
+          <li class="header__list-social">
+            <ul>
+              <li class="header__item"><a href="#" class="header__link"><svg width="20" height="12" viewBox="0 0 20 12">
+                    <use xlink:href="../images/sprite.svg#logo-vk"></use>
+                  </svg></a></li>
+              <li class="header__item"><a href="#" class="header__link"><svg width="17" height="14" viewBox="0 0 17 14">
+                    <use xlink:href="../images/sprite.svg#logo-telegramm"></use>
+                  </svg></a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+    <section class="titleblock">
+      <ul class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
+        <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a itemprop="item" href="../index.html"><span itemprop="name">Главная</span></a>
+          <meta itemprop="position" content="1">
+        </li>
+      </ul>
+      <h1 class="title">Смена пароля</h1>
+    </section>
+    <section class="profile">
+      <div class="profile__name">Здравствуйте,<p>Иван</p>!</div>
+      <div class="profile__info">
+        <div class="profile__email">Мой профиль (<a href="./profile.html">ivanov@ivan.ru</a>)</div><a href="./profile.html" class="profile__link">Вернуться в профиль</a> <a href="./login.html" class="profile__link">Выйти</a>
+      </div>
+    </section>
+    <form action="" class="auth newpass__form" novalidate>
+      <div class="auth__input-group required"><label class="auth__label" for="oldpass">Старый пароль</label> <input class="auth__input labeledinput" id="oldpass" type="password" value="" maxlength="70" required> <span class="auth__err">Вы указали некорректный пароль</span></div>
+      <div class="auth__input-group required"><label class="auth__label" for="newpass1">Новый пароль</label> <input class="auth__input labeledinput" id="newpass1" type="password" value="" maxlength="70" required> <span class="auth__err"></span></div>
+      <div class="auth__input-group required"><label class="auth__label" for="newpass2">Повторите новый пароль</label> <input class="auth__input labeledinput" id="newpass2" type="password" value="" maxlength="70" required> <span class="auth__err"></span></div><button type="submit" class="auth__button">Изменить пароль</button>
+    </form>
+  </main>
+  <footer class="footer">
+    <div class="footer__container"><img src="../images/logos/main-logo-white.svg" alt="логотип Института Генплана" class="footer__logo">
+      <div class="footer__emails">
+        <div>
+          <p>техническая поддержка:</p><a href="mailto:gorod@genplanmos.ru" class="">gorod@genplanmos.ru</a>
+        </div>
+        <div>
+          <p>пресс-служба:</p><a href="mailto:press@genplanmos.ru" class="">press@genplanmos.ru</a>
+        </div>
+      </div>
+      <p class="footer__copyright">© 2023 Платформа «Мой город» Разработана Институтом Генплана Москвы</p>
+      <div class="footer__links"><a href="https://genplanmos.ru/useragreement/" title="пользовательское соглашение">Пользовательское соглашение</a> <a href="https://genplanmos.ru/policypersonaldata/" title="политика конфиденциальности">Политика обработки персональных данных</a> <a href="https://genplanmos.ru/" title="сайт Института Генплана Москвы">Государственное автономное учреждение «Институт Генплана Москвы»</a></div>
+    </div>
+  </footer>
+</body>
+
+</html>
