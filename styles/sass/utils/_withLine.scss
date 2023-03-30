@@ -1,0 +1,51 @@
+.withLine.line {
+  position: relative;
+  &:before {
+    @extend %transition;
+    content: '';
+    width: 0;
+    height: 1px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $dark-color-default;
+    animation: cardTopLine 1s ease forwards;
+  }
+
+  &::after {
+    @extend %transition;
+    content: '';
+    width: 1px;
+    height:0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: $dark-color-default;
+    animation: cardRightLine 1s ease-in 1s forwards;
+  }
+  
+}
+
+
+/*ЛИНИИ КАРТОЧКИ*/
+@keyframes cardTopLine {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+  
+}
+
+@keyframes cardRightLine {
+  from {
+    height: 0;
+  }
+
+  to {
+    height: 100%;
+  }
+  
+}

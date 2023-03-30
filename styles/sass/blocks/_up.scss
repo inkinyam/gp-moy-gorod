@@ -8,7 +8,7 @@
   border: none;
   background-color: $light-color-default;
   opacity: 0;
-  box-shadow: 0 2px 4px rgb(33 31 51 / 25%);
+  box-shadow: 0 2px 4px rgba(33, 31, 51, 0.25);
   opacity: 0.7;
 
   width: 40px;
@@ -61,10 +61,10 @@
 
     background-color: currentColor;
 
-    transform: translate(-3px, -50%) rotate(45deg);
+    transform: translate(-2px, -50%) rotate(-45deg);
   }
   &::after {
-    transform: translate(3px, -50%) rotate(-45deg);
+    transform: translate(4px, -50%) rotate(45deg);
   }
 
   

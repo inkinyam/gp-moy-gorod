@@ -26,11 +26,19 @@
         this.switchTab(this.tabButton);
       }
     } else {
-      // Инициализация по умолчанию
-      this.tabBtns[0].classList.add('tabs__nav-btn_active');
-      this.tabsPanels.forEach(el => {
-        el.classList.add('tabs__panel_active');
-      });
+      // при открытии страницы
+      if (this.showAllBtn) {
+        // если есть кнопка ALL
+        this.tabBtns[0].classList.add('tabs__nav-btn_active');
+        this.tabsPanels.forEach(el => {
+          el.classList.add('tabs__panel_active');
+        });
+      } else {
+        //если нет кнопки ALL, открываем первую вкладку
+        this.tabBtns[0].classList.add('tabs__nav-btn_active');
+        this.tabsPanels[0].classList.add('tabs__panel_active');
+      }
+
     }
   }
 
@@ -97,8 +105,7 @@
 
   urldecode(str) {
     return decodeURIComponent((str+'').replace(/\+/g, '%20'));
-}
-
+  }
 }
 
 

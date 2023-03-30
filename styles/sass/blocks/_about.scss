@@ -24,9 +24,6 @@
   .about__card {
     width: 100%;
     padding: $spacer-s $spacer-s 0 0;
-    border-top: 2px solid $dark-color-default;
-    border-right: 2px solid $dark-color-default;
-
     display: flex;
     flex-direction: column;
     row-gap: $spacer-xs;

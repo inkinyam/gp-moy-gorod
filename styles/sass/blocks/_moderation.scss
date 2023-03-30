@@ -1,5 +1,6 @@
 .moderation__tables {
   .moderation__tables-item {
+    @extend %transition;
     border-top: 1px solid $dark-color-default;
     min-height: 90px;
     display: flex;

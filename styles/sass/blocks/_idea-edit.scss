@@ -65,6 +65,7 @@
 
     .idea-edit__line {
       margin-top: 24px;
+      border: none;
     }
     
   }
@@ -99,7 +100,7 @@
     .idea-edit__select-title {
       display: flex;
       align-items: center;
-      width: 100%;
+      width: calc(100% - 24px);
       height: 100%;
       padding: 0 8px;
       

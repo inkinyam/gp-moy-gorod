@@ -2,6 +2,8 @@ import { Carousel } from "https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fa
 import { Autoplay } from "https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/carousel.autoplay.esm.js";
 import LabeledInput from './LabeledInput.js'
 import Tabs from "./LinkedTabs.js";
+import initAccordion from './accordion.js';
+
 
 // хедер, обработка клика на бургер
 let header = document.querySelector('header');
@@ -12,7 +14,6 @@ if (header) {
   })
 
 };
-
 
 // инициализация карусели на главной
 Carousel.Plugins.Autoplay = Autoplay; 
@@ -32,29 +33,6 @@ if (leadCrsl) {
 }
 
 
-// функция для инициализации аккордеона, вызов функции в html
-function initAccordion (selector) {
-  let accordion = document.querySelector(selector);
-
-  if (!accordion) {
-    return;
-  } else {
-    let accordionTriggers = Array.from(accordion.querySelectorAll('.accordion__trigger'));
-    accordionTriggers.forEach(item => {
-      item.addEventListener('click', (e) => {
-        let parentElement = e.target.closest('.accordion');
-        if (parentElement.classList.contains('accordion_opened')) {
-          parentElement.classList.remove('accordion_opened')
-        } else {     
-          parentElement.classList.add('accordion_opened')  
-        }
-      })
-    })
-  }
-}
-window.initAccordion = initAccordion;
-
-
 // инициализация "всплывающих" лейблов в формах
 let labeledInputs = Array.from(document.querySelectorAll('.labeledinput'));
 if (labeledInputs.length != 0) {
@@ -64,22 +42,110 @@ if (labeledInputs.length != 0) {
   })
 }
 
-let tabs =Array.from(document.querySelectorAll('.tabs'));
+let accordionsArray = Array.from(document.querySelectorAll('.accordion'));
+if (accordionsArray.length != 0) {
+  accordionsArray.forEach(item => {
+    initAccordion(item);
+  })
+}
+
+// инициализация табов
+let tabs = Array.from(document.querySelectorAll('.tabs'));
 if (tabs.length != 0) {
   tabs.forEach(item => {
     let el = new Tabs(`.${item.classList[0]}`);
   })
 }
 
-const upButton = document.querySelector('.up');
-if (upButton) {
-  // обработка нажатия на кнопку "вверх" и ее появление
-  upButton.addEventListener('click', function(e) {
+// обработчик на клик лайка в карточках
+let likeButtons = Array.from(document.querySelectorAll('.like'));
+if (likeButtons.length != 0) {
+  likeButtons.forEach(item => {
+    item.addEventListener('click', () => {
+      item.classList.toggle('liked');
+    })
+  })
+} 
+
+//кнопка вверх на страницах
+if (window.innerHeight > 950) {
+  // если страница длинная, создаем кнопку UP
+  let body = document.querySelector('.page');
+  let upBtn = document.createElement('div');
+  upBtn.classList.add('up');
+  body.append(upBtn);
+
+  upBtn.addEventListener('click', function(e) {
     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
   })
 
   window.onscroll = () =>
-  window.scrollY > 600
-    ? (upButton.classList.add('up_showed'))
-    : (upButton.classList.remove('up_showed'));
+  window.scrollY > 620
+    ? (upBtn.classList.add('up_showed'))
+    : (upBtn.classList.remove('up_showed'));
 }
+
+// анимация курсора при наведении
+let hoverableElement = document.querySelectorAll('.withCursor');
+if (hoverableElement.length != 0) {
+  // если находим элементы, помеченные нужным классом, создаем курсор
+  let body = document.querySelector('.page');
+  let cursor = document.createElement('div');
+  cursor.classList.add('cursor');
+  body.append(cursor);
+
+  // движение курсора
+  const handleMouseMove = (e) => {
+    TweenMax.to(cursor, .4, {
+      x: e.clientX ,
+      y: e.clientY,
+    })
+  }
+ // ховер на элемент с классом withCursor
+  const handleMouseHover = () => {
+    TweenMax.to(cursor, .3, {
+      scale: 50,
+      opacity: 0.7
+    })
+  }
+
+  // возвращение к стандартному размеру
+  const handleMouseOut = () => {
+    TweenMax.to(cursor, .3, {
+      scale: 0.1
+    })
+  }
+
+
+  document.body.addEventListener('mousemove', handleMouseMove);
+  
+  hoverableElement.forEach(item => {
+    item.addEventListener('mouseenter', handleMouseHover);
+    item.addEventListener('mouseleave', handleMouseOut);
+  })
+}
+
+function AnimationObserver(){
+  const callback = (entries, observer) => {
+    entries.forEach(entry => {
+      const { target } = entry;
+      
+      if (entry.intersectionRatio >= 0.4) {
+        target.classList.add("line");
+      } else {
+       // target.classList.remove("line");
+      }
+    });
+  };
+
+  let options = {
+    threshold: [.0,.1,.2,.3,.4,.5,.6,.7,.8,.9,] };
+  let observer = new IntersectionObserver(callback, options);
+  let elements = document.querySelectorAll('.withLine');
+  
+  if (elements.length != 0) {
+    elements.forEach(elm => {observer.observe(elm);})
+  }
+}
+
+AnimationObserver();
