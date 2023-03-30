@@ -149,3 +149,60 @@ function AnimationObserver(){
 }
 
 AnimationObserver();
+
+// страница редактирования профиля, можно разблокировать и изменить, или просто посмотреть
+let profileForm = document.querySelector('.profile__form');
+if (profileForm) {
+  let field = profileForm.querySelector('.auth__field');
+  let button = profileForm.querySelector('.auth__button');
+
+  button.addEventListener('click', e => {
+    e.preventDefault();
+    if (field.disabled === true) {
+      field.removeAttribute('disabled');
+      button.textContent = 'Сохранить';
+      button.setAttribute('type', 'submit');
+
+      // вставить отправку формы на сервер сюда
+    } else {
+      field.setAttribute('disabled', 'true');
+      button.textContent = 'Изменить';
+      button.setAttribute('type', 'button');
+    }
+  })
+}
+
+// проверка на соответствие пароля и повтора пароля
+let newPassForm = document.querySelector('.newpass__form');
+if (newPassForm) {
+ let oldPass = newPassForm.querySelector('#oldpass');
+ let newPass = newPassForm.querySelector('#newpass1');
+ let confirmPass = newPassForm.querySelector('#newpass2');
+
+ newPass.addEventListener('input', (e) => {
+  let newPassBox = newPass.closest('.auth__input-group');
+  let newPassErr = newPassBox.querySelector('.auth__err');
+
+  if (oldPass.value === e.target.value) {
+    newPassBox.classList.add('is-invalid');
+    newPassErr.textContent = 'Указанный пароль совпадает с использующимся ранее, выберите другой';
+  } else {
+    newPassBox.classList.remove('is-invalid');
+    newPassErr.textContent = '';
+   }
+ })
+
+ confirmPass.addEventListener('input', (e) => {
+  let newPassBox = confirmPass.closest('.auth__input-group');
+  let newPassErr = newPassBox.querySelector('.auth__err');
+
+  if (newPass.value != e.target.value) {
+    newPassBox.classList.add('is-invalid');
+    newPassErr.textContent = 'Введенные пароли не совпадают, повторите попытку';
+   } else {
+    newPassBox.classList.remove('is-invalid');
+    newPassErr.textContent = '';
+   }
+ })
+
+}
