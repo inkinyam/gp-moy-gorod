@@ -70,7 +70,7 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 }
 
 .fancybox__nav .f-button.is-next:hover {
-  cursor: url(../../images/Cursor-hand.svg), pointer;
+  cursor: url(../../images/icons/Cursor-hand.svg), pointer;
   color: var(--only-green);
 }
 
@@ -85,7 +85,7 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 }
 
 .fancybox__nav .f-button.is-prev:hover {
-  cursor: url(../../images/Cursor-hand.svg), pointer;
+  cursor: url(../../images/icons/Cursor-hand.svg), pointer;
   color: var(--only-green);
 }
 

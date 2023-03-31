@@ -1,5 +1,4 @@
 let cardsArray = Array.from(document.querySelectorAll('.moderation__tables-item'));
-
 if (cardsArray.length != 0) {
   cardsArray.map(item => {
     let aproveButton = item.querySelector('.aprove');

@@ -1,10 +1,8 @@
-const path = require('path');
 const fs = require('fs');
+const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const FileManagerPlugin = require('filemanager-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 function generateHtmlPlugins(templateDir) {
   const templateFiles = fs.readdirSync(path.resolve(__dirname, templateDir));
@@ -19,109 +17,105 @@ function generateHtmlPlugins(templateDir) {
     })
   })
 }
-
 const htmlPlugins = generateHtmlPlugins('./src/pages/')
 
 module.exports = {
-  entry: { main: './src/scripts/index.js' },
+  entry: path.join(__dirname, 'src/scripts', 'index.js'),
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'scripts/index.js',
-    publicPath: ''
+    path: path.join(__dirname, 'dist'),
+    filename: 'index.js',
+    assetModuleFilename: path.join('images', '[name][ext]').replace(/\\/g, '/'),
   },
-  mode: 'development',
-  devServer: {
-    static: path.resolve(__dirname, './dist'),
-    compress: true,
-    port: 8080,
-    open: true
-  },
+
   module: {
     rules: [
       {
         test: /\.js$/,
         use: 'babel-loader',
-        exclude: /node_modules/
+        exclude: /node_modules/,
       },
       {
-        test: /\.(png|jpg|gif|svg)$/,
+        test: /\.(scss|css)$/,
         use: [
+          MiniCssExtractPlugin.loader,
           {
-            loader: 'file-loader',
-            options: {name: 'images/[name].[ext]'}  
-          }
-        ]
-      },
-      {
-        test: /\.(woff(2)?|eot|ttf|otf)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {name: 'vendors/fonts/[name].[ext]'}  
-          }
-        ]
-      },
-
-      {
-        test: /\.s?css$/,
-        use: [
-          MiniCssExtractPlugin.loader,    
-          { 
             loader: 'css-loader',
-            options: {}
-          }, 
+          },
+          'postcss-loader',
+          'sass-loader',
           {
             loader: 'resolve-url-loader',
-            options: {}
-          }, 
+            options: {
+              sourceMap: true,
+            },
+          },
           {
             loader: 'sass-loader',
             options: {
-              sourceMap: true, 
-            }
-          }
-        ]
+              sourceMap: true,
+            },
+          },
+        ],
       },
       {
-        test: /\.html$/,
-        include: path.resolve(__dirname, 'src/html/includes'),
-        use: ['raw-loader']
+        test: /\.(png|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: path.join('images', '[name][ext]').replace(/\\/g, '/'),
+        },
       },
-    ]
+      {
+        test: /\.svg$/,
+        type: 'asset/resource',
+        generator: {
+          filename: path.join('images/icons', '[name][ext]').replace(/\\/g, '/'),
+        },
+      },
+      {
+        test: /\.(woff2?|eot|ttf|otf)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: path.join('fonts', '[name][ext]').replace(/\\/g, '/'),
+        },
+      },
+      
+    ],
   },
+
   plugins: [
     new HtmlWebpackPlugin({
+      template: path.join(__dirname, 'src', 'index.html'),
       filename: 'index.html',
-      template: './src/index.html',
-    }),
-    /* new CopyWebpackPlugin({
-      patterns: [
-        { from: './src/vendors', to: './vendors' },
-        { from: './src/images', to: './images' },
-        { from: './src/pages', to: './pages' },
-      ]      
-    }), */
-    new MiniCssExtractPlugin({
-      filename: "[name].css",
-      chunkFilename: "[id].css",
     }),
 
-    new CleanWebpackPlugin(),
+    new FileManagerPlugin({
+      events: {
+        onStart: {
+          delete: ['dist'],
+        },
+        onEnd: {
+          copy: [
+            {
+              source: path.join('src', 'favicons'),
+              destination: 'dist/favicons',    
+            },
+            {
+              source: path.join('src', 'sprites'),
+              destination: 'dist/sprites',    
+            }
+          ]
+        }
+      },
+    }),
+
+    new MiniCssExtractPlugin({
+      filename: '[name].css',
+    }),
   ].concat(htmlPlugins),
 
-  optimization: {
-    minimize: true,
-    minimizer: [
-      new CssMinimizerPlugin({
-        minimizerOptions: {
-          preset: [
-            "default",
-            {
-              discardComments: { removeAll: true },
-            },
-          ],
-        },
-      }),
-    ],
+
+  devServer: {
+    watchFiles: path.join(__dirname, 'src'),
+    port: 9000,
   },
 };

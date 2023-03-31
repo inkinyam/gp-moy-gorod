@@ -221,7 +221,7 @@
 
 /*правильно заполненное поле ввода*/
 .auth__input-group.is-valid .auth__input {
-  background-image: url(../../images/icons/Check.png);
+  background-image: url(../../images/Check.png);
   background-repeat: no-repeat;
   background-position: right;
 }
@@ -229,7 +229,7 @@
 
 /*НЕПРАВИЛЬНО заполненное поле ввода*/
 .auth__input-group.is-invalid .auth__input {
-  background-image: url(../../images/icons/err.png);
+  background-image: url(../../images/err.png);
   background-repeat: no-repeat;
   background-position: right;
 }
