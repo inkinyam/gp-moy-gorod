@@ -1,0 +1,141 @@
+/*настройки карусельки*/
+button:focus {
+  outline: none;
+  border: none;
+}
+
+
+body:not(.is-using-mouse) .fancybox__container :focus {
+  box-shadow: none;
+}
+
+
+.f-carousel {
+  color: var(--black-onclick);
+  --carousel-button-bg: transparent;
+  --carousel-button-shadow: none;
+  --carousel-button-svg-width: 28px;
+  --carousel-button-svg-height: 28px;
+  --carousel-button-svg-stroke-width: 2.5;
+  width: 100%;
+
+  .f-carousel__slide {
+    width: 100%;
+    padding: 0;
+
+    @media screen and (max-width: 800px) {
+      padding: 0 5px;
+    }
+  }
+  
+  .f-carousel__dots  {
+    bottom: 24px;
+
+    .f-carousel__dot  {
+      color: $primary-color-default;
+    }
+  }
+}
+
+
+.fancybox__container .fancybox__backdrop {
+  background:  rgba(19, 18, 18, 0.9);
+}
+
+
+.fancybox__caption {
+  font-family: 'Lora';
+  font-style: italic;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: $light-color-default;
+  text-align: left;
+}
+
+
+/*положение тулбара (крестик, кубики)*/
+.fancybox__container  {
+  .fancybox__toolbar{
+    top: 2% !important;
+    right:  2% !important;
+
+    .f-button {
+      margin: 0 4px;
+      background: transparent;
+      width: 28px;
+      height: 28px;
+
+      svg{
+        height: 100%;
+        width: 100%;
+        fill: white;
+      }
+
+      &:hover {
+        svg {
+          fill: $secondary-color-default;
+          stroke: $secondary-color-default;
+          background: transparent;
+        }
+      }
+    }
+  }
+
+  .f-thumbs{
+    --f-thumb-width: 60px;
+    --f-thumb-height: 60px;
+    --f-thumb-border-radius: 0;
+    --f-thumb-outline: 4px !important;
+    --f-thumb-outline-color: $secondary-color-default !important;
+  }
+}
+
+
+/*кастомизируем кнопки*/
+.fancybox__nav {
+  .f-button.is-next {
+    right: 2%;
+
+    &:hover {
+      @extend %silly-link;
+      color: $secondary-color-hovered;
+    }
+
+    &:active {
+      @extend %silly-link;
+      color: $secondary-color-hovered;
+    }
+
+    @media screen and (max-width: 800px) {
+      display: none;
+    }
+  }
+
+  .f-button.is-prev {
+    right: 2%;
+
+    &:hover {
+      @extend %silly-link;
+      color: $secondary-color-onclick;
+    }
+
+    &:active {
+      @extend %silly-link;
+      color: $secondary-color-onclick;
+    }
+
+    @media screen and (max-width: 800px) {
+      display: none;
+    }
+  }
+
+}
+
+
+
+
+
+
+
+

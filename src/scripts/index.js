@@ -7,6 +7,7 @@ import { Carousel } from '@fancyapps/ui';
 import "@fancyapps/ui/dist/carousel/carousel.css";
 import { Autoplay } from "@fancyapps/ui/dist/carousel/carousel.autoplay.esm.js";
 
+
 // хедер, обработка клика на бургер
 let header = document.querySelector('header');
 if (header) {
@@ -25,7 +26,7 @@ if (leadCrsl) {
       timeout: 5000, 
       showProgress: false
     }, 
-    Dots: false,
+    Dots: true,
     Navigation: false,
   }, {Autoplay}); 
 }
@@ -224,7 +225,6 @@ if (moderationCards.length != 0) {
 }
 
 let selects = Array.from(document.querySelectorAll('.idea-edit__select'));
-
 if (selects.length != 0 ) {
   selects.map(item => {
 
@@ -251,7 +251,6 @@ if (selects.length != 0 ) {
 }
 
 let texAreas = Array.from(document.querySelectorAll('.idea-edit__txtarea')); // ищем все textarea
-
 if (texAreas.length != 0) {
   texAreas.forEach(item => {
     item.addEventListener('keyup', e => {

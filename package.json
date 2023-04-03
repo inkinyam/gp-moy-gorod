@@ -40,6 +40,7 @@
   "dependencies": {
     "@fancyapps/ui": "^5.0.13",
     "core-js": "^3.29.1",
+    "leaflet": "^1.9.3",
     "sass-resources-loader": "^2.2.5"
   }
 }
