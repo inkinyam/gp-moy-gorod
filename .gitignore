@@ -1,3 +1,4 @@
 .vscode
 question.md
 node_modules
+.sass-cache
