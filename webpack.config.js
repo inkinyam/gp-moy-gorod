@@ -22,7 +22,7 @@ const htmlPlugins = generateHtmlPlugins('./src/pages/')
 module.exports = {
   entry: path.join(__dirname, 'src/scripts', 'index.js'),
   output: {
-    path: path.join(__dirname, 'dist'),
+    path: path.join(__dirname, 'docs'),
     filename: 'index.js',
     assetModuleFilename: path.join('images', '[name][ext]').replace(/\\/g, '/'),
   },
@@ -91,17 +91,17 @@ module.exports = {
     new FileManagerPlugin({
       events: {
         onStart: {
-          delete: ['dist'],
+          delete: ['docs'],
         },
         onEnd: {
           copy: [
             {
               source: path.join('src', 'favicons'),
-              destination: 'dist/favicons',    
+              destination: 'docs/favicons',    
             },
             {
               source: path.join('src', 'sprites'),
-              destination: 'dist/sprites',    
+              destination: 'docs/sprites',    
             }
           ]
         }
