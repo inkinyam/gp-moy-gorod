@@ -261,3 +261,274 @@ if (texAreas.length != 0) {
     })
   })
 }
+
+import * as L from 'leaflet';
+import 'leaflet/dist/leaflet.css';
+
+let mapContainer = document.querySelector('#ekbmap');
+if (mapContainer) {
+  /* var mapLeaflet = L.map(mapContainer, {
+   "mapConfig":
+    {
+      "center":[51.828168,107.593119],
+      "zoom":12,
+      "bounds":null
+    },
+     "mapOptions":
+    {
+      "tap":false,
+      "zoomControl":false,
+      "fullscreenControl":false,
+      "scrollWheelZoom":false,
+      "clickFitBounds":false,
+      "clickPanToLayer":false,
+      "maxBounds":[[51.6922,107.3289],[52.0252,107.9993]],
+      "minZoom":12,
+      "maxZoom":18
+    },
+    "controls":
+    [
+      {
+        "alias":"sidebar",
+        "name":"sidebar",
+        "options":
+        {
+          "position":"topright"
+        }
+      },
+      {
+        "alias":"infoSidebar",
+        "name":"sidebar",
+        "options":
+        {
+          "position":"left"
+        }
+      },
+      {
+        "alias":"legend",
+        "name":"legend",
+        "options":
+        {
+          "position":"topright",
+          "title":"Условные знаки"
+        }
+      },
+      {
+        "alias":null,
+        "name":"layersPanel",
+        "options":
+        {
+          "position":"topright",
+          "title":"Слои",
+          "checkAllName":"Все"
+        }
+      },
+      {
+        "alias":null,
+        "name":"basemaps",
+        "options":
+        {
+          "position":"topright",
+          "title":"Подосновы",
+          "center":[51.828168,107.593119],
+          "zoom":12
+        }
+      },
+      {
+        "alias":null,
+        "name":"divider",
+        "options":
+        {
+          "position":"topright"
+        }
+      },
+      {
+        "alias":null,
+        "name":"customZoom",
+        "options":
+        {
+          "position":"topright",
+          "zoomInTitle":"Увеличить масштаб",
+          "zoomOutTitle":"Уменьшить масштаб"
+        }
+      },
+      {
+        "alias":null,
+        "name":"divider",
+        "options":
+        {
+          "position":"topright"
+        }
+      },
+      {
+        "alias":null,
+        "name":"fullscreen",
+        "options":
+        {
+          "position":"topright",
+          "pseudoFullscreen":true,
+          "title":
+          {
+            "false":"Полный экран",
+            "true":"Свернуть"
+          }
+        }
+      },
+      {
+        "alias":null,
+        "name":"defaultExtent",
+        "options":
+        {
+          "position":"topright",
+          "title":"Домой"
+        }
+      },
+      {
+        "alias":null,
+        "name":"divider",
+        "options":
+        {
+          "position":"topright"
+        }
+      },
+      {
+        "alias":null,
+        "name":"permalink",
+        "options":
+        {
+          "position":"topright",
+          "title":"Поделиться",
+          "copySubtitle":"Ссылка на карту",
+          "copyButtonLabel":"Скопировать",
+          "copySuccessMessage":"Ссылка скопирована",
+          "copyErrorMessage":"Ошибка копирования ссылки на карту"
+        }
+      }
+    ],
+    "layers":
+    [
+      {
+        "id":1,
+        "name":"Граница",
+        "legend":null,
+        "layers":
+        [
+          {
+            "id":1,
+            "name":"Граница",
+            "url":"https://ulan-ude-strategy.ru/static/uploads/map/layer/1/1/bound.geojson?v=1654865258",
+            "clusterization":false,
+            "options":
+            {
+              style: 
+              {
+                initial: {
+                    color: '#c10000',
+                    weight: 4
+                }
+              } 
+            }
+          }
+        ],
+        "isBaseGroup":true,
+        "addToMap":true,
+        "addToControl":false
+      },
+      {
+        "name":"Идеи",
+        "options":
+          {
+            "icon":function(feature) {
+                var style = '';
+                if (feature.properties.color) {
+                    style = 'color: ' + feature.properties.color + ';';
+                }
+                                    
+                return L.divIcon({
+                    className: 'idea-marker',
+                    html: '<i class="fa fa-map-marker" style="' + style + '"></i>'
+                });
+            },
+             "popup":
+              {
+                "options":{
+                  "className":"idea-popup"
+                },
+                "content": function(feature) {
+                  var properties = feature.properties || {},
+                  style = '';
+                  
+                  if(properties.color) {
+                    style = 'color: ' + properties.color + ';';
+                  }
+                  
+                  return '\
+                    <div class="idea-popup__wrapper">\
+                        <div class="idea-popup__title">\
+                            <div class="idea-popup__title-label">' + properties.title + '</div>\
+                        </div>\
+                        <div class="idea-popup__category">\
+                            <div class="idea-popup__marker idea-marker"><i class="fa fa-map-marker" style="' + style + '"></i></div>\
+                            <a href="' + properties.category_url + '">' + properties.category_name + '</a>\
+                        </div>\
+                        <div class="idea-popup__author">' + properties.author + '</div>\
+                        <div class="idea-popup__description">' + properties.annotation + '</div>\
+                        <div class="idea-popup__link"><a href="' + properties.url + '" target="_blank">Читать полностью</a></div>\
+                        <div class="idea-popup__likes">' + properties.likeBtn + '</div>\
+                    </div>';
+                }
+              } 
+            },
+            "layers":
+            [
+              {
+                "name":"Идеи",
+                "url":"/ideas/json/",
+                "clusterization":false
+              }
+            ],
+            "addToMap":true,
+            "addToControl":false
+      }
+    ],
+    "baselayers":
+    [
+      {
+        "id":1,
+        "name":"Институт Генплана Москвы",
+        "url":"https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+        "options":[]
+      },http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png
+      {
+        "id":3,
+        "name":"Satellite",
+        "url":"Esri:Imagery",
+        "options":
+        {
+          "apiKey":"AAPK7c537a938f2c4edab3373713a142497cWZmHKQsnwv2hH6cwHj4CXzfXrQrxrOXzPjShYXHbLi4HLF7Y_2iSG5Z0pE67d86G"
+        }
+      }
+    ],
+    "events":[] });
+  */
+
+    let map = L.map(mapContainer, {
+        center: [51.828168,107.593119],
+        zoom: 12,
+        minZoom: 10,
+        maxZoom: 20,
+        attributionControl: false,
+        zoomControl: true,
+        keyboard: false,
+        scrollWheelZoom: false,
+        maxBounds:[[51.6922,107.3289],[52.0252,107.9993]],
+      })
+      L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+      L.marker([51.828168,107.593119], {
+        opacity: 0.7,
+        draggable: true
+
+      }).addTo(map);
+
+  }
+

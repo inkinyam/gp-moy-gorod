@@ -40,6 +40,16 @@
   "dependencies": {
     "@fancyapps/ui": "^5.0.13",
     "core-js": "^3.29.1",
-    "sass-resources-loader": "^2.2.5"
+    "handlebars": "^4.7.7",
+    "esri-leaflet": "^3.0.10",
+    "leaflet-ajax": "^2.1.0",
+    "leaflet-draw": "^1.0.4",
+    "leaflet-spin": "^1.1.2",
+    "leaflet-textpath": "^1.2.3",
+    "leaflet.markercluster": "^1.5.3",
+    "leaflet.pattern": "^0.1.0",
+    "polylabel": "^1.1.0",
+    "sass-resources-loader": "^2.2.5",
+    "tinyqueue": "^2.0.3"
   }
 }
