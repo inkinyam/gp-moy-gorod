@@ -1,0 +1,76 @@
+.leafPopup {
+  display: flex;
+  flex-direction: column;
+  width: 422px;
+  box-sizing: border-box;
+  padding: 4px 0;
+  background-color: #fff;
+ 
+
+  .leafPopup__category {
+    @extend %text-circe-16;
+    @extend %silly-link;
+    color: $middle-dark-color-default;
+  }
+
+
+  .leafPopup__title {
+    @extend %title-h4;
+
+  }
+  .leafPopup__status {
+    @extend %text-circe-16;
+    color: $middle-dark-color-default;
+    margin: 0;
+  }
+
+  .leafPopup__showmore {
+    @extend %blue-link;
+    @extend %text-circe-16;
+  }
+
+  .leafPopup__footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 16px;
+  }
+
+  .leafPopup__author {
+    @extend %text-circe-16;
+    margin: 0;
+  }
+
+  .ideas__like {
+    background-color: transparent;
+  }
+
+  .leafPopup__like-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+
+    .ideas__like-counter {
+      @extend %text-circe-16;
+      color: $dark-color-hovered;
+    } 
+
+  }
+}
+
+
+.leaflet-popup-content-wrapper {
+  border-radius: 0 !important;
+}
+
+.leaflet-popup-content {
+  width: auto !important;
+}
+
+.leaflet-popup-close-button {
+  font-size: 24px !important;
+  top: 6px !important;
+  right: 6px !important;
+  @extend %silly-link;
+}

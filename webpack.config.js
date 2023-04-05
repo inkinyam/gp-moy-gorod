@@ -24,6 +24,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, 'docs'),
     filename: 'index.js',
+    publicPath: '',
     assetModuleFilename: path.join('images', '[name][ext]').replace(/\\/g, '/'),
   },
 
@@ -78,6 +79,13 @@ module.exports = {
           filename: path.join('fonts', '[name][ext]').replace(/\\/g, '/'),
         },
       },
+      {
+        test: /\.geojson$/,
+        type: 'asset/resource',
+        generator: {
+          filename: path.join('geojson', '[name][ext]').replace(/\\/g, '/'),
+        },
+      }
       
     ],
   },
@@ -113,9 +121,11 @@ module.exports = {
     }),
   ].concat(htmlPlugins),
 
-
+  mode: 'development',
   devServer: {
-    watchFiles: path.join(__dirname, 'src'),
-    port: 9000,
+    static: path.resolve(__dirname, './dist'),
+    open: true,
+    compress: true,
+    port: 8080
   },
 };
