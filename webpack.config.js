@@ -83,7 +83,7 @@ module.exports = {
         test: /\.geojson$/,
         type: 'asset/resource',
         generator: {
-          filename: path.join('geojson', '[name][ext]').replace(/\\/g, '/'),
+          filename: path.join('geojson', '[name][ext]'),
         },
       }
       

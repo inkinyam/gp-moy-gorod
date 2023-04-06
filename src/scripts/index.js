@@ -251,7 +251,6 @@ if (selects.length != 0 ) {
 }
 
 let texAreas = Array.from(document.querySelectorAll('.idea-edit__txtarea')); // ищем все textarea
-
 if (texAreas.length != 0) {
   texAreas.forEach(item => {
     item.addEventListener('keyup', e => {
@@ -263,22 +262,79 @@ if (texAreas.length != 0) {
 }
 
 import 'leaflet/dist/leaflet.css';
-
 import LeafletMaps from './leaflet';
+import {allGroup, arskiy, kazan, district}  from '../geojson/json.export.js';
 
 let mapContainer = document.querySelector('#ekbmap');
 if (mapContainer) {
- new LeafletMaps( '#ekbmap', {
-                      center: [39.73, -104.99],
-                      zoom: 10,
-                      minZoom: 10,
-                      maxZoom: 20,
-                      attributionControl: false,
-                      zoomControl: true,
-                      keyboard: false,
-                      scrollWheelZoom: false,
-                    }
-  ) 
+  new LeafletMaps( '#ekbmap', {
+                              zoom: 9,
+                              attributionControl : false,
+                              zoomControl: true,
+                              keyboard: false,
+                              scrollWheelZoom: false,
+                              center: [55.796127, 49.106414],
+                              tap: false,
+                              zoomControl:false,
+                              fullscreenControl: false,
+                              clickFitBounds: false,
+                              clickPanToLayer: false,
+                              maxBounds: [[55.1,48.0108],[56.45,50.2238]],
+                              minZoom: 8,
+                              maxZoom: 18,
+                              
+                              dataLayers: [
+                                {
+                                  gjson: allGroup,
+                                  style: {
+                                    color: '#5A596E',
+                                    weight: 1,
+                                    dashArray: '15, 7, 1, 7',
+                                    fillColor: '#DAE856'
+                                  },
+                                  
+                                },
+                                {
+                                  gjson: district,
+                                  style: {
+                                    color: 'red',
+                                    weight: 1,
+                                    dashArray: '20, 20',
+                                    fill: false
+                                  }
+                                },
+                                {
+                                  gjson: arskiy,
+                                  style: {
+                                    style: {
+                                      color: '#0C5FBA',
+                                      weight: 2,
+                                      dashArray: '5, 4',
+                                      fillColor: '#2D8BF1'
+                                    }
+                                  },
+                                  options: {
+                                    interactive: true,
+                                    handleMouseEnter: function() {
+                                      target.style = {
+                                        weight: 4,
+                                        fillColor: 'orange'
+                                      }
+                                    }
+                                  }
+                                },
+                                {
+                                  gjson: kazan,
+                                  style: {
+                                    color: '#AD003E',
+                                    weight: 2,
+                                    dashArray: '5, 4',
+                                    fillColor: '#F13D53'
+                                  }
+                                },
+                                
+                              ],
+                            }) 
 }
 
 

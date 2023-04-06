@@ -1,12 +1,12 @@
 {
   "name": "gp-moy-gorod",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Проект - редизайн одного из основных спецпроектов ГАУ \"Института Генплана Москвы\"",
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode production",
     "build-and-b": "webpack --mode production && html dist/*.html --indent-size 2",
-    "beautify": "html dist/*.html --indent-size 2",
+    "beautify": "html docs/*.html --indent-size 2",
     "serve": "webpack serve --open --mode development",
     "dev": "webpack --mode development"
   },
