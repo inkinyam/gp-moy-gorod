@@ -263,7 +263,19 @@ if (texAreas.length != 0) {
 
 import 'leaflet/dist/leaflet.css';
 import LeafletMaps from './leaflet';
-import {allGroup, arskiy, kazan, district}  from '../geojson/json.export.js';
+import { allGroup, 
+  arskiy,
+  volzhsk, 
+  pestrech, 
+  laishev, 
+  kamskU, 
+  kazan, 
+  district,   
+  rybnaya,
+  verhneust,
+  visokogorsk,
+  volshskiy, 
+  zelenodolskiy }  from '../geojson/json.export.js';
 
 let mapContainer = document.querySelector('#ekbmap');
 if (mapContainer) {
@@ -283,58 +295,109 @@ if (mapContainer) {
                               minZoom: 8,
                               maxZoom: 18,
                               
-                              dataLayers: [
-                                {
-                                  gjson: allGroup,
+                              dataLayersGroup: [
+                                { 
+                                  layers: [volzhsk, kazan, arskiy],
                                   style: {
-                                    color: '#5A596E',
+                                    color: 'hotpink',
                                     weight: 1,
-                                    dashArray: '15, 7, 1, 7',
-                                    fillColor: '#DAE856'
-                                  },
-                                  
-                                },
-                                {
-                                  gjson: district,
-                                  style: {
-                                    color: 'red',
-                                    weight: 1,
-                                    dashArray: '20, 20',
-                                    fill: false
-                                  }
-                                },
-                                {
-                                  gjson: arskiy,
-                                  style: {
-                                    style: {
-                                      color: '#0C5FBA',
-                                      weight: 2,
-                                      dashArray: '5, 4',
-                                      fillColor: '#2D8BF1'
-                                    }
+                                    fillColor: 'hotpink',
+                                    fillOpacity: 0.3
                                   },
                                   options: {
                                     interactive: true,
-                                    handleMouseEnter: function() {
-                                      target.style = {
-                                        weight: 4,
-                                        fillColor: 'orange'
-                                      }
+                                    handleMouseEnter: function(e) {
+                                      this.setStyle({fillColor: '#4BB96A', fillOpacity: 0.3});
+                                    },
+                                    handleMouseLeave: function(e) {
+                                      this.setStyle({ fillOpacity: 0});
+                                    }
+                                  }
+                                }
+                              ],
+                              dataLayers: [ 
+                                {
+                                  gjson: allGroup,
+                                  style: {fillOpacity:0} },
+
+                                {
+                                  gjson: district,
+                                  style: {fillOpacity:0}  },
+
+                                { 
+                                  gjson: arskiy,
+                                  style: { fillOpacity: 0 },
+                                  options: {
+                                    interactive: true,
+                                    handleMouseEnter: function(e) {
+                                      this.setStyle({fillColor: '#6990BA', fillOpacity: 0.3});
+                                    },
+                                    handleMouseLeave: function(e) {
+                                      this.setStyle({ fillOpacity: 0});
                                     }
                                   }
                                 },
-                                {
-                                  gjson: kazan,
-                                  style: {
-                                    color: '#AD003E',
-                                    weight: 2,
-                                    dashArray: '5, 4',
-                                    fillColor: '#F13D53'
+
+                                { 
+                                  gjson: volzhsk,
+                                  style: { fillOpacity: 0 },
+                                  options: {
+                                    interactive: true,
+                                    handleMouseEnter: function(e) {
+                                      this.setStyle({fillColor: '#6990BA', fillOpacity: 0.3});
+                                    },
+                                    handleMouseLeave: function(e) {
+                                      this.setStyle({ fillOpacity: 0});
+                                    }
                                   }
                                 },
+
+                                { 
+                                  gjson: kazan,
+                                  style: { fillOpacity: 0 },
+                                  options: {
+                                    interactive: true,
+                                    handleMouseEnter: function(e) {
+                                      this.setStyle({fillColor: '#6990BA', fillOpacity: 0.3});
+                                    },
+                                    handleMouseLeave: function(e) {
+                                      this.setStyle({ fillOpacity: 0});
+                                    }
+                                  }
+                                },
+
+                                { 
+                                  gjson: kamskU,
+                                  style: { fillOpacity: 0 }},
+
+                                { 
+                                  gjson: laishev,
+                                  style: { fillOpacity: 0 }},
+
+                                { 
+                                  gjson: pestrech,
+                                  style: { fillOpacity: 0 }},
+
+                                { 
+                                  gjson: rybnaya,
+                                  style: { fillOpacity: 0 }},
+
+                                { 
+                                  gjson: verhneust,
+                                  style: { fillOpacity: 0 }},
+
+                                { 
+                                  gjson: visokogorsk,
+                                  style: { fillOpacity: 0 }},
+
+                                { 
+                                  gjson: volshskiy,
+                                  style: { fillOpacity: 0 }},
                                 
+                                { 
+                                  gjson: zelenodolskiy,
+                                  style: { fillOpacity: 0 }},
                               ],
                             }) 
 }
-
 

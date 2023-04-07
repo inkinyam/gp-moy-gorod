@@ -12,14 +12,6 @@ var parks = L.layerGroup([crownHill, rubyHill]);
 
 
 
-
-
-
-
-
-
-
-
 class LeafletMaps extends L.Class {
   constructor(id, options) {
     super();
@@ -34,23 +26,51 @@ class LeafletMaps extends L.Class {
     this.map = new L.map(this.container, {...this.options});
 
     this.addTiles();
-    this.addJsons();
+    this.addLayers();
+    this.addLayersGroup();
   }
             
-  addJsons () {
+  addLayers () {
     let layers = this.options.dataLayers;
-    if (layers.lenght != 0) {
+    this.layersGroup = L.layerGroup();
+    
+    if (layers.length != 0) {
       layers.forEach(item => {
         let itemL = L.geoJSON(item.gjson, { 
           style: {...item.style}, 
           interactive: item.options?.interactive? item.options.interactive:false,
-        }).addTo(this.map);
+        });
 
-        if (item.options) {
-          itemL.on('mouseenter',item.options.handleMouseEnter());
+        if (item.options && item.options.handleMouseEnter) {
+          itemL.on('mouseover', item.options.handleMouseEnter);
+          itemL.on('mouseout', item.options.handleMouseLeave);
         }
-        
-      })
+        this.layersGroup.addLayer(itemL);
+      });
+      this.layersGroup.addTo(this.map);
+    }
+  }
+
+
+  addLayersGroup() {
+    if (this.options.dataLayersGroup) {
+      let layers = this.options.dataLayers;
+      this.options.dataLayersGroup.forEach(item => {
+        let newGroup = layers.filter(layer => item.layers.includes(layer));
+        let groupLayer = L.layerGroup();
+        newGroup.forEach(layer => {
+          let layerL = L.geoJSON(layer.gjson, {
+            style: {...layer.style, ...item.style},
+            interactive: item.options?.interactive ? item.options.interactive : false,
+          });
+          if (item.options && item.options.handleMouseEnter) {
+            layerL.on('mouseover', item.options.handleMouseEnter);
+            layerL.on('mouseout', item.options.handleMouseLeave);
+          }
+          groupLayer.addLayer(layerL);
+        });
+        groupLayer.addTo(this.map);
+      });
     }
   }
 
@@ -68,6 +88,6 @@ class LeafletMaps extends L.Class {
     L.control.layers(this.baseMaps, this.overlays).addTo(this.map);
   }
 
-  }
+}
 
 export default LeafletMaps;
