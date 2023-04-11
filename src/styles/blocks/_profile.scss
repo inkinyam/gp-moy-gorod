@@ -6,7 +6,7 @@
   width: 90%;
   margin: 0 auto;
 
-  @extend %text-circe-15;
+  @include text-circe-15;
   color: $middle-dark-color-default;
   margin-top: $spacer-xs;
 
@@ -20,7 +20,7 @@
 
   .profile__email {
    a {
-    @extend %black-link;
+    @include black-link;
    } 
   }
 
@@ -37,7 +37,7 @@
   }
 
   .profile__link {
-    @extend %gray-link;
+    @include gray-link;
   }
 
   @media screen and (max-width: 650px) {

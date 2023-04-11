@@ -1,5 +1,5 @@
 .title {
-  @extend %title-h1;
+  @include title-h1;
   width: 90%;
   max-width: calc(1440px - 10%);
   margin: 0 auto $spacer-l;

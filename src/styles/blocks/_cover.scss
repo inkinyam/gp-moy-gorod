@@ -48,7 +48,7 @@
   }
 
   .cover__title{
-    @extend %cover-title;
+    @include cover-title;
     text-align: center; 
     margin-bottom: $spacer-xs;
 
@@ -59,7 +59,7 @@
   }
 
   .cover__subtitle{
-    @extend %text-lora;
+    @include text-lora;
   }
 
 }

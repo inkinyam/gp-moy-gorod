@@ -1,7 +1,7 @@
 .withLine.line {
   position: relative;
   &:before {
-    @extend %transition;
+    @include transition;
     content: '';
     width: 0;
     height: 1px;
@@ -13,7 +13,7 @@
   }
 
   &::after {
-    @extend %transition;
+    @include transition;
     content: '';
     width: 1px;
     height:0;

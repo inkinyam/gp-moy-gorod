@@ -97,8 +97,8 @@
   }
 
   .pagination__link  {
-    @extend %transition;
-    @extend %silly-link;
+    @include transition;
+    @include silly-link;
     text-decoration: none;
     color: inherit;
     width: 100%;

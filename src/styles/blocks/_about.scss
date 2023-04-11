@@ -35,11 +35,11 @@
   }
 
   .about__card-title {
-    @extend %title-h4;
+    @include title-h4;
   }
 
   .about__card-text {
-    @extend %text-lora;
+    @include text-lora;
   }
 
   .about__layout {

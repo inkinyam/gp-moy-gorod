@@ -12,6 +12,6 @@
   .title {
     text-align: center;
     margin-bottom: 0;
-    @extend %title-h2;
+    @include title-h2;
   }
 }

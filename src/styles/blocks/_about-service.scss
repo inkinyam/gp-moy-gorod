@@ -20,19 +20,19 @@
   }
 
   .about-service__section-title {
-    @extend %title-h2;
+    @include title-h2;
 
   }
 
   .about-service__section-subtitle {
-    @extend %title-h4;
+    @include title-h4;
     a {
-      @extend %blue-link;
+      @include blue-link;
     }
   }
 
   .about-service__section-text {
-    @extend %text-lora;
+    @include text-lora;
     margin-top: $spacer-xxs;
 
 

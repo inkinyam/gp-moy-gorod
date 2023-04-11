@@ -4,7 +4,7 @@
   margin: 0 auto 80px;
 
   .about-project__title {
-    @extend %title-h2;
+    @include title-h2;
     max-width: 644px;
     width: 100%;
     margin: 0 auto $spacer-m;
@@ -30,11 +30,11 @@
 
 
     &-title {
-      @extend %title-h4;
+      @include title-h4;
     }
 
     &-text {
-      @extend %text-lora;
+      @include text-lora;
     }
   }
 

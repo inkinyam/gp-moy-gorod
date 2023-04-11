@@ -5,7 +5,7 @@
 
 @import './utils/reset';                // убираем лишнее
 @import './utils/variables';            // переменные
-@import './utils/samples';              // шаблоны для основных стилей
+@import './utils/mixins';              // шаблоны для основных стилей
 @import './utils/root';                 // стили для .page
  
 @import './utils/_animation.scss';      // анимации

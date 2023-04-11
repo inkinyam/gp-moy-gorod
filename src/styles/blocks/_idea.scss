@@ -13,29 +13,29 @@
     }
 
   .idea__tag {
-    @extend %text-circe-16;
+    @include text-circe-16;
   
     color: $middle-dark-color-default;
     a {
-      @extend %black-link;
+      @include black-link;
     }
   }
 
   .idea__cardtitle {
-    @extend %title-h3;
+    @include title-h3;
     margin: 8px 0 16px;
     
     a {
-      @extend %black-link;
+      @include black-link;
     }
   }
 
   .idea__description {
-    @extend %text-circe-16;
+    @include text-circe-16;
   }
 
   .idea__author {
-    @extend %text-circe-16;
+    @include text-circe-16;
     margin: 16px 0 8px;
   }
 
@@ -66,8 +66,8 @@
   }
 
   .idea__button {
-    @extend %button;
-    @extend %text-circe-18;
+    @include button;
+    @include text-circe-18;
     background-color: $primary-color-default;
     color:$light-color-default;
 
@@ -104,7 +104,7 @@
     align-items: center;
 
     .idea__like {
-      @extend %button;
+      @include button;
       background-color: transparent;
       padding: 0;
       margin: 0 4px 0 auto;
@@ -114,7 +114,7 @@
       display: block;
   
       svg {
-        @extend %transition;
+        @include transition;
         stroke:$dark-color-hovered;
         fill: none;
       }
@@ -141,7 +141,7 @@
     } 
     
     .idea__like-counter {
-      @extend %text-circe-16;
+      @include text-circe-16;
       line-height: 18px;
       color: $dark-color-hovered;
     }

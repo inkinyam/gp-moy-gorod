@@ -28,7 +28,7 @@
   }
 
   .header__logo {
-    @extend %silly-link;  
+    @include silly-link;  
     display: flex;
     line-height: 0;
     font-size: 0;
@@ -62,7 +62,7 @@
   }
 
   .header__burger {
-    @extend %silly-link;  
+    @include silly-link;  
     z-index: 98;
     display: none;
     flex-direction: column;
@@ -91,7 +91,7 @@
     width: 24px;
     height: 2px;
     background-color: $middle-dark-color-onclick;
-    @extend %transition;
+    @include transition;
     transition-property: all;
 
   }
@@ -150,7 +150,7 @@
       }
 
       svg {
-        @extend %transition;
+        @include transition;
         transition-property: fill;
         fill: $light-color-default;
       }
@@ -167,9 +167,9 @@
   }
 
   .header__link {
-    @extend %title-h4;
-    @extend %silly-link;
-    @extend %transition;
+    @include title-h4;
+    @include silly-link;
+    @include transition;
     transition-property: color;
     
     &:hover {

@@ -8,25 +8,25 @@
  
 
   .leafPopup__category {
-    @extend %text-circe-16;
-    @extend %silly-link;
+    @include text-circe-16;
+    @include silly-link;
     color: $middle-dark-color-default;
   }
 
 
   .leafPopup__title {
-    @extend %title-h4;
+    @include title-h4;
 
   }
   .leafPopup__status {
-    @extend %text-circe-16;
+    @include text-circe-16;
     color: $middle-dark-color-default;
     margin: 0;
   }
 
   .leafPopup__showmore {
-    @extend %blue-link;
-    @extend %text-circe-16;
+    @include blue-link;
+    @include text-circe-16;
   }
 
   .leafPopup__footer {
@@ -37,7 +37,7 @@
   }
 
   .leafPopup__author {
-    @extend %text-circe-16;
+    @include text-circe-16;
     margin: 0;
   }
 
@@ -52,7 +52,7 @@
     
 
     .ideas__like-counter {
-      @extend %text-circe-16;
+      @include text-circe-16;
       color: $dark-color-hovered;
     } 
 
@@ -72,7 +72,7 @@
   font-size: 24px !important;
   top: 6px !important;
   right: 6px !important;
-  @extend %silly-link;
+  @include silly-link;
 }
 
 .controll {

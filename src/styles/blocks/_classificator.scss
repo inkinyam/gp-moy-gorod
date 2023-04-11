@@ -6,7 +6,7 @@
   margin: 0 auto 80px;
 
   .classificator__title {
-    @extend %title-h2;
+    @include title-h2;
     margin-bottom: $spacer-m;
   }
 
@@ -26,8 +26,8 @@
     flex-shrink: 0;
     
     a {
-      @extend %silly-link;
-      @extend %text-circe-18;
+      @include silly-link;
+      @include text-circe-18;
     }
 
     &:hover {

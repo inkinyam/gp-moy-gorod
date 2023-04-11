@@ -22,7 +22,7 @@
 
 
 .breadcrumb__item {
-  @extend %text-circe-16;
+  @include text-circe-16;
   margin: 0 0 0 20px;
    position: relative;
   flex-shrink: 0;
@@ -30,7 +30,7 @@
   max-width: 100%;
 
   a {
-    @extend %silly-link;
+    @include silly-link;
     &:hover {
       color: $middle-dark-color-default;
     }

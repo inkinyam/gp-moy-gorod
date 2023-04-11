@@ -23,8 +23,8 @@
   column-gap: 24px;
 
   .tabs__link {
-    @extend %text-circe-18;
-    @extend %blue-link;
+    @include text-circe-18;
+    @include blue-link;
     flex-shrink: 0;
   }
 
@@ -64,9 +64,9 @@
   padding: 4px 10px;
   
   color: $middle-dark-color-default;
-  @extend %text-circe-18;
-  @extend %silly-link;
-  @extend %transition;
+  @include text-circe-18;
+  @include silly-link;
+  @include transition;
 
   text-decoration: none;    
   overflow-anchor: none;

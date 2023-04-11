@@ -7,7 +7,7 @@
   margin: 80px auto;
 
   .article__title {
-    @extend %title-h2;
+    @include title-h2;
   }
 
   .article__text {
@@ -15,11 +15,11 @@
     flex-direction: column;
     row-gap: $spacer-xs;
     p {
-      @extend %text-lora;
+      @include text-lora;
     }
 
     a {
-      @extend %blue-link;
+      @include blue-link;
     }
   }
 }

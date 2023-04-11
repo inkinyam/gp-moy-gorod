@@ -1,6 +1,6 @@
 .moderation__tables {
   .moderation__tables-item {
-    @extend %transition;
+    @include transition;
     border-top: 1px solid $dark-color-default;
     min-height: 90px;
     display: flex;
@@ -35,7 +35,7 @@
 
 
 .moderation__table {
-  @extend %text-circe-18;
+  @include text-circe-18;
   width: 100%;
   display: grid;
   grid-template-columns: 2fr 2fr 5fr 1fr 2fr 1fr;
@@ -57,7 +57,7 @@
     word-break: break-word;
 
     a {
-      @extend %black-link;
+      @include black-link;
     }
 
     &:nth-last-of-type(2){
@@ -106,7 +106,7 @@
     column-gap: 4px;
 
     .moderation__button {
-      @extend %button; 
+      @include button; 
       background-color: transparent;
       padding: 0;
       min-height: auto;
@@ -116,7 +116,7 @@
       &:hover {
         svg {
           path {
-            @extend %transition;
+            @include transition;
             fill: $primary-color-hovered;
           }
         }
@@ -125,7 +125,7 @@
       &:active {
         svg {
           path {
-            @extend %transition;
+            @include transition;
             fill: $primary-color-onclick;
           }
         }

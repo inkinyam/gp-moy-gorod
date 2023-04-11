@@ -5,8 +5,8 @@
 }
 
 .project {
-  @extend %silly-link;
-  @extend %transition;
+  @include silly-link;
+  @include transition;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -19,12 +19,12 @@
   }
   
   .project__title {
-    @extend %transition;
-    @extend %title-h4;
+    @include transition;
+    @include title-h4;
   }
 
   .project__tag {
-    @extend %title-h4;
+    @include title-h4;
     margin-top: auto;
     color: $middle-dark-color-default;
 

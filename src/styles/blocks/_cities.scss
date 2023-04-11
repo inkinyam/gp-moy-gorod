@@ -104,21 +104,21 @@
 
   .city__title {
     grid-area: title;
-    @extend %giant-text;
+    @include giant-text;
     
     a {
-      @extend %black-link;
+      @include black-link;
     }
   }
 
   .city__subtitle {
     grid-area: subtitle;
-    @extend %text-lora-description;
+    @include text-lora-description;
   }
 
   .city__description {
     grid-area: description;
-    @extend %text-lora;
+    @include text-lora;
 
     @media screen and (max-width: $tablet) {
      margin-bottom: $spacer-s;

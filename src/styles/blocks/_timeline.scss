@@ -30,7 +30,7 @@
   }
 
   .timeline__step {
-    @extend %text-lora;
+    @include text-lora;
     font-size: 15px;
     display: block;
     margin: 0;
@@ -73,7 +73,7 @@
   }
 
   .timeline__item-title {
-    @extend %title-h4;
+    @include title-h4;
     margin: 5px 0 16px;
     @media screen and (max-width: $tablet) {
       margin: 5px 0 8px;
@@ -85,8 +85,8 @@
     width: 100%;
 
     a {
-      @extend %silly-link;
-      @extend %transition;
+      @include silly-link;
+      @include transition;
       color: $primary-color-default;
 
       &:hover {
@@ -98,7 +98,7 @@
     }
 
     p {
-      @extend %text-lora;
+      @include text-lora;
       margin-bottom: 4px;
 
       &:last-of-type {

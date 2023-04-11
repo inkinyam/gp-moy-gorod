@@ -76,13 +76,13 @@
     }
 
     p {
-      @extend %title-h4;
+      @include title-h4;
     }
 
     a {
-      @extend %silly-link;
-      @extend %text-circe-16;
-      @extend %transition;
+      @include silly-link;
+      @include text-circe-16;
+      @include transition;
       transition-property: color;
       &:hover {
         color: $middle-dark-color-default;
@@ -95,7 +95,7 @@
 
   .footer__copyright {
     grid-area: copyright;
-    @extend %text-circe-16;
+    @include text-circe-16;
     text-align: center;
 
     @media screen and (max-width: $tablet) {
@@ -115,9 +115,9 @@
     flex-wrap: wrap;
 
     a {
-      @extend %silly-link;
-      @extend %text-circe-16;
-      @extend %transition;
+      @include silly-link;
+      @include text-circe-16;
+      @include transition;
       transition-property: color;
       text-align: center;
       &:hover {

@@ -110,7 +110,7 @@
     color: white;
     
     p {
-      @extend %giant-text;
+      @include giant-text;
       margin: 0;
       color: var(--white-default);
   
@@ -133,8 +133,8 @@
     }
 
     a {
-      @extend %giant-text;
-      @extend %silly-link;
+      @include giant-text;
+      @include silly-link;
 
       margin: 0;
       color: inherit;
@@ -148,8 +148,8 @@
   }
 
   .lead__button {
-    @extend %button;
-    @extend %text-circe-18;
+    @include button;
+    @include text-circe-18;
     margin-top: 114px;
     background-color: $secondary-color-default;
     color: $dark-color-default;

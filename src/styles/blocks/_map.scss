@@ -3,7 +3,7 @@
 
 
   .map__title {
-    @extend %title-h2;
+    @include title-h2;
     max-width: calc(1440px - 10%);
     width: 90%;
     margin: 0 auto;

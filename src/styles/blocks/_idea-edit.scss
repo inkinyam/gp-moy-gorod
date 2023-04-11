@@ -29,13 +29,13 @@
     }
 
     .idea-edit__line-lbl {
-      @extend %text-circe-18;
+      @include text-circe-18;
       color: $middle-dark-color-default;
       line-height: 44px;
     }
 
     .idea-edit__line-inp {
-      @extend %text-circe-18;
+      @include text-circe-18;
       line-height: 44px;
       padding: 0 8px;
       border: none;
@@ -47,7 +47,7 @@
     }
 
     .idea-edit__txtarea {
-      @extend %text-circe-16;
+      @include text-circe-16;
       border: none;
       outline: none;
       resize: none;
@@ -74,7 +74,7 @@
     position: relative;
     width: 100%;
     height: 100%;
-    @extend %text-circe-18;
+    @include text-circe-18;
 
     &[data-state="active"] {
       .idea-edit__select-title {
@@ -104,7 +104,7 @@
       height: 100%;
       padding: 0 8px;
       
-      @extend %custom-cursor;
+      @include custom-cursor;
     
       &::before,
       &::after {
@@ -118,7 +118,7 @@
         width: 10px;
         height: 2px;
     
-        @extend %transition;
+        @include transition;
     
         background-color: $middle-dark-color-default;
     
@@ -139,7 +139,7 @@
     }
   
     .idea-edit__select-content {
-      @extend %transition;
+      @include transition;
       position: absolute;
       top: 44px;
       left: 0px;
@@ -173,7 +173,7 @@
       max-height: 0;
       padding: 0 8px;
       
-      @extend %transition;
+      @include transition;
     
       cursor: pointer;
       
@@ -197,8 +197,8 @@
   }
 
   .idea-edit__submit {
-    @extend %button;
-    @extend %text-circe-18;
+    @include button;
+    @include text-circe-18;
     width: 224px;
     margin: 40px auto 0;
     background-color: $primary-color-default;

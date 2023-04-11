@@ -6,7 +6,7 @@
   margin: 80px auto; 
 
   .ideas__title {
-    @extend %title-h2;
+    @include title-h2;
     margin-bottom: $spacer-m;
   }
 
@@ -60,25 +60,25 @@
 }
 
 .ideas__tag {
-  @extend %text-circe-16;
+  @include text-circe-16;
 
   color: $middle-dark-color-default;
   a {
-    @extend %gray-link ;
+    @include gray-link ;
   }
 }
 
 .ideas__cardtitle {
-  @extend %title-h4;
+  @include title-h4;
   margin-bottom: 4px;
   
   a {
-    @extend %black-link;
+    @include black-link;
   }
 }
 
 .ideas__description {
-  @extend %text-circe-16;
+  @include text-circe-16;
   line-height: 20px;
 }
 
@@ -90,12 +90,12 @@
 }
 
 .ideas__author {
-  @extend %text-circe-16;
+  @include text-circe-16;
   color: $middle-dark-color-default;
 }
 
 .ideas__like {
-  @extend %button;
+  @include button;
   padding: 0;
   margin: 0 4px 0 auto;
   width: 18px;
@@ -104,7 +104,7 @@
   display: block;
 
   svg {
-    @extend %transition;
+    @include transition;
 
     stroke:$dark-color-hovered;
     fill: none;
@@ -133,13 +133,13 @@
 }
 
 .ideas__like-counter {
-  @extend %text-circe-16;
+  @include text-circe-16;
   color: $dark-color-hovered;
 }
 
 .ideas__showmore {
-  @extend %button;
-  @extend %text-circe-18;
+  @include button;
+  @include text-circe-18;
   margin: $spacer-l auto 0;
   background-color: $primary-color-default;
   color: $light-color-default;

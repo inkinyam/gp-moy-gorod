@@ -6,8 +6,8 @@
 }
 
 .lead-buttons__button {
-  @extend %button;
-  @extend %transition;
+  @include button;
+  @include transition;
   display: flex;
   width: 100%;
   background-color: $light-color-onclick;
@@ -32,11 +32,11 @@
   }
 
   .lead-buttons__city {
-    @extend %title-h2;
+    @include title-h2;
   }
   
   .lead-buttons__advice {
-    @extend %text-circe-20;
+    @include text-circe-20;
     line-height: 34px;
     @media screen  and (max-width: $tablet){
       font-size: 18px;
