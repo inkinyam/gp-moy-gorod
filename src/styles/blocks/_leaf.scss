@@ -74,3 +74,139 @@
   right: 6px !important;
   @extend %silly-link;
 }
+
+.controll {
+  height: 44px;
+  width: auto;
+  position: relative;
+  display: block;
+
+  &.controll_zoomIn {
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    background-color: $dark-color-default;
+
+    &::before {
+      content: url(../../images/icons/zoom-in-icon.svg);
+      height: 48px;
+      width: 48px;
+      display: block;
+    }    
+  }
+
+  &.controll_zoomOut {
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    background-color: $dark-color-default;
+
+    &::before {
+      content: url(../../images/icons/zoom-out-icon.svg);
+      height: 48px;
+      width: 48px;
+      display: block;
+    }    
+  }
+
+  &.controll_center {
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    background-color: $dark-color-default;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::before {
+      content: url(../../images/icons/default-extent-icon.svg);
+      height: 38px;
+      width: 34px;
+      display: block;
+    }    
+  }
+
+  &.controll_baselayer {
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    background-color: $dark-color-default;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::before {
+      content: url(../../images/icons/baselayers-icon.svg);
+      height: 34px;
+      width: 34px;
+      display: block;
+    }    
+  }
+
+  &.controll_fullscreen {
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    background-color: $dark-color-default;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::before {
+      content: url(../../images/icons/full-screen-icon.svg);
+      height: 30px;
+      width: 30px;
+      display: block;
+    }    
+  }
+
+  &.controll_smallscreen {
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    background-color: $dark-color-default;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::before {
+      content: url(../../images/icons/smalll-screen-icon.svg);
+      height: 30px;
+      width: 30px;
+      display: block;
+    }    
+  }
+  
+  &.controll_add {
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    background-color: $dark-color-default;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::before {
+      content: url(../../images/icons/add-idea-icon.svg);
+      height: 30px;
+      width: 30px;
+      display: block;
+    }    
+  }
+  &.controll_layers {
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    background-color: $dark-color-default;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::before {
+      content: url(../../images/icons/layers-icon.svg);
+      height: 30px;
+      width: 30px;
+      display: block;
+    }    
+  }
+}

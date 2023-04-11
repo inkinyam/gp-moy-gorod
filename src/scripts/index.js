@@ -263,6 +263,7 @@ if (texAreas.length != 0) {
 
 import 'leaflet/dist/leaflet.css';
 import LeafletMaps from './leaflet';
+import LeafletMap from './leflet-custom';
 import { allGroup, 
   arskiy,
   volzhsk, 
@@ -279,125 +280,249 @@ import { allGroup,
 
 let mapContainer = document.querySelector('#ekbmap');
 if (mapContainer) {
-  new LeafletMaps( '#ekbmap', {
-                              zoom: 9,
-                              attributionControl : false,
-                              zoomControl: true,
-                              keyboard: false,
-                              scrollWheelZoom: false,
-                              center: [55.796127, 49.106414],
-                              tap: false,
-                              zoomControl:false,
-                              fullscreenControl: false,
-                              clickFitBounds: false,
-                              clickPanToLayer: false,
-                              maxBounds: [[55.1,48.0108],[56.45,50.2238]],
-                              minZoom: 8,
-                              maxZoom: 18,
-                              
-                              dataLayersGroup: [
-                                { 
-                                  layers: [volzhsk, kazan, arskiy],
-                                  style: {
-                                    color: 'hotpink',
-                                    weight: 1,
-                                    fillColor: 'hotpink',
-                                    fillOpacity: 0.3
-                                  },
-                                  options: {
-                                    interactive: true,
-                                    handleMouseEnter: function(e) {
-                                      this.setStyle({fillColor: '#4BB96A', fillOpacity: 0.3});
-                                    },
-                                    handleMouseLeave: function(e) {
-                                      this.setStyle({ fillOpacity: 0});
-                                    }
-                                  }
-                                }
-                              ],
-                              dataLayers: [ 
-                                {
-                                  gjson: allGroup,
-                                  style: {fillOpacity:0} },
 
-                                {
-                                  gjson: district,
-                                  style: {fillOpacity:0}  },
+  const map = new LeafletMap(
+    'ekbmap', // id контейнера для карты
+       {
+          zoom: 9,
+          attributionControl : false,
+          zoomControl: true,
+          keyboard: false,
+          scrollWheelZoom: false,
+          center: [55.796127, 49.106414],
+          tap: false,
+          zoomControl:false,
+          fullscreenControl: false,
+          clickFitBounds: false,
+          clickPanToLayer: false,
+          maxBounds: [[55.1,48.0108],[56.45,50.2238]],
+          minZoom: 8,
+          maxZoom: 18,
+          baseLayers: [ // массив базовых слоев
+            {
+              name: 'BlackMaps',
+              url: 'http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png',
+              options: {},
+            },
+            {
+              name: "Satelite",
+              url:   "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+              options: {},
+            },  
+            {
+              name: 'OpenStreetMap',
+              url: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+              options: {},
+            },
+ 
+          ],
+    },
+    [ // массив объектов с настройками геоjson-слоев
+      {
+        name: 'Territory1',
+        geojson: volshskiy,
+        style: {
+          color: 'red',
+          fillColor: '#f03',
+          fillOpacity: 0.5,
+        },
+        options: {
+          interactive: true,
+          handleMouseEnter: function(e) {
+            this.setStyle({
+              color: 'blue',
+              fillColor: '#00f',
+            });
+          },
+          handleMouseLeave: function(e) {
+            this.setStyle({
+              color: 'red',
+              fillColor: '#f03',
+            });
+          },
+        },
+        group: 'Territory', // имя группы, к которой принадлежит слой
+      },
+      {
+        name: 'Territory2',
+        geojson: pestrech,
+        style: {
+          color: 'red',
+          fillColor: '#f03',
+          fillOpacity: 0.5,
+        },
+        options: {
+          interactive: true,
+          handleMouseEnter: function(e) {
+            this.setStyle({
+              color: 'blue',
+              fillColor: '#00f',
+            });
+          },
+          handleMouseLeave: function(e) {
+            this.setStyle({
+              color: 'red',
+              fillColor: '#f03',
+            });
+          },
+        },
+        group: 'Territory', // имя группы, к которой принадлежит слой
+      },
+      {
+        name: 'Territory3',
+        geojson: laishev,
+        style: {
+          color: 'red',
+          fillColor: '#f03',
+          fillOpacity: 0.5,
+        },
+        options: {
+          interactive: true,
+          handleMouseEnter: function(e) {
+            this.setStyle({
+              color: 'blue',
+              fillColor: '#00f',
+            });
+          },
+          handleMouseLeave: function(e) {
+            this.setStyle({
+              color: 'red',
+              fillColor: '#f03',
+            });
+          },
+        },
+        group: 'Territory', // имя группы, к которой принадлежит слой
+      },
+      {
+        name: 'volzhsk',
+        geojson: volzhsk,
+        group: 'City', 
+        options: {
+          interactive: true,
+          handleMouseEnter: function(e) {
+            this.setStyle({
+              color: 'hotpink',
+              fillColor: 'hotpink',
+            });
+          },
+          handleMouseLeave: function(e) {
+            this.setStyle({
+              color: 'green',
+              fillColor: 'green',
+            });
+          },
+        },
+      },      
+      {
+        name: 'kazan',
+        geojson: kazan,
+        group: 'City', 
+        options: {
+          interactive: true,
+          handleMouseEnter: function(e) {
+            this.setStyle({
+              color: 'hotpink',
+              fillColor: 'hotpink',
+            });
+          },
+          handleMouseLeave: function(e) {
+            this.setStyle({
+              color: 'green',
+              fillColor: 'green',
+            });
+          },
+        },
+      },
+    ],
+    [ 
+      {
+        name: 'Territory',
+        layers: ['Territory1', 'Territory2', 'Territory3'], 
+      },
+      {
+        name: 'City',
+        layers: ['kazan', 'volzhsk'], 
+        options: {
+          
+          style: {
+            color: 'green',
+            fillColor: 'green',
+            fillOpacity: 0.5,
+          },
+        },
+       
+      }
+    ],
+    [ // массив объектов с настройками контроллеров
+      { 
+        name: 'zoomOut',
+        position: 'bottomright',
+        html: '<div class="controll controll_zoomOut"></div>',
+        onClick: function () {
+          console.log('zoom out');
+        }
+      },
+      { 
+        name: 'zoomIn',
+        position: 'bottomright',
+        html: '<div class="controll controll_zoomIn"></div>',
+        onClick: function () {
+          console.log('zoom in');
+        }
+      },
+      {
+        name: 'defaultPosition',
+        position: 'bottomright',
+        html: '<div class="controll controll_center"></div>',
+        onClick: function () {
+          console.log('default position');
+        }
+      },
+      {
+        name: 'fullscreen',
+        position: 'bottomright',
+        html: '<div class="controll controll_fullscreen"></div>',
+        onClick: function () {
+          console.log('full position');
+        }
+      },
+      {
+        name: 'smallscreen',
+        position: 'bottomright',
+        html: '<div class="controll controll_smallscreen"></div>',
+        onClick: function () {
+          console.log('small position');
+        }
+      },
 
-                                { 
-                                  gjson: arskiy,
-                                  style: { fillOpacity: 0 },
-                                  options: {
-                                    interactive: true,
-                                    handleMouseEnter: function(e) {
-                                      this.setStyle({fillColor: '#6990BA', fillOpacity: 0.3});
-                                    },
-                                    handleMouseLeave: function(e) {
-                                      this.setStyle({ fillOpacity: 0});
-                                    }
-                                  }
-                                },
+      {
+        name: 'addidea',
+        position: 'topleft',
+        html: '<div class="controll controll_add"></div>',
+        onClick: function () {
+          console.log('add new idea');
+        }
+      },
 
-                                { 
-                                  gjson: volzhsk,
-                                  style: { fillOpacity: 0 },
-                                  options: {
-                                    interactive: true,
-                                    handleMouseEnter: function(e) {
-                                      this.setStyle({fillColor: '#6990BA', fillOpacity: 0.3});
-                                    },
-                                    handleMouseLeave: function(e) {
-                                      this.setStyle({ fillOpacity: 0});
-                                    }
-                                  }
-                                },
 
-                                { 
-                                  gjson: kazan,
-                                  style: { fillOpacity: 0 },
-                                  options: {
-                                    interactive: true,
-                                    handleMouseEnter: function(e) {
-                                      this.setStyle({fillColor: '#6990BA', fillOpacity: 0.3});
-                                    },
-                                    handleMouseLeave: function(e) {
-                                      this.setStyle({ fillOpacity: 0});
-                                    }
-                                  }
-                                },
 
-                                { 
-                                  gjson: kamskU,
-                                  style: { fillOpacity: 0 }},
 
-                                { 
-                                  gjson: laishev,
-                                  style: { fillOpacity: 0 }},
-
-                                { 
-                                  gjson: pestrech,
-                                  style: { fillOpacity: 0 }},
-
-                                { 
-                                  gjson: rybnaya,
-                                  style: { fillOpacity: 0 }},
-
-                                { 
-                                  gjson: verhneust,
-                                  style: { fillOpacity: 0 }},
-
-                                { 
-                                  gjson: visokogorsk,
-                                  style: { fillOpacity: 0 }},
-
-                                { 
-                                  gjson: volshskiy,
-                                  style: { fillOpacity: 0 }},
-                                
-                                { 
-                                  gjson: zelenodolskiy,
-                                  style: { fillOpacity: 0 }},
-                              ],
-                            }) 
+      {
+        name: 'TerritoryControl',
+        position: 'topright',
+        html: '<div class="controll controll_layers"></div>',
+        layers: ['Territory'],
+      },
+      {
+        name: 'CityControl',
+        position: 'topright',
+        html: '<div class="controll controll_baselayer"></div>',
+        layers: ['City'],
+      },
+    ],
+  );
+  map.init();
 }
+
+
 
